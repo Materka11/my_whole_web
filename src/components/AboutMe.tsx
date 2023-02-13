@@ -31,14 +31,14 @@ function AboutMe() {
 			<div className={`container ${classContainer}`}>
 				<span>History</span>
 				<p>
-					I started learning about the frontend from October 2017. Later I tested my knowledge on various
-					projects but it was time to introduce some mechanics to my projects and the first language I learned
-					was JavaScript. I made a little game with it. After JavaScript, came powerful JavaScript library,
-					React. I studied it for half a year and started my first project based on it, meanwhile I learned
-					git and how to use Adobe XD. After creating the first project based on React I I started learning
-					the Typescript and built this part of the website. When I finished I started to improve this page by
-					making part of the 3D page. The project was based on React Three Fiber. For this project, I also had
-					to learn Blender to recreate my idea in 3D.
+					I've been learning frontend development since October 2017 and have applied my knowledge by working
+					on various projects. My goal was to add more dynamic elements to my pages, so I decided to learn my
+					first language, which was JavaScript and used it to create a basic game. Afterwards, I explored the
+					powerful library React, and after six months of studying it, I created my first React project, which
+					was an online store, also learning Git and Adobe XD in the process. Then, I moved on to Typescript
+					and used it to build this website. To enhance the site further, I added a 3D component using React
+					Three Fiber, requiring me to learn Blender as well. In early 2023, as team member DeveloArt, I
+					worked on developing mobile applications for restaurants using React Native.
 				</p>
 			</div>
 			<div className={`container skill ${classContainer}`}>
@@ -47,15 +47,27 @@ function AboutMe() {
 					<li>Very good knowledge of HTML5, CSS3 and JavaScript (ES6)</li>
 					<li>Good knowledge of React 17</li>
 					<li>Ability to build an application with React 17</li>
+					<li>Ability to use TypeScript</li>
 					<li>Ability to use the Git version control system</li>
 					<li>Ability to use Sass</li>
-					<li>Basic unit testing skills using the Jest framework and the Testing Library</li>
-					<li>Ability to use TypeScript</li>
 					<li>Basic knowledge of PHP and MySQL</li>
 					<li>Basic design skills in Adobe XD</li>
 					<li>Basic design skills in Blender</li>
 					<li>Ability to use React Three Fiber</li>
 					<li>Ability to use the tool: Webpack, Babel</li>
+					<li>Knowledge of React Native</li>
+					<li>Ability to using the styled components library</li>
+					<li>Familiarity with Jira Software</li>
+					<li>
+						I have experience conducting code reviews, including evaluating the quality and readability of
+						code, identifying potential issues, and making suggestions for code improvement. This allows me
+						to ensure high-quality and reliable code and assist my fellow programmers in developing their
+						skills.
+					</li>
+					<li>
+						I have the ability and experience to work in a team of programmers, collaborating with them on
+						common projects and delivering solutions that meet the client's requirements and expectations.
+					</li>
 				</ul>
 			</div>
 			<img className="circle1" src={circles} alt="background element" />

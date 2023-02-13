@@ -290,26 +290,7 @@
 }
 .header span.scroll::before {
   content: "SCROLL";
-  -webkit-animation: scroll infinite 15s;
-          animation: scroll infinite 15s;
-}
-@-webkit-keyframes scroll {
-  0% {
-    content: "SCROLL";
-  }
-  20% {
-    filter: blur(1px);
-    opacity: 0;
-  }
-  50% {
-    content: "DOWN";
-    filter: blur(0px);
-    opacity: 1;
-  }
-  70% {
-    filter: blur(1px);
-    opacity: 0;
-  }
+  animation: scroll infinite 15s;
 }
 @keyframes scroll {
   0% {

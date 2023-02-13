@@ -1,7 +1,7 @@
 @import '../variables.scss';
 
 .aboutMe {
-	height: calc(100vh - 200px);
+	height: calc(100vh - 100px);
 
 	.container {
 		width: 80vw;
@@ -18,7 +18,7 @@
 
 		p,
 		ul {
-			font-size: 0.625rem;
+			font-size: 0.5625rem;
 			color: $primary-purple;
 			margin: 25px 0;
 		}

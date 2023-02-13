@@ -14,27 +14,28 @@
     opacity: 0;
     border: none;
     transition: all 0.75s cubic-bezier(0.175, 0.885, 0.32, 1.3);
+    text-align: justify;
   }
   .aboutMe .container span {
     font-size: 3.75rem;
     padding: 0 0 0 150px;
   }
   .aboutMe .container p,
-.aboutMe .container ul {
-    font-size: 1rem;
+  .aboutMe .container ul {
+    font-size: 0.875rem;
   }
   .aboutMe .container p {
     padding: 0 100px 0 150px;
   }
   .aboutMe .container ul {
-    padding: 0 0 0 55px;
+    padding: 0 175px 0 55px;
   }
   .aboutMe .active {
     transform: none;
     opacity: 1;
   }
   .aboutMe .skill {
-    margin: 450px 0 0 0;
+    margin: 400px 0 0 0;
   }
   .aboutMe .skill span {
     padding: 0 0 0 35px;

@@ -1,5 +1,5 @@
 .aboutMe {
-  height: calc(100vh - 200px);
+  height: calc(100vh - 100px);
 }
 .aboutMe .container {
   width: 80vw;
@@ -15,7 +15,7 @@
 }
 .aboutMe .container p,
 .aboutMe .container ul {
-  font-size: 0.625rem;
+  font-size: 0.5625rem;
   color: #5444c1;
   margin: 25px 0;
 }
