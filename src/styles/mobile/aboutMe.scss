@@ -1,38 +1,57 @@
 @import '../variables.scss';
 
 .aboutMe {
-	height: calc(100vh - 100px);
+  height: calc(100vh - 100px);
+  overflow: scroll;
+  overflow: -moz-scrollbars-none;
 
-	.container {
-		width: 80vw;
-		height: 25vh;
-		display: block;
-		margin: 250px auto 0;
+  .containerOuter {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    height: 100%;
+    padding: 0 25px;
 
-		span {
-			font-size: 2.1875rem;
-			color: $primary-purple;
-			margin-bottom: 100px;
-			font-weight: bold;
-		}
+    .container {
+      display: block;
+      margin: 260px 25px 25px 0;
+      text-align: justify;
 
-		p,
-		ul {
-			font-size: 0.5625rem;
-			color: $primary-purple;
-			margin: 25px 0;
-		}
+      h2 {
+        font-size: 2.1875rem;
+        color: $primary-purple;
+        font-weight: bold;
+      }
 
-		ul {
-			padding: 0 15px;
-		}
-	}
+      h3 {
+        font-weight: 400;
+      }
 
-	.skill {
-		margin: 65px auto 0;
-	}
+      span {
+        font-weight: bold;
+        text-transform: uppercase;
+      }
 
-	img {
-		display: none;
-	}
+      p,
+      ul,
+      h3,
+      strong,
+      span {
+        font-size: 0.5625rem;
+        color: $primary-purple;
+      }
+    }
+
+    .experience {
+      padding-right: 25px;
+    }
+
+    img {
+      display: none;
+    }
+  }
+}
+
+.aboutMe::-webkit-scrollbar {
+  display: none;
 }

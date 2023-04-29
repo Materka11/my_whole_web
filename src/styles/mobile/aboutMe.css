@@ -1,30 +1,47 @@
 .aboutMe {
   height: calc(100vh - 100px);
+  overflow: scroll;
+  overflow: -moz-scrollbars-none;
 }
-.aboutMe .container {
-  width: 80vw;
-  height: 25vh;
+.aboutMe .containerOuter {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  height: 100%;
+  padding: 0 25px;
+}
+.aboutMe .containerOuter .container {
   display: block;
-  margin: 250px auto 0;
+  margin: 260px 25px 25px 0;
+  text-align: justify;
 }
-.aboutMe .container span {
+.aboutMe .containerOuter .container h2 {
   font-size: 2.1875rem;
   color: #5444c1;
-  margin-bottom: 100px;
   font-weight: bold;
 }
-.aboutMe .container p,
-.aboutMe .container ul {
+.aboutMe .containerOuter .container h3 {
+  font-weight: 400;
+}
+.aboutMe .containerOuter .container span {
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.aboutMe .containerOuter .container p,
+.aboutMe .containerOuter .container ul,
+.aboutMe .containerOuter .container h3,
+.aboutMe .containerOuter .container strong,
+.aboutMe .containerOuter .container span {
   font-size: 0.5625rem;
   color: #5444c1;
-  margin: 25px 0;
 }
-.aboutMe .container ul {
-  padding: 0 15px;
+.aboutMe .containerOuter .experience {
+  padding-right: 25px;
 }
-.aboutMe .skill {
-  margin: 65px auto 0;
+.aboutMe .containerOuter img {
+  display: none;
 }
-.aboutMe img {
+
+.aboutMe::-webkit-scrollbar {
   display: none;
 }/*# sourceMappingURL=aboutMe.css.map */

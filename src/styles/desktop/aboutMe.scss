@@ -1,82 +1,80 @@
 @media (min-width: 1440px) {
-	.aboutMe {
-		display: flex;
-		height: calc(100vh + 100px);
-		position: relative;
+  .aboutMe {
+    display: flex;
+    height: calc(100vh + 100px);
+    position: relative;
 
-		.container {
-			width: 50vw;
-			height: calc(100% - 450px);
-			flex-shrink: 1;
-			margin: 300px 0 0 0;
-			overflow: hidden;
-			transform: translate(0, 200px) scale(0.1);
-			opacity: 0;
-			border: none;
-			transition: all .75s cubic-bezier(.175, .885, .32, 1.3);
-			text-align: justify;
+    .containerOuter {
+      overflow: hidden;
 
-			span {
-				font-size: 3.75rem;
-				padding: 0 0 0 150px;
-			}
+      .container {
+        height: 100%;
+        flex-shrink: 1;
+        overflow: hidden;
+        transform: translate(0, 200px) scale(0.1);
+        opacity: 0;
+        border: none;
+        transition: all 0.75s cubic-bezier(0.175, 0.885, 0.32, 1.3);
 
-			p,
-			ul {
-				font-size: .875rem;
-			}
+        h2 {
+          font-size: 3.75rem;
+        }
 
-			p {
-				padding: 0 100px 0 150px;
-			}
+        p,
+        ul,
+        h3,
+        strong,
+        span {
+          font-size: 0.875rem;
+        }
+      }
 
-			ul {
-				padding: 0 175px 0 55px;
-			}
-		}
+      .skill {
+        margin-top: 400px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
 
-		.active {
-			transform: none;
-			opacity: 1;
-		}
+      .experience {
+        margin-top: 150px;
+      }
 
-		.skill {
-			margin: 400px 0 0 0;
+      .active {
+        transform: none;
+        opacity: 1;
+      }
 
-			span {
-				padding: 0 0 0 35px;
-			}
-		}
+      img {
+        position: absolute;
+        width: 100px;
+        display: block;
+      }
 
-		img {
-			position: absolute;
-			width: 100px;
-			display: block;
-		}
+      .stairs {
+        width: 60px;
+      }
 
-		.stairs {
-			width: 60px;
-		}
+      .circle1 {
+        top: 750px;
+        left: 200px;
+      }
 
-		.circle1 {
-			top: 620px;
-			left: 400px;
-		}
+      .stairs1 {
+        top: 820px;
+        left: 350px;
+      }
 
-		.stairs1 {
-			top: 680px;
-			left: 550px;
-		}
+      .circle2 {
+        top: 250px;
+        left: 550px;
+      }
 
-		.circle2 {
-			top: 250px;
-			right: 550px;
-		}
-
-		.stairs2 {
-			top: 320px;
-			right: 350px;
-			transform: rotate(270deg);
-		}
-	}
+      .stairs2 {
+        top: 320px;
+        left: 650px;
+        transform: rotate(270deg);
+      }
+    }
+  }
 }
