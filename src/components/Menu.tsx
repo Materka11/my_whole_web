@@ -39,7 +39,6 @@ export const Menu = ({ setClassNoScroll, scrollToComponent }: MenuType) => {
       if (scrollWorkNav) {
         setSwitchLogo(logoMenu);
         setClassNav('white');
-        console.log('siema');
       }
     }
   }, [document.documentElement.scrollTop]);
