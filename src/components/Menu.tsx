@@ -17,7 +17,7 @@ export const Menu = ({ setClassNoScroll, scrollToComponent }: MenuType) => {
   const [classNav, setClassNav] = useState('');
   const scrollHeaderNav = useHasScrolled(454);
   const scrollAboutMeNav = useHasScrolled(684);
-  const scrollWorkNav = useHasScrolled(936);
+  const scrollWorkNav = useHasScrolled(940);
 
   useEffect(() => {
     const { innerWidth } = window;
@@ -39,6 +39,7 @@ export const Menu = ({ setClassNoScroll, scrollToComponent }: MenuType) => {
       if (scrollWorkNav) {
         setSwitchLogo(logoMenu);
         setClassNav('white');
+        console.log('siema');
       }
     }
   }, [document.documentElement.scrollTop]);
