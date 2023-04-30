@@ -1,4 +1,4 @@
-@import '../variables.scss';
+@use '../variables.scss' as v;
 
 .aboutMe {
   height: calc(100vh - 100px);
@@ -19,7 +19,7 @@
 
       h2 {
         font-size: 2.1875rem;
-        color: $primary-purple;
+        color: v.$primary-purple;
         font-weight: bold;
       }
 
@@ -38,7 +38,7 @@
       strong,
       span {
         font-size: 0.5625rem;
-        color: $primary-purple;
+        color: v.$primary-purple;
       }
     }
 
@@ -50,8 +50,8 @@
       display: none;
     }
   }
-}
 
-.aboutMe::-webkit-scrollbar {
-  display: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
 }

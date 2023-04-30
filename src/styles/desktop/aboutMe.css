@@ -35,7 +35,7 @@
   .aboutMe .containerOuter .experience {
     margin-top: 150px;
   }
-  .aboutMe .containerOuter .active {
+  .aboutMe .containerOuter .transition {
     transform: none;
     opacity: 1;
   }

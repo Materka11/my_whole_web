@@ -1,8 +1,8 @@
-@import '../variables.scss';
+@use '../variables.scss' as v;
 
 .footer {
   height: 200px;
-  background-color: $footer-color;
+  background-color: v.$footer-color;
   position: relative;
 
   .icons {
@@ -16,12 +16,12 @@
     justify-content: space-around;
 
     .icon {
-      color: $white;
+      color: v.$white;
     }
   }
 
   span {
-    color: $primary-green;
+    color: v.$primary-green;
     font-size: 1rem;
     position: absolute;
     width: 100%;

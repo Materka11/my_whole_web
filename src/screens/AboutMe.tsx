@@ -1,28 +1,14 @@
-import React, { useState, useEffect } from 'react';
-
 import '../styles/mobile/aboutMe.css';
 import '../styles/desktop/aboutMe.css';
-
-import circles from '../img/Component 6 – 1@2x.png';
-import stairs from '../img/Component 7 – 1@2x.png';
-
+import circles from '../assets/img/Component 6 – 1@2x.png';
+import stairs from '../assets/img/Component 7 – 1@2x.png';
 import { useHasScrolled } from '../hooks/useHasScrolled';
+import { useScrollTrigger } from '../hooks/useScrollTrigger';
 
-function AboutMe() {
-  const [classContainer, setClassContainer] = useState('');
-
+export const AboutMe = () => {
   const scrollAboutMe = useHasScrolled(440);
+  const classContainer = useScrollTrigger(scrollAboutMe);
 
-  useEffect(() => {
-    const { innerWidth } = window;
-    if (innerWidth >= 1440) {
-      if (scrollAboutMe) {
-        setClassContainer('active');
-      } else if (!scrollAboutMe) {
-        setClassContainer('');
-      }
-    }
-  }, [document.documentElement.scrollTop]);
   return (
     <div className="aboutMe">
       <div className="containerOuter">
@@ -98,6 +84,4 @@ function AboutMe() {
       </div>
     </div>
   );
-}
-
-export default AboutMe;
+};

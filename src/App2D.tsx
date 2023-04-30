@@ -1,22 +1,22 @@
-import React, { useState } from 'react';
-import AboutMe from './components/AboutMe';
-import Form from './components/Form';
-import Header from './components/Header';
-import Work from './components/Work';
-import Footer from './components/Footer';
+import { useState } from 'react';
+import { AboutMe } from './screens/AboutMe';
+import { Form } from './screens/Form';
+import { Header } from './screens/Header';
+import { Work } from './screens/Work';
+import { Footer } from './screens/Footer';
 
-function App2D() {
-	const [ classNoScroll, setClassNoScroll ] = useState('');
+const App2D = () => {
+  const [classNoScroll, setClassNoScroll] = useState('');
 
-	return (
-		<div className={`App ${classNoScroll}`}>
-			<Header setClassNoScroll={setClassNoScroll} />
-			<AboutMe />
-			<Work />
-			<Form />
-			<Footer />
-		</div>
-	);
-}
+  return (
+    <div className={`App ${classNoScroll}`}>
+      <Header setClassNoScroll={setClassNoScroll} />
+      <AboutMe />
+      <Work />
+      <Form />
+      <Footer />
+    </div>
+  );
+};
 
 export default App2D;

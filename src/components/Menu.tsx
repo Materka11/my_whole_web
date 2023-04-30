@@ -1,73 +1,83 @@
-import React from 'react';
+import { useState, useEffect } from 'react';
+import { MobileMenu } from './MobileMenu';
+import logoMenu from '../assets/img/logoMenu.png';
+import logo from '../assets/img/logo.png';
+import { FiMessageCircle } from 'react-icons/fi';
+import { useHasScrolled } from '../hooks/useHasScrolled';
 
-import '../styles/mobile/menu.css';
-
-import { BsGithub, BsInstagram, BsFacebook, BsLinkedin } from 'react-icons/bs';
-
-interface Menu {
-  classMenu: string;
-  handleClickMenu: () => void;
+interface MenuType {
+  setClassNoScroll: React.Dispatch<React.SetStateAction<string>>;
   scrollToComponent: (value: number) => void;
 }
 
-function Menu({ classMenu, handleClickMenu, scrollToComponent }: Menu) {
-  return (
-    <div className={`menu ${classMenu}`}>
-      <div className="socialLink">
-        <hr />
-        <div className="icons">
-          <a href="https://github.com/materka11" className="icon">
-            <BsGithub />
-          </a>
-          <a href="https://www.facebook.com/arkadiusz.materka" className="icon">
-            <BsFacebook />
-          </a>
-          <a href="https://www.instagram.com/materka_144/" className="icon">
-            <BsInstagram />
-          </a>
-          <a
-            href="https://www.linkedin.com/in/arkadiusz-materka-738372242/"
-            className="icon"
-          >
-            <BsLinkedin />
-          </a>
-        </div>
-      </div>
-      <ul className="link">
-        <button
-          onClick={() => {
-            handleClickMenu();
-          }}
-        >
-          HOME
-        </button>
-        <button
-          onClick={() => {
-            scrollToComponent(1);
-            handleClickMenu();
-          }}
-        >
-          ABOUT ME
-        </button>
-        <button
-          onClick={() => {
-            scrollToComponent(2);
-            handleClickMenu();
-          }}
-        >
-          WORK
-        </button>
-        <button
-          onClick={() => {
-            scrollToComponent(3);
-            handleClickMenu();
-          }}
-        >
-          CONTACT
-        </button>
-      </ul>
-    </div>
-  );
-}
+export const Menu = ({ setClassNoScroll, scrollToComponent }: MenuType) => {
+  const [classMenu, setClassMenu] = useState('inactive');
+  const [isToggledMenu, setIsToggledMenu] = useState(false);
+  const [switchLogo, setSwitchLogo] = useState(logo);
+  const [classNav, setClassNav] = useState('');
+  const scrollHeaderNav = useHasScrolled(454);
+  const scrollAboutMeNav = useHasScrolled(684);
+  const scrollWorkNav = useHasScrolled(936);
 
-export default Menu;
+  useEffect(() => {
+    const { innerWidth } = window;
+
+    if (innerWidth >= 1440) {
+      if (scrollHeaderNav) {
+        setSwitchLogo(logoMenu);
+        setClassNav('white');
+      } else if (!scrollHeaderNav) {
+        setSwitchLogo(logo);
+        setClassNav('');
+      }
+
+      if (scrollAboutMeNav) {
+        setSwitchLogo(logo);
+        setClassNav('');
+      }
+
+      if (scrollWorkNav) {
+        setSwitchLogo(logoMenu);
+        setClassNav('white');
+      }
+    }
+  }, [document.documentElement.scrollTop]);
+
+  const handleClickMenu = () => {
+    if (!isToggledMenu) {
+      setClassMenu('active');
+      setIsToggledMenu(true);
+      setClassNoScroll('noScroll');
+      setSwitchLogo(logoMenu);
+      setClassNav('navMenu');
+    } else {
+      setClassMenu('inactive');
+      setIsToggledMenu(false);
+      setClassNoScroll('');
+      setSwitchLogo(logo);
+      setClassNav('');
+    }
+  };
+
+  return (
+    <>
+      <nav className={classNav}>
+        <img src={switchLogo} alt="logo" />
+        <hr />
+        <span className="spanMenu" onClick={handleClickMenu}>
+          <span className="spanLink">CLOSE</span>
+          <span className="spanLink menuSpan">MENU</span>
+        </span>
+        <FiMessageCircle className="icon" />
+        <a href="mailto:arekmaterka11@gmail.com?subject=Hi Arek, I'd like to say hello">
+          SAY HELLO
+        </a>
+      </nav>
+      <MobileMenu
+        classMenu={classMenu}
+        handleClickMenu={handleClickMenu}
+        scrollToComponent={scrollToComponent}
+      />
+    </>
+  );
+};

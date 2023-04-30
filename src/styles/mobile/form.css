@@ -87,6 +87,6 @@
 .form button .btnDynamic .icon {
   color: #5444c1;
 }
-.form button button:hover .btnDynamic {
+.form button:hover .btnDynamic {
   transform: translateX(100%);
 }/*# sourceMappingURL=form.css.map */
