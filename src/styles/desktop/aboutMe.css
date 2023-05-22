@@ -24,7 +24,7 @@
   .aboutMe .containerOuter .container h3,
   .aboutMe .containerOuter .container strong,
   .aboutMe .containerOuter .container span {
-    font-size: 0.875rem;
+    font-size: 1rem;
   }
   .aboutMe .containerOuter .skill {
     margin-top: 400px;
@@ -48,11 +48,11 @@
     width: 60px;
   }
   .aboutMe .containerOuter .circle1 {
-    top: 750px;
+    top: 820px;
     left: 200px;
   }
   .aboutMe .containerOuter .stairs1 {
-    top: 820px;
+    top: 890px;
     left: 350px;
   }
   .aboutMe .containerOuter .circle2 {
