@@ -54,6 +54,7 @@
   overflow: hidden;
   left: 50%;
   transform: translateX(-50%);
+  cursor: pointer;
 }
 .form button span {
   position: absolute;
