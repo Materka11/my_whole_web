@@ -1,4 +1,4 @@
-@use '../variables.scss' as v;
+@use "../variables.scss" as v;
 
 @media (min-width: 1440px) {
   .header {
@@ -86,6 +86,7 @@
     div.scroll {
       top: 650px;
       left: 327px;
+      height: 50%;
     }
 
     .menuDesktop {

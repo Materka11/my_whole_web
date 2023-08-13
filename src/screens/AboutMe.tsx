@@ -1,9 +1,9 @@
-import '../styles/mobile/aboutMe.css';
-import '../styles/desktop/aboutMe.css';
-import circles from '../assets/img/Component 6 – 1@2x.png';
-import stairs from '../assets/img/Component 7 – 1@2x.png';
-import { useHasScrolled } from '../hooks/useHasScrolled';
-import { useScrollTrigger } from '../hooks/useScrollTrigger';
+import "../styles/mobile/aboutMe.css";
+import "../styles/desktop/aboutMe.css";
+import circles from "../assets/img/Component 6 – 1@2x.png";
+import stairs from "../assets/img/Component 7 – 1@2x.png";
+import { useHasScrolled } from "../hooks/useHasScrolled";
+import { useScrollTrigger } from "../hooks/useScrollTrigger";
 
 export const AboutMe = () => {
   const scrollAboutMe = useHasScrolled(440);
@@ -12,7 +12,7 @@ export const AboutMe = () => {
   return (
     <div className="aboutMe">
       <div className="containerOuter">
-        <div className={`container ${classContainer}`}>
+        <div className={`container history ${classContainer}`}>
           <h2>History</h2>
           <p>
             I've been learning frontend development since October 2017 and have
@@ -27,9 +27,14 @@ export const AboutMe = () => {
             Fiber, requiring me to learn Blender as well. In October 2022, I
             started studying at the Koszalin University of Technology to further
             expand my knowledge and skills in the field of computer science and
-            engineering. Additionally, in early 2023, as team member DeveloArt,
-            I worked on developing mobile applications for restaurants using
-            React Native.
+            engineering. Additionally, in September 2022, as team member
+            DeveloArt, I worked on developing mobile applications for
+            restaurants using React Native. After ten months of being a team
+            member at DeveloArt, I decided to conclude my collaboration with
+            them. In June 2023, I embarked on a new chapter by joining ART-Tech
+            Solutions, Here, I contributed to a project utilizing Next.js
+            technology for the Moja Alivia portal. My primary goal was to
+            enhance the SEO of the projects.
           </p>
         </div>
         <div className={`container skill ${classContainer}`}>
@@ -46,19 +51,24 @@ export const AboutMe = () => {
             <li>MySQL</li>
             <li>Git</li>
             <li>JavaScript</li>
-            <li>React Context API</li>
+            <li>React Three Fiber</li>
             <li>Redux</li>
             <li>Next.js</li>
             <li>Code Review</li>
             <li>Team programming</li>
+            <li>Adobe XD</li>
+            <li>Trello</li>
+            <li>React Hook Form</li>
+            <li>React Query</li>
+            <li>RTK Query</li>
           </ul>
         </div>
         <div className={`container experience ${classContainer}`}>
           <h2>Experience</h2>
           <h3>
-            <strong>DeveloArt</strong> / Trainee Frontend Developer
+            <strong>DeveloArt</strong> / Frontend Developer
           </h3>
-          <span>September 2022 - present</span>
+          <span>September 2022 - June 2023</span>
           <div>
             <p>
               Creating a mobile application in React Native was my main
@@ -71,12 +81,38 @@ export const AboutMe = () => {
               <li>conducting code reviews</li>
               <li>participating in weekly meetings</li>
             </ul>
-            <strong>
-              Technologies used: React Native, TypeScript, CSS, JavaScript,
-              Redux
-            </strong>
+            <p>
+              Technologies used:{" "}
+              <strong> React Native, TypeScript, CSS, JavaScript, Redux</strong>
+            </p>
+          </div>
+          <hr />
+          <h3>
+            <strong>ART-Tech Solutions</strong> / Frontend Developer
+          </h3>
+          <span>June 2023 - present</span>
+          <div>
+            <p>
+              Creating a projects in Next.js was my main responsibility, which
+              included:
+            </p>
+            <ul>
+              <li>enhance the SEO</li>
+              <li>optimizing the webpages</li>
+              <li>introducing simplified logic</li>
+              <li>participating in daily meetings</li>
+            </ul>
+
+            <p>
+              Technologies used:{" "}
+              <strong>
+                Next.js, TypeScript, SCSS, JavaScript, Redux, RTK Query, React
+                Query, Bootstrap, React Hook Form
+              </strong>
+            </p>
           </div>
         </div>
+
         <img className="circle1" src={circles} alt="background element" />
         <img className="circle2" src={circles} alt="background element" />
         <img className="stairs1 stairs" src={stairs} alt="background element" />

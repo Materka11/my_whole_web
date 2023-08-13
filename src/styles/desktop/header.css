@@ -72,6 +72,7 @@
   .header div.scroll {
     top: 650px;
     left: 327px;
+    height: 50%;
   }
   .header .menuDesktop {
     display: block;

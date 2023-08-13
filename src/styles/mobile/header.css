@@ -313,11 +313,16 @@
 }
 .header div.scroll {
   width: 1px;
-  height: 47vh;
+  height: 25%;
   background-color: #a398e9;
   position: absolute;
   top: 655px;
   left: 50%;
+}
+@media (max-height: 730px) {
+  .header div.scroll {
+    display: none;
+  }
 }
 .header .menuDesktop {
   display: none;

@@ -1,4 +1,4 @@
-@use '../variables.scss' as v;
+@use "../variables.scss" as v;
 
 .aboutMe {
   height: calc(100vh - 100px);
@@ -13,8 +13,10 @@
     padding: 0 25px;
 
     .container {
-      display: block;
-      margin: 260px 25px 25px 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      margin-bottom: 25px;
       text-align: justify;
 
       h2 {

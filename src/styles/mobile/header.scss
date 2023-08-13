@@ -1,4 +1,4 @@
-@use '../variables.scss' as v;
+@use "../variables.scss" as v;
 
 .header {
   height: 100vh;
@@ -343,14 +343,14 @@
     text-align: center;
 
     &::before {
-      content: 'SCROLL';
+      content: "SCROLL";
       animation: scroll infinite 15s;
     }
   }
 
   @keyframes scroll {
     0% {
-      content: 'SCROLL';
+      content: "SCROLL";
     }
 
     20% {
@@ -359,7 +359,7 @@
     }
 
     50% {
-      content: 'DOWN';
+      content: "DOWN";
       filter: blur(0px);
       opacity: 1;
     }
@@ -372,11 +372,17 @@
 
   div.scroll {
     width: 1px;
-    height: 47vh;
+    height: 25%;
     background-color: #a398e9;
     position: absolute;
     top: 655px;
     left: 50%;
+  }
+
+  @media (max-height: 730px) {
+    div.scroll {
+      display: none;
+    }
   }
 
   .menuDesktop {
