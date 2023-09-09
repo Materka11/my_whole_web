@@ -8,14 +8,14 @@
   flex-wrap: nowrap;
   flex-direction: row;
   height: 100%;
-  padding: 0 25px;
 }
 .aboutMe .containerOuter .container {
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
-  margin-bottom: 25px;
+  justify-content: center;
   text-align: justify;
+  box-sizing: border-box;
+  padding: 0 25px;
 }
 .aboutMe .containerOuter .container h2 {
   font-size: 2.1875rem;
@@ -37,11 +37,16 @@
   font-size: 0.6875rem;
   color: #5444c1;
 }
-.aboutMe .containerOuter .experience {
-  padding-right: 25px;
-}
 .aboutMe .containerOuter img {
   display: none;
+}
+.aboutMe .containerOuter .scrollContainer {
+  overflow-y: auto;
+  height: 50%;
+  padding-right: 15px;
+}
+.aboutMe .containerOuter hr {
+  border-color: #5444c1;
 }
 .aboutMe::-webkit-scrollbar {
   display: none;

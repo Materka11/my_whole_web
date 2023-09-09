@@ -1,0 +1,55 @@
+export const COMMERCIAL_EXPERIENCE = [
+  {
+    id: 1,
+    nameComapany: "DeveloArt",
+    positionJob: "Frontend Developer",
+    startJob: "SEPTEMBER 2022",
+    endJob: "JUNE 2023",
+    description:
+      "Creating a restaurant management mobile application in React Native.",
+    responsibilities: [
+      "Creating screens and views for the application",
+      "Writing application logic",
+      "Fetching data from the backend",
+      "Conducting code reviews.",
+      "Participating in meetings (weekly).",
+    ],
+    technologies: [
+      "React Native",
+      "TypeScript",
+      "CSS",
+      "JavaScript",
+      "Redux Toolkit",
+      "Next.js",
+    ],
+  },
+  {
+    id: 2,
+    nameComapany: "ART-Tech Solutions",
+    positionJob: "Frontend Developer",
+    startJob: "JUNE 2023",
+    endJob: "PRESENT",
+    description:
+      "Creating several portals for the Alivi Foundation in Next.js and React",
+    responsibilities: [
+      "Rewriting code from React to Next.js.",
+      "Creating new functionalities in Next.js.",
+      "Creating new functionalities in React.",
+      "Integrating with the backend.",
+      "Code optimization.",
+      "Daily meetings.",
+      "Enhance the SEO.",
+      "Introducing simplified logic.",
+    ],
+    technologies: [
+      "React",
+      "TypeScript",
+      "SCSS",
+      "JavaScript",
+      "Redux Toolkit",
+      "RTK Query",
+      "Next.js",
+      "Bootstrap 5",
+    ],
+  },
+];
