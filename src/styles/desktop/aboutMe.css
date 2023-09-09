@@ -1,8 +1,9 @@
-@media (min-width: 1440px) {
+@media (min-width: 1400px) {
   .aboutMe {
     display: flex;
     height: calc(100vh + 100px);
     position: relative;
+    padding-right: 150px;
   }
   .aboutMe .containerOuter {
     overflow: hidden;
@@ -32,6 +33,10 @@
   .aboutMe .containerOuter .container strong,
   .aboutMe .containerOuter .container span {
     font-size: 0.875rem;
+  }
+  .aboutMe .containerOuter .scrollContainer {
+    height: 100%;
+    padding-right: 0;
   }
   .aboutMe .containerOuter .history {
     margin-top: 250px;
