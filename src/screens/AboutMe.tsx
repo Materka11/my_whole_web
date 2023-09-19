@@ -53,7 +53,6 @@ export const AboutMe = () => {
               <li>Styled Components</li>
               <li>React Native</li>
               <li>Jira</li>
-              <li>PHP</li>
               <li>MySQL</li>
               <li>Git</li>
               <li>JavaScript</li>
