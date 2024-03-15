@@ -1,17 +1,24 @@
-import '../styles/mobile/workContainer.css';
-import '../styles/desktop/workContainer.css';
-import { BsArrowRight } from 'react-icons/bs';
-import { useHasScrolled } from '../hooks/useHasScrolled';
-import { useScrollTrigger } from '../hooks/useScrollTrigger';
+import "../styles/mobile/workContainer.css";
+import "../styles/desktop/workContainer.css";
+import { BsArrowRight } from "react-icons/bs";
+import { useHasScrolled } from "../hooks/useHasScrolled";
+import { useScrollTrigger } from "../hooks/useScrollTrigger";
+import { useEffect, useState } from "react";
 
-interface WorkContainerType {
+interface WorkContainerProps {
   title: string;
   description: string;
   date: string;
   isCodeOrWork: string;
-  backgroundColor: string;
   link: string;
-  classContainer?: string;
+  id: number;
+  isActive?: boolean;
+}
+
+interface StyleContainerType {
+  backgroundColor?: string;
+  color?: string;
+  transform?: string;
 }
 
 export const WorkContainer = ({
@@ -19,32 +26,47 @@ export const WorkContainer = ({
   description,
   date,
   isCodeOrWork,
-  backgroundColor,
   link,
-  classContainer,
-}: WorkContainerType) => {
+  id,
+  isActive,
+}: WorkContainerProps) => {
   const scrollWork = useHasScrolled(635);
   const classContainerTransition = useScrollTrigger(scrollWork);
+  const [styleContainer, setStyleContainer] = useState<
+    StyleContainerType | undefined
+  >();
+  const [styleButton, setStyleButton] = useState<
+    { border?: string } | undefined
+  >();
 
-  const { innerWidth } = window;
-  let styleContainer;
-  let styleButton;
+  useEffect(() => {
+    const calculateStyles = () => {
+      if (!isEven(id) && window.innerWidth < 1440) {
+        setStyleContainer({ backgroundColor: "#5444c1", color: "#ffffff" });
+        setStyleButton({ border: "2px solid #ffffff" });
+      } else if (isEven(id)) {
+        setStyleContainer({ backgroundColor: "#ffffff", color: "#5444c1" });
+        setStyleButton({ border: "2px solid #5444c1" });
+      }
+    };
 
-  if (backgroundColor === 'purple' && innerWidth < 1440) {
-    styleContainer = { backgroundColor: '#5444c1', color: '#ffffff' };
-  } else if (backgroundColor === 'white') {
-    styleContainer = { backgroundColor: '#ffffff', color: '#5444c1' };
-  }
-  if (backgroundColor === 'purple' && innerWidth < 1440) {
-    styleButton = { border: '2px solid #ffffff' };
-  } else if (backgroundColor === 'white') {
-    styleButton = { border: '2px solid #5444c1' };
-  }
+    calculateStyles();
+  }, [id]);
+
+  const isEven = (id: number) => {
+    if (id % 2 === 0) {
+      return true;
+    } else {
+      return false;
+    }
+  };
 
   return (
     <div
       style={styleContainer}
-      className={`container ${classContainer} ${classContainerTransition}`}
+      className={`container ${
+        isActive ? `active${id}` : ""
+      } ${classContainerTransition}`}
     >
       <div className="text">
         <span>{title}</span>

@@ -9,9 +9,10 @@
     flex-direction: row;
     height: 100%;
   }
-
-  button {
-    display: none;
+  @media (max-width: 1440px) {
+    button {
+      display: none !important;
+    }
   }
 
   &::-webkit-scrollbar {

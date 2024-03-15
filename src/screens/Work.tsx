@@ -1,95 +1,101 @@
-import { useState } from 'react';
-import '../styles/mobile/work.css';
-import '../styles/desktop/work.css';
-import { WorkContainer } from '../components/WorkContainer';
-import { IoArrowUndoSharp, IoArrowRedoSharp } from 'react-icons/io5';
+import "../styles/mobile/work.css";
+import "../styles/desktop/work.css";
+import { WorkContainer } from "../components/WorkContainer";
+import { IoArrowUndoSharp, IoArrowRedoSharp } from "react-icons/io5";
+import { works } from "../consts/works.consts";
+import { useEffect, useState } from "react";
+
+type Opacity = "1" | "0";
+
+interface StyleButton {
+  left: Opacity;
+  right: Opacity;
+}
 
 export const Work = () => {
-  const [classContainer2, setClassContainer2] = useState('');
-  const [classContainer3, setClassContainer3] = useState('');
-  const [classContainer4, setClassContainer4] = useState('');
-  const [classButtonLeft, setClassButtonLeft] = useState('none');
-  const [classButtonRight, setClassButtonRight] = useState('');
+  const [worksData, setWorksData] = useState(works);
+  const [styleButton, setStyleButton] = useState<StyleButton>({
+    left: "0",
+    right: "1",
+  });
+  const [currentIndex, setCurrentIndex] = useState<number>(0);
+
+  useEffect(() => {
+    if (currentIndex === 0) {
+      setStyleButton({ left: "0", right: "1" });
+    } else if (currentIndex === worksData.length - 1) {
+      setStyleButton({ left: "1", right: "0" });
+    } else {
+      setStyleButton({ left: "1", right: "1" });
+    }
+  }, [currentIndex, worksData]);
 
   const handleClickActiveContainer = () => {
-    if (classContainer2 === '') {
-      setClassContainer2('active');
-      setClassButtonLeft('');
+    let currentIndex = worksData.findIndex(({ isActive }) => isActive);
+
+    if (currentIndex === -1) {
+      currentIndex = 0;
+    } else if (currentIndex === worksData.length - 1) {
+      return;
     }
-    if (classContainer2 === 'active') {
-      setClassContainer3('active2');
-      setClassButtonRight('none'); //switch to the last slide
-    }
-    if (classContainer3 === 'active2') {
-      setClassContainer4('active3');
-    }
+
+    setCurrentIndex(currentIndex + 1);
+
+    const updatedWorks = worksData.map((work, index) => ({
+      ...work,
+      isActive: index === currentIndex + 1,
+    }));
+
+    setWorksData(updatedWorks);
   };
 
   const handleClickInActiveContainer = () => {
-    if (classContainer4 === 'active3') {
-      setClassContainer4('');
+    let currentIndex = worksData.findIndex(({ isActive }) => isActive);
+
+    if (currentIndex === -1) {
+      currentIndex = worksData.length - 1;
+    } else if (currentIndex === 0) {
+      return;
     }
 
-    if (classContainer4 === '') {
-      setClassContainer3('');
-      setClassButtonRight(''); //switch to the last slide
-    }
+    setCurrentIndex(currentIndex - 1);
 
-    if (classContainer3 === '') {
-      setClassContainer2('');
-      setClassButtonLeft('none');
-    }
+    const updatedWorks = worksData.map((work, index) => ({
+      ...work,
+      isActive: index === currentIndex - 1 && index !== 0,
+    }));
+
+    setWorksData(updatedWorks);
   };
 
   return (
     <div className="work">
       <button
-        className={classButtonLeft}
+        style={{ opacity: styleButton.left }}
         onClick={handleClickInActiveContainer}
       >
         <IoArrowRedoSharp className="icon" />
       </button>
       <div className="containerOuter">
-        <WorkContainer
-          title={'Raport Game'}
-          description={
-            'A game of choosing whether the suspect is guilty or not. Created in pure JavaScript. It only works on the PC'
-          }
-          date={'January 2021'}
-          isCodeOrWork={'work'}
-          backgroundColor={'purple'}
-          link={'https://materka11.github.io/Raport-Game/game.html'}
-          classContainer={''}
-        />
-        <WorkContainer
-          title={'Clothing Store'}
-          description={'Online store designed with React.'}
-          date={'June 2022'}
-          isCodeOrWork={'code'}
-          backgroundColor={'white'}
-          link={'https://github.com/Materka11/ClothingStore'}
-          classContainer={classContainer2}
-        />
-        <WorkContainer
-          title={'This website'}
-          description={'View the code of this website'}
-          date={'July and September 2022'}
-          isCodeOrWork={'code'}
-          backgroundColor={'purple'}
-          link={'https://github.com/Materka11/MyWholeWeb'}
-          classContainer={classContainer3}
-        />
-        {/* <WorkContainer
-					title={'Clothing Store4'}
-					description={'Online store designed with React.'}
-					date={'June 2022'}
-					isCodeOrWork={'code'}
-					backgroundColor={'white'}
-					link={'https://github.com/Materka11/ClothingStore'}
-					classContainer={classContainer4}
-				/>  */}
+        {worksData.map(
+          ({ title, description, date, id, isCodeOrWork, link, isActive }) => (
+            <WorkContainer
+              key={id}
+              id={id}
+              title={title}
+              date={date}
+              description={description}
+              isCodeOrWork={isCodeOrWork}
+              link={link}
+              isActive={isActive}
+            />
+          )
+        )}
       </div>
-      <button className={classButtonRight} onClick={handleClickActiveContainer}>
+      <button
+        style={{ opacity: styleButton.right }}
+        onClick={handleClickActiveContainer}
+      >
         <IoArrowUndoSharp className="icon" />
       </button>
     </div>

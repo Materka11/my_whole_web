@@ -6,6 +6,7 @@ import { useHasScrolled } from "../hooks/useHasScrolled";
 import { useScrollTrigger } from "../hooks/useScrollTrigger";
 import { CommercialExperience } from "../components/CommercialExperience";
 import { COMMERCIAL_EXPERIENCE } from "../consts/commercialExperience.consts";
+import React from "react";
 
 export const AboutMe = () => {
   const scrollAboutMe = useHasScrolled(440);
@@ -67,6 +68,8 @@ export const AboutMe = () => {
               <li>React Query</li>
               <li>RTK Query</li>
               <li>Bootstrap 5</li>
+              <li>Figma</li>
+              <li>Tailwind</li>
             </ul>
           </div>
         </div>
@@ -74,9 +77,8 @@ export const AboutMe = () => {
           <h2>Experience</h2>
           <div className="scrollContainer">
             {COMMERCIAL_EXPERIENCE.map((experience) => (
-              <>
+              <React.Fragment key={experience.id}>
                 <CommercialExperience
-                  key={experience.id}
                   description={experience.description}
                   endJob={experience.endJob}
                   nameComapany={experience.nameComapany}
@@ -86,7 +88,7 @@ export const AboutMe = () => {
                   technologies={experience.technologies}
                 />
                 <hr />
-              </>
+              </React.Fragment>
             ))}
           </div>
         </div>

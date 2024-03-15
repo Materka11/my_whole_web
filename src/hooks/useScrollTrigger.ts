@@ -1,18 +1,19 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState } from "react";
 
 export const useScrollTrigger = (isDistance: boolean) => {
-  const [classScrollTrigger, setClassScrollTrigger] = useState('');
+  const [classScrollTrigger, setClassScrollTrigger] = useState("");
 
   useEffect(() => {
     const { innerWidth } = window;
     if (innerWidth >= 1440) {
       if (isDistance) {
-        setClassScrollTrigger('transition');
+        setClassScrollTrigger("transition");
       } else if (!isDistance) {
-        setClassScrollTrigger('');
+        setClassScrollTrigger("");
       }
     }
-  }, [document.documentElement.scrollTop]);
+    //eslint-disable-next-line
+  }, [document.documentElement.scrollTop, isDistance]);
 
   return classScrollTrigger;
 };

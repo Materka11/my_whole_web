@@ -1,4 +1,8 @@
-@use '../variables.scss' as v;
+@use "../variables.scss" as v;
+
+@function delay($index) {
+  @return 0.1s * ($index - 1);
+}
 
 @media (min-width: 1440px) {
   .work {
@@ -24,19 +28,12 @@
         transform: translateX(-1000px);
       }
 
-      &:nth-child(2) {
-        transform: translateX(1000px);
-        transition: all 1s 0.1s;
-      }
-
-      &:nth-child(3) {
-        transform: translateX(1000px);
-        transition: all 1s 0.2s;
-      }
-
-      &:nth-child(4) {
-        transform: translateX(1000px);
-        transition: all 1s 0.3s;
+      @for $i from 2 through 50 {
+        &:nth-child(#{$i}) {
+          $translateX: if($i == 1, -1000px, 1000px);
+          transform: translateX($translateX);
+          transition: all 1s delay($i);
+        }
       }
     }
 
@@ -44,16 +41,12 @@
       transform: translateX(0) rotateX(10deg) !important;
     }
 
-    .active {
-      transform: translateX(-100%) translateZ(-10px) rotateX(10deg) !important;
-    }
-
-    .active2 {
-      transform: translateX(-100%) translateZ(-20px) rotateX(10deg) !important;
-    }
-
-    .active3 {
-      transform: translateX(-100%) translateZ(-30px) rotateX(10deg) !important;
+    @for $i from 1 through 50 {
+      .active#{$i} {
+        transform: translateX(-100%)
+          translateZ(-#{$i + 10}px)
+          rotateX(10deg) !important;
+      }
     }
   }
 }
