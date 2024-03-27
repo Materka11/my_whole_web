@@ -3,26 +3,36 @@
 @media (min-width: 1400px) {
   .aboutMe {
     display: flex;
-    height: calc(100vh + 100px);
+    height: calc(300vh + 100px);
     position: relative;
     padding-right: 150px;
+    overflow: visible;
 
     .containerOuter {
       overflow: hidden;
+      position: sticky;
+      top: 0px;
+      align-items: center;
+      height: 100vh;
 
       .container {
-        height: 100%;
+        height: 100vh;
         flex-shrink: 1;
-
+        width: 100vw;
         overflow: hidden;
-        transform: translate(0, 200px) scale(0.1);
-        opacity: 0;
+        //transform: translate(0, 200px) scale(0.1);
+        opacity: 1;
         border: none;
         transition: all 0.75s cubic-bezier(0.175, 0.885, 0.32, 1.3);
         justify-content: flex-start;
+        padding-right: 225px;
+        position: relative;
 
         h2 {
           font-size: 3.75rem;
+          position: absolute;
+          margin: 0;
+          top: 150px;
         }
 
         h3 {
@@ -30,7 +40,8 @@
         }
 
         hr {
-          margin: 15px 0;
+          height: 100vh;
+          margin: 0 100px;
         }
 
         p,
@@ -38,28 +49,48 @@
         h3,
         strong,
         span {
-          font-size: 0.875rem;
+          font-size: 1rem;
         }
       }
 
       .scrollContainer {
         height: 100%;
         padding-right: 0;
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+        margin-top: 200px;
+        padding: 75px 0;
+        overflow-y: hidden;
       }
 
       .history {
-        margin-top: 250px;
+        .scrollContainer {
+          p {
+            text-align: center;
+          }
+        }
       }
 
       .skill {
-        margin-top: 400px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+        ul {
+          display: flex;
+          gap: 30px;
+          flex-wrap: wrap;
+          li {
+            list-style: none;
+            font-weight: bold;
+          }
+        }
       }
 
       .experience {
-        margin-top: 150px;
+        width: 140vw;
+        .scrollContainer {
+          align-items: flex-start;
+          flex-direction: column;
+          flex-wrap: wrap;
+        }
       }
 
       .transition {
@@ -78,23 +109,23 @@
       }
 
       .circle1 {
-        top: 820px;
-        left: 200px;
+        top: 150px;
+        left: calc(100vw - 350px);
       }
 
       .stairs1 {
-        top: 890px;
-        left: 350px;
+        bottom: 150px;
+        left: 0px;
       }
 
       .circle2 {
-        top: 250px;
-        left: 550px;
+        bottom: 150px;
+        left: calc(100vw + 100px);
       }
 
       .stairs2 {
-        top: 320px;
-        left: 650px;
+        bottom: 300px;
+        left: calc(200vw - 400px);
         transform: rotate(270deg);
       }
     }

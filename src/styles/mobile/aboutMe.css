@@ -42,8 +42,9 @@
 }
 .aboutMe .containerOuter .scrollContainer {
   overflow-y: auto;
-  height: 50%;
+  height: 100%;
   padding-right: 15px;
+  padding-bottom: 15px;
 }
 .aboutMe .containerOuter hr {
   border-color: #5444c1;

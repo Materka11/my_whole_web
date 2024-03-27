@@ -13,6 +13,7 @@
     "@types/react": "^18.0.14",
     "@types/react-dom": "^18.0.5",
     "@types/three": "^0.143.0",
+    "framer-motion": "^11.0.18",
     "gh-pages": "^4.0.0",
     "leva": "^0.9.30",
     "react": "^18.2.0",
