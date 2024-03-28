@@ -1,50 +1,55 @@
-import { useState, useEffect } from 'react';
-import { useHasScrolled } from '../hooks/useHasScrolled';
+import { useState, useEffect } from "react";
+import { useHasScrolled } from "../hooks/useHasScrolled";
 
 interface DesktopMenuType {
-  scrollToComponent: (value: number) => void;
+  scrollToComponent: (vh: number, px?: number) => void;
 }
 
 export const DesktopMenu = ({ scrollToComponent }: DesktopMenuType) => {
-  const [classDotHome, setClassDotHome] = useState('dot scrollDot');
-  const [classLineHome, setClassLineHome] = useState('line');
-  const [classButtonHome, setClassButtonHome] = useState('');
-
-  const [classDotAboutMe, setClassDotAboutMe] = useState('dot');
-  const [classLineAboutMe, setClassLineAboutMe] = useState('line');
-  const [classButtonAboutMe, setClassButtonAboutMe] = useState('');
-
-  const [classDotWork, setClassDotWork] = useState('dot');
-  const [classLineWork, setClassLineWork] = useState('line');
-  const [classButtonWork, setClassButtonWork] = useState('');
-
-  const [classDotContact, setClassDotContact] = useState('dot');
-  const [classLineContact, setClassLineContact] = useState('line');
-  const [classButtonContact, setClassButtonContact] = useState('');
+  const [classesHome, setClassesHome] = useState({
+    dot: "dot scrollDot",
+    line: "line",
+    button: "",
+  });
+  const [classesAboutMe, setClassesAboutMe] = useState({
+    dot: "dot",
+    line: "line",
+    button: "",
+  });
+  const [classesWork, setClassesWork] = useState({
+    dot: "dot",
+    line: "line",
+    button: "",
+  });
+  const [classesContact, setClassesContact] = useState({
+    dot: "dot",
+    line: "line",
+    button: "",
+  });
 
   //between header and about me
-  const scrollHeaderHome = useHasScrolled(276);
-  const scrollHeaderAboutMe = useHasScrolled(265);
-  const scrollHeaderWork = useHasScrolled(252);
-  const scrollHeaderContact = useHasScrolled(240);
+  const scrollHeaderHome = useHasScrolled(186);
+  const scrollHeaderAboutMe = useHasScrolled(178);
+  const scrollHeaderWork = useHasScrolled(170);
+  const scrollHeaderContact = useHasScrolled(162);
 
   //between about me and work
-  const scrollAboutMeHome = useHasScrolled(533);
-  const scrollAboutMeAboutMe = useHasScrolled(523);
-  const scrollAboutMeWork = useHasScrolled(510);
-  const scrollAboutMeContact = useHasScrolled(498);
+  const scrollAboutMeHome = useHasScrolled(676);
+  const scrollAboutMeAboutMe = useHasScrolled(668);
+  const scrollAboutMeWork = useHasScrolled(660);
+  const scrollAboutMeContact = useHasScrolled(652);
 
   //between work and contact
-  const scrollWorkHome = useHasScrolled(761);
-  const scrollWorkAboutMe = useHasScrolled(750);
-  const scrollWorkWork = useHasScrolled(737);
-  const scrollWorkContact = useHasScrolled(725);
+  const scrollWorkHome = useHasScrolled(831);
+  const scrollWorkAboutMe = useHasScrolled(823);
+  const scrollWorkWork = useHasScrolled(815);
+  const scrollWorkContact = useHasScrolled(807);
 
   //between contact and footer
   const scrollContactHome = useHasScrolled(988);
-  const scrollContactAboutMe = useHasScrolled(977);
-  const scrollContactWork = useHasScrolled(964);
-  const scrollContactContact = useHasScrolled(952);
+  const scrollContactAboutMe = useHasScrolled(980);
+  const scrollContactWork = useHasScrolled(972);
+  const scrollContactContact = useHasScrolled(964);
 
   useEffect(() => {
     const { innerWidth } = window;
@@ -52,120 +57,161 @@ export const DesktopMenu = ({ scrollToComponent }: DesktopMenuType) => {
     if (innerWidth >= 1440) {
       //between header and about me
       if (scrollHeaderHome) {
-        setClassDotHome('dot colorDot');
-        setClassLineHome('line colorLine');
-        setClassButtonHome('colorButton');
+        setClassesHome({
+          dot: "dot colorDot",
+          line: "line colorLine",
+          button: "colorButton",
+        });
       } else if (!scrollHeaderHome) {
-        setClassDotHome('dot scrollDot');
-        setClassLineHome('line');
-        setClassButtonHome('');
+        setClassesHome({
+          dot: "dot scrollDot",
+          line: "line",
+          button: "",
+        });
       }
 
       if (scrollHeaderAboutMe) {
-        setClassDotAboutMe('dot scrollDotColor');
-        setClassLineAboutMe('line colorLine');
-        setClassButtonAboutMe('colorButton');
+        setClassesAboutMe({
+          dot: "dot scrollDotColor",
+          line: "line colorLine",
+          button: "colorButton",
+        });
       } else if (!scrollHeaderAboutMe) {
-        setClassDotAboutMe('dot');
-        setClassLineAboutMe('line ');
-        setClassButtonAboutMe('');
+        setClassesAboutMe({
+          dot: "dot",
+          line: "line",
+          button: "",
+        });
       }
 
       if (scrollHeaderWork) {
-        setClassDotWork('dot colorDot');
-        setClassLineWork('line colorLine');
-        setClassButtonWork('colorButton');
+        setClassesWork({
+          dot: "dot colorDot",
+          line: "line colorLine",
+          button: "colorButton",
+        });
       } else if (!scrollHeaderAboutMe) {
-        setClassDotWork('dot');
-        setClassLineWork('line ');
-        setClassButtonWork('');
+        setClassesWork({
+          dot: "dot",
+          line: "line",
+          button: "",
+        });
       }
 
       if (scrollHeaderContact) {
-        setClassDotContact('dot colorDot');
-        setClassLineContact('line colorLine');
-        setClassButtonContact('colorButton');
+        setClassesContact({
+          dot: "dot colorDot",
+          line: "line colorLine",
+          button: "colorButton",
+        });
       } else if (!scrollHeaderContact) {
-        setClassDotContact('dot');
-        setClassLineContact('line ');
-        setClassButtonContact('');
+        setClassesContact({
+          dot: "dot",
+          line: "line",
+          button: "",
+        });
       }
 
       //between about me and work
       if (scrollAboutMeHome) {
-        setClassDotHome('dot');
-        setClassLineHome('line');
-        setClassButtonHome('');
+        setClassesHome({
+          dot: "dot",
+          line: "line",
+          button: "",
+        });
       }
 
       if (scrollAboutMeAboutMe) {
-        setClassDotAboutMe('dot');
-        setClassLineAboutMe('line');
-        setClassButtonAboutMe('');
+        setClassesAboutMe({
+          dot: "dot",
+          line: "line",
+          button: "",
+        });
       }
 
       if (scrollAboutMeWork) {
-        setClassDotWork('dot scrollDot');
-        setClassLineWork('line');
-        setClassButtonWork('');
+        setClassesWork({
+          dot: "dot scrollDot",
+          line: "line",
+          button: "",
+        });
       }
 
       if (scrollAboutMeContact) {
-        setClassDotContact('dot');
-        setClassLineContact('line');
-        setClassButtonContact('');
+        setClassesContact({
+          dot: "dot",
+          line: "line",
+          button: "",
+        });
       }
 
       //between work and contact
       if (scrollWorkHome) {
-        setClassDotHome('dot colorDot');
-        setClassLineHome('line colorLine');
-        setClassButtonHome('colorButton');
+        setClassesHome({
+          dot: "dot colorDot",
+          line: "line colorLine",
+          button: "colorButton",
+        });
       }
 
       if (scrollWorkAboutMe) {
-        setClassDotAboutMe('dot colorDot');
-        setClassLineAboutMe('line colorLine');
-        setClassButtonAboutMe('colorButton');
+        setClassesAboutMe({
+          dot: "dot colorDot",
+          line: "line colorLine",
+          button: "colorButton",
+        });
       }
 
       if (scrollWorkWork) {
-        setClassDotWork('dot colorDot');
-        setClassLineWork('line colorLine');
-        setClassButtonWork('colorButton');
+        setClassesWork({
+          dot: "dot colorDot",
+          line: "line colorLine",
+          button: "colorButton",
+        });
       }
 
       if (scrollWorkContact) {
-        setClassDotContact('dot scrollDotColor');
-        setClassLineContact('line colorLine');
-        setClassButtonContact('colorButton');
+        setClassesContact({
+          dot: "dot scrollDotColor",
+          line: "line colorLine",
+          button: "colorButton",
+        });
       }
 
       //between contact and footer
       if (scrollContactHome) {
-        setClassDotHome('dot');
-        setClassLineHome('line');
-        setClassButtonHome('');
+        setClassesHome({
+          dot: "dot",
+          line: "line",
+          button: "",
+        });
       }
 
       if (scrollContactAboutMe) {
-        setClassDotAboutMe('dot');
-        setClassLineAboutMe('line');
-        setClassButtonAboutMe('');
+        setClassesAboutMe({
+          dot: "dot",
+          line: "line",
+          button: "",
+        });
       }
 
       if (scrollContactWork) {
-        setClassDotWork('dot');
-        setClassLineWork('line');
-        setClassButtonWork('');
+        setClassesWork({
+          dot: "dot",
+          line: "line",
+          button: "",
+        });
       }
 
       if (scrollContactContact) {
-        setClassDotContact('dot');
-        setClassLineContact('line');
-        setClassButtonContact('');
+        setClassesContact({
+          dot: "dot",
+          line: "line",
+          button: "",
+        });
       }
     }
+    //eslint-disable-next-line
   }, [document.documentElement.scrollTop]);
 
   return (
@@ -173,41 +219,41 @@ export const DesktopMenu = ({ scrollToComponent }: DesktopMenuType) => {
       <span className="headerMenu">MENU</span>
       <div className="menuDesktopFixed">
         <div className="subMenu">
-          <div className={classDotHome} />
-          <div className={classLineHome} />
+          <div className={classesHome.dot} />
+          <div className={classesHome.line} />
           <button
-            className={classButtonHome}
+            className={classesHome.button}
             onClick={() => scrollToComponent(0 - 100)}
           >
             Home
           </button>
         </div>
         <div className="subMenu">
-          <div className={classDotAboutMe} />
-          <div className={classLineAboutMe} />
+          <div className={classesAboutMe.dot} />
+          <div className={classesAboutMe.line} />
           <button
-            className={classButtonAboutMe}
+            className={classesAboutMe.button}
             onClick={() => scrollToComponent(1)}
           >
             About Me
           </button>
         </div>
         <div className="subMenu">
-          <div className={classDotWork} />
-          <div className={classLineWork} />
+          <div className={classesWork.dot} />
+          <div className={classesAboutMe.line} />
           <button
-            className={classButtonWork}
-            onClick={() => scrollToComponent(2)}
+            className={classesWork.button}
+            onClick={() => scrollToComponent(4, 50)}
           >
             Work
           </button>
         </div>
         <div className="subMenu">
-          <div className={classDotContact} />
-          <div className={classLineContact} />
+          <div className={classesContact.dot} />
+          <div className={classesContact.line} />
           <button
-            className={classButtonContact}
-            onClick={() => scrollToComponent(3)}
+            className={classesContact.button}
+            onClick={() => scrollToComponent(5, 100)}
           >
             Contact
           </button>

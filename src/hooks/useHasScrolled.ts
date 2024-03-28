@@ -1,14 +1,10 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect } from "react";
 
-// Added distance parameter to determine how much
-// from the top tell return value is updated.
 export const useHasScrolled = (distance: number) => {
-  // setting initial value to false
-  const [scroll, setScroll] = useState(false);
-  // running on mount
+  const [isScroll, setIsScroll] = useState(false);
+
   useEffect(() => {
     const onScroll = () => {
-      // Logic is false tell user reaches threshold, then true after.
       const { scrollTop, scrollHeight, clientHeight } =
         document.documentElement;
 
@@ -18,15 +14,16 @@ export const useHasScrolled = (distance: number) => {
 
       const scrollCheckStart = scrollValuePerMil >= distance;
 
-      if (scrollCheckStart !== scroll) setScroll(scrollCheckStart);
+      if (scrollCheckStart !== isScroll) setIsScroll(scrollCheckStart);
     };
 
-    document.addEventListener('scroll', onScroll);
+    document.addEventListener("scroll", onScroll);
 
     return () => {
-      document.removeEventListener('scroll', onScroll);
+      document.removeEventListener("scroll", onScroll);
     };
-  }, [scroll, setScroll]);
+    //eslint-disable-next-line
+  }, [isScroll, distance]);
 
-  return scroll;
+  return isScroll;
 };

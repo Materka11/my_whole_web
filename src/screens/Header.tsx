@@ -1,22 +1,23 @@
-import React from 'react';
-import background from '../assets/img/Component 12 – 1@2x2.png';
-import '../styles/mobile/header.css';
-import '../styles/desktop/header.css';
-import { Menu } from '../components/Menu';
-import { Bust } from '../components/Bust';
-import { DesktopMenu } from '../components/DesktopMenu';
+import React from "react";
+import background from "../assets/img/Component 12 – 1@2x2.png";
+import "../styles/mobile/header.css";
+import "../styles/desktop/header.css";
+import { Menu } from "../components/Menu";
+import { Bust } from "../components/Bust";
+import { DesktopMenu } from "../components/DesktopMenu";
 
 export interface NoScroll {
   setClassNoScroll: React.Dispatch<React.SetStateAction<string>>;
 }
 
 export const Header = ({ setClassNoScroll }: NoScroll) => {
-  const scrollToComponent = (value: number) => {
+  const scrollToComponent = (vh: number, px: number = 0) => {
     const { innerHeight, scrollTo } = window;
+
     setTimeout(() => {
       scrollTo({
-        top: innerHeight * value + 100,
-        behavior: 'smooth',
+        top: innerHeight * vh + px,
+        behavior: "smooth",
       });
     }, 0);
   };

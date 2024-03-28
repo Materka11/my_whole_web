@@ -1,23 +1,28 @@
-import { useState, useEffect } from 'react';
-import { MobileMenu } from './MobileMenu';
-import logoMenu from '../assets/img/logoMenu.png';
-import logo from '../assets/img/logo.png';
-import { FiMessageCircle } from 'react-icons/fi';
-import { useHasScrolled } from '../hooks/useHasScrolled';
+import { useState, useEffect } from "react";
+import { MobileMenu } from "./MobileMenu";
+import logoMenu from "../assets/img/logoMenu.png";
+import logo from "../assets/img/logo.png";
+import { FiMessageCircle } from "react-icons/fi";
+import { useHasScrolled } from "../hooks/useHasScrolled";
 
 interface MenuType {
   setClassNoScroll: React.Dispatch<React.SetStateAction<string>>;
-  scrollToComponent: (value: number) => void;
+  scrollToComponent: (vh: number, px?: number) => void;
 }
 
 export const Menu = ({ setClassNoScroll, scrollToComponent }: MenuType) => {
-  const [classMenu, setClassMenu] = useState('inactive');
+  const [classMenu, setClassMenu] = useState("inactive");
   const [isToggledMenu, setIsToggledMenu] = useState(false);
   const [switchLogo, setSwitchLogo] = useState(logo);
-  const [classNav, setClassNav] = useState('');
-  const scrollHeaderNav = useHasScrolled(454);
-  const scrollAboutMeNav = useHasScrolled(684);
-  const scrollWorkNav = useHasScrolled(940);
+  const [classNav, setClassNav] = useState("");
+
+  const POINT_OF_HEADER = 454;
+  const POINT_OF_ABOUT_ME = 684;
+  const POINT_OF_WORK = 940;
+
+  const scrollHeaderNav = useHasScrolled(POINT_OF_HEADER);
+  const scrollAboutMeNav = useHasScrolled(POINT_OF_ABOUT_ME);
+  const scrollWorkNav = useHasScrolled(POINT_OF_WORK);
 
   useEffect(() => {
     const { innerWidth } = window;
@@ -25,37 +30,38 @@ export const Menu = ({ setClassNoScroll, scrollToComponent }: MenuType) => {
     if (innerWidth >= 1440) {
       if (scrollHeaderNav) {
         setSwitchLogo(logoMenu);
-        setClassNav('white');
+        setClassNav("white");
       } else if (!scrollHeaderNav) {
         setSwitchLogo(logo);
-        setClassNav('');
+        setClassNav("");
       }
 
       if (scrollAboutMeNav) {
         setSwitchLogo(logo);
-        setClassNav('');
+        setClassNav("");
       }
 
       if (scrollWorkNav) {
         setSwitchLogo(logoMenu);
-        setClassNav('white');
+        setClassNav("white");
       }
     }
+    //eslint-disable-next-line
   }, [document.documentElement.scrollTop]);
 
   const handleClickMenu = () => {
     if (!isToggledMenu) {
-      setClassMenu('active');
+      setClassMenu("active");
       setIsToggledMenu(true);
-      setClassNoScroll('noScroll');
+      setClassNoScroll("noScroll");
       setSwitchLogo(logoMenu);
-      setClassNav('navMenu');
+      setClassNav("navMenu");
     } else {
-      setClassMenu('inactive');
+      setClassMenu("inactive");
       setIsToggledMenu(false);
-      setClassNoScroll('');
+      setClassNoScroll("");
       setSwitchLogo(logo);
-      setClassNav('');
+      setClassNav("");
     }
   };
 
