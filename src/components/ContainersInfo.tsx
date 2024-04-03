@@ -28,10 +28,12 @@ const ContainersInfo = () => (
         collaboration with them. In June 2023, I embarked on a new chapter by
         joining ART-Tech Solutions, Here, I contributed to a project utilizing
         Next.js and React technology for the Moja Alivia portal. My primary goal
-        was to enhance the SEO of the projects.
+        was to enhance the SEO of the projects. After few months I completed the
+        Moja Alivia portal and I'm starting a project as a fullstack developer
+        where I will be creating a website for company reviews.
       </p>
     </ContainerInfo>
-    <ContainerInfo title="Skills" classContainer="skill">
+    <ContainerInfo title="Tech Stack" classContainer="skill">
       <ul>
         {skills.map((skill) => (
           <li key={skill}>{skill}</li>

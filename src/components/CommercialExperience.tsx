@@ -33,6 +33,7 @@ export const CommercialExperience = ({
         <p>
           {description}
           <br />
+          <br />
           My responsibilities included:
         </p>
         <ul>
@@ -41,7 +42,7 @@ export const CommercialExperience = ({
           ))}
         </ul>
         <p>
-          Technologies used: <strong>{technologies.join(", ")}</strong>
+          Technologies used: <strong>{technologies.join(" | ")}</strong>
         </p>
       </div>
     </div>
