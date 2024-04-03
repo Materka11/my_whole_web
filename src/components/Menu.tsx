@@ -16,8 +16,8 @@ export const Menu = ({ setClassNoScroll, scrollToComponent }: MenuType) => {
   const [switchLogo, setSwitchLogo] = useState(logo);
   const [classNav, setClassNav] = useState("");
 
-  const POINT_OF_HEADER = 454;
-  const POINT_OF_ABOUT_ME = 684;
+  const POINT_OF_HEADER = 294;
+  const POINT_OF_ABOUT_ME = 784;
   const POINT_OF_WORK = 940;
 
   const scrollHeaderNav = useHasScrolled(POINT_OF_HEADER);
