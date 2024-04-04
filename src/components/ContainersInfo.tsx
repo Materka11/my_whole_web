@@ -5,6 +5,9 @@ import circles from "../assets/img/Component 6 – 1@2x.png";
 import stairs from "../assets/img/Component 7 – 1@2x.png";
 import { CommercialExperience } from "../components/CommercialExperience";
 import { COMMERCIAL_EXPERIENCE } from "../consts/commercialExperience.consts";
+import { education } from "../consts/education.consts";
+import NameWithDate from "./NameWithDate";
+import { certificates } from "../consts/certificates.consts";
 
 const ContainersInfo = () => (
   <>
@@ -55,6 +58,31 @@ const ContainersInfo = () => (
           />
         </React.Fragment>
       ))}
+    </ContainerInfo>
+    <ContainerInfo title="Education & Certificates" classContainer="education">
+      <div>
+        {education.map((school) => (
+          <React.Fragment key={school.id}>
+            <NameWithDate
+              name={school.schoolName}
+              additionalName={school.department}
+              startDate={school.startSchool}
+              endDate={school.endSchool}
+            />
+          </React.Fragment>
+        ))}
+      </div>
+      <hr />
+      <div>
+        {certificates.map((certificate) => (
+          <React.Fragment key={certificate.id}>
+            <NameWithDate
+              name={certificate.name}
+              startDate={certificate.date}
+            />
+          </React.Fragment>
+        ))}
+      </div>
     </ContainerInfo>
     <img className="circle1" src={circles} alt="background element" />
     <img className="circle2" src={circles} alt="background element" />

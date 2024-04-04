@@ -68,12 +68,19 @@
     font-weight: bold;
   }
   .aboutMe .containerOuter .experience {
-    width: 195vw;
+    width: 210vw;
   }
   .aboutMe .containerOuter .experience .scrollContainer {
     align-items: flex-start;
     flex-direction: column;
     flex-wrap: wrap;
+  }
+  .aboutMe .containerOuter .education div div {
+    flex-direction: column;
+  }
+  .aboutMe .containerOuter .education div div span {
+    font-weight: 400;
+    font-size: 0.875rem;
   }
   .aboutMe .containerOuter .transition {
     transform: none;

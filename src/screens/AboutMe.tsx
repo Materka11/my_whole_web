@@ -11,7 +11,7 @@ export const AboutMe = () => {
     target: targetRef,
   });
 
-  const x = useTransform(scrollYProgress, [0, 1], ["1%", "-75%"]);
+  const x = useTransform(scrollYProgress, [0, 1], ["1%", "-80%"]);
 
   const isMobile = useMobile();
 

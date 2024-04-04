@@ -85,11 +85,23 @@
       }
 
       .experience {
-        width: 195vw;
+        width: 210vw;
         .scrollContainer {
           align-items: flex-start;
           flex-direction: column;
           flex-wrap: wrap;
+        }
+      }
+
+      .education {
+        div {
+          div {
+            flex-direction: column;
+            span {
+              font-weight: 400;
+              font-size: 0.875rem;
+            }
+          }
         }
       }
 
