@@ -19,4 +19,9 @@ export const certificates = [
     name: "Google Cloud Fundamentals: Core Infrastructure",
     date: "MARCH 2024",
   },
+  {
+    id: 5,
+    name: "Google Cloud Platform Big Data and Machine Learning Fundamentals",
+    date: "APRIL 2024",
+  },
 ];

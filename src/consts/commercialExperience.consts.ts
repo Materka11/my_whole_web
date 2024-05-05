@@ -53,7 +53,7 @@ export const COMMERCIAL_EXPERIENCE = [
     ],
   },
   {
-    id: 2,
+    id: 3,
     nameComapany: "Freelancer",
     positionJob: "Fullstack Developer",
     startJob: "FEBRUARY 2024",
