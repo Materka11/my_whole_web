@@ -1,4 +1,4 @@
-@use '../variables.scss' as v;
+@use "../variables.scss" as v;
 
 .form {
   height: 100vh;
@@ -35,6 +35,13 @@
         border-radius: 0;
         width: 100%;
         padding: 10px 10px;
+        font-family: -apple-system, BlinkMacSystemFont, "Bitter", "Segoe UI",
+          "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
+          "Helvetica Neue", sans-serif;
+
+        &:focus {
+          outline: none;
+        }
       }
       textarea {
         resize: none;

@@ -36,6 +36,10 @@
   border-radius: 0;
   width: 100%;
   padding: 10px 10px;
+  font-family: -apple-system, BlinkMacSystemFont, "Bitter", "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+}
+.form form .formRow .input:focus {
+  outline: none;
 }
 .form form .formRow textarea {
   resize: none;
