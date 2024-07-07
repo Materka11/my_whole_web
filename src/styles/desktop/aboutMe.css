@@ -55,6 +55,9 @@
     padding: 75px 0;
     overflow-y: hidden;
   }
+  .aboutMe .containerOuter .scrollContainer div {
+    width: auto;
+  }
   .aboutMe .containerOuter .history .scrollContainer p {
     text-align: center;
   }
