@@ -46,10 +46,10 @@ export const DesktopMenu = ({ scrollToComponent }: DesktopMenuType) => {
   const scrollWorkContact = useHasScrolled(807);
 
   //between contact and footer
-  const scrollContactHome = useHasScrolled(988);
-  const scrollContactAboutMe = useHasScrolled(980);
-  const scrollContactWork = useHasScrolled(972);
-  const scrollContactContact = useHasScrolled(964);
+  const scrollContactHome = useHasScrolled(991);
+  const scrollContactAboutMe = useHasScrolled(986);
+  const scrollContactWork = useHasScrolled(980);
+  const scrollContactContact = useHasScrolled(974);
 
   useEffect(() => {
     const { innerWidth } = window;
@@ -240,7 +240,7 @@ export const DesktopMenu = ({ scrollToComponent }: DesktopMenuType) => {
         </div>
         <div className="subMenu">
           <div className={classesWork.dot} />
-          <div className={classesAboutMe.line} />
+          <div className={classesWork.line} />
           <button
             className={classesWork.button}
             onClick={() => scrollToComponent(4, 50)}
