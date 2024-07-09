@@ -164,4 +164,9 @@
   .header .menuDesktop .menuDesktopFixed .subMenu:hover .line {
     height: 2px;
   }
+}
+@media (min-width: 1980px) {
+  .header .bust {
+    transform: scale(1.5);
+  }
 }/*# sourceMappingURL=header.css.map */

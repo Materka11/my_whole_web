@@ -57,7 +57,7 @@
         h3,
         strong,
         span {
-          font-size: 1rem;
+          font-size: 1.25rem;
         }
       }
 
@@ -151,6 +151,16 @@
         bottom: 300px;
         left: calc(200vw - 400px);
         transform: rotate(270deg);
+      }
+    }
+  }
+}
+
+@media (min-width: 1980px) {
+  .aboutMe {
+    .containerOuter {
+      .scrollContainer {
+        padding: 150px 0;
       }
     }
   }

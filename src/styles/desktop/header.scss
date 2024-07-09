@@ -194,3 +194,11 @@
     }
   }
 }
+
+@media (min-width: 1980px) {
+  .header {
+    .bust {
+      transform: scale(1.5);
+    }
+  }
+}
