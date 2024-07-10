@@ -26,7 +26,7 @@
     .formRow {
       margin: 10px 0;
       span {
-        font-size: 0.6875rem;
+        font-size: 0.875rem;
       }
       .input {
         border: none;
@@ -38,6 +38,7 @@
         font-family: -apple-system, BlinkMacSystemFont, "Bitter", "Segoe UI",
           "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
           "Helvetica Neue", sans-serif;
+        font-size: 1rem;
 
         &:focus {
           outline: none;
