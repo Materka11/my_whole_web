@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { useHasScrolled } from "../hooks/useHasScrolled";
+import { sendEvent } from "../helpers/sendEvent";
 
 interface DesktopMenuType {
   scrollToComponent: (vh: number, px?: number) => void;
@@ -214,6 +215,26 @@ export const DesktopMenu = ({ scrollToComponent }: DesktopMenuType) => {
     //eslint-disable-next-line
   }, [document.documentElement.scrollTop]);
 
+  const handleClickHome = () => {
+    scrollToComponent(0 - 100);
+    sendEvent("Forwarding", "Click", "Home");
+  };
+
+  const handleClickAboutMe = () => {
+    scrollToComponent(1);
+    sendEvent("Forwarding", "Click", "About Me");
+  };
+
+  const handleClickWork = () => {
+    scrollToComponent(4, 50);
+    sendEvent("Forwarding", "Click", "Work");
+  };
+
+  const handleClickContact = () => {
+    scrollToComponent(5, 100);
+    sendEvent("Forwarding", "Click", "Contact");
+  };
+
   return (
     <div className="menuDesktop">
       <span className="headerMenu">MENU</span>
@@ -221,10 +242,7 @@ export const DesktopMenu = ({ scrollToComponent }: DesktopMenuType) => {
         <div className="subMenu">
           <div className={classesHome.dot} />
           <div className={classesHome.line} />
-          <button
-            className={classesHome.button}
-            onClick={() => scrollToComponent(0 - 100)}
-          >
+          <button className={classesHome.button} onClick={handleClickHome}>
             Home
           </button>
         </div>
@@ -233,7 +251,7 @@ export const DesktopMenu = ({ scrollToComponent }: DesktopMenuType) => {
           <div className={classesAboutMe.line} />
           <button
             className={classesAboutMe.button}
-            onClick={() => scrollToComponent(1)}
+            onClick={handleClickAboutMe}
           >
             About Me
           </button>
@@ -241,10 +259,7 @@ export const DesktopMenu = ({ scrollToComponent }: DesktopMenuType) => {
         <div className="subMenu">
           <div className={classesWork.dot} />
           <div className={classesWork.line} />
-          <button
-            className={classesWork.button}
-            onClick={() => scrollToComponent(4, 50)}
-          >
+          <button className={classesWork.button} onClick={handleClickWork}>
             Work
           </button>
         </div>
@@ -253,7 +268,7 @@ export const DesktopMenu = ({ scrollToComponent }: DesktopMenuType) => {
           <div className={classesContact.line} />
           <button
             className={classesContact.button}
-            onClick={() => scrollToComponent(5, 100)}
+            onClick={handleClickContact}
           >
             Contact
           </button>
