@@ -80,9 +80,11 @@
   transform: none;
 }
 .header .bust {
-  transform: scale(0.8);
   position: relative;
   z-index: 2;
+  width: 400px;
+  left: 50%;
+  transform: translate(-50%, 0) scale(0.8);
 }
 .header .bust .head {
   width: 301px;
@@ -257,13 +259,14 @@
   transform: translate(-50%, 0);
 }
 .header .background {
-  position: absolute;
-  width: 100vw;
-  top: 140px;
-  left: 50%;
-  transform: translate(-50%, 0);
-  z-index: 1;
+  display: none;
   opacity: 0.5;
+}
+.header .background img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .header .name {
   font-size: 2.625rem;
@@ -313,17 +316,62 @@
 }
 .header div.scroll {
   width: 1px;
-  height: 25%;
   background-color: #a398e9;
   position: absolute;
   top: 655px;
   left: 50%;
 }
+.header .menuDesktop {
+  display: none;
+}
+
 @media (max-height: 730px) {
-  .header div.scroll {
+  div.scroll {
     display: none;
   }
 }
-.header .menuDesktop {
-  display: none;
+@media (min-height: 730px) {
+  div.scroll {
+    height: 20vh;
+  }
+}
+@media (min-height: 800px) {
+  div.scroll {
+    height: 25vh;
+  }
+}
+@media (min-height: 850px) {
+  div.scroll {
+    height: 30vh;
+  }
+}
+@media (min-height: 900px) {
+  div.scroll {
+    height: 35vh;
+  }
+}
+@media (min-height: 980px) {
+  div.scroll {
+    height: 40vh;
+  }
+}
+@media (min-height: 1060px) {
+  div.scroll {
+    height: 45vh;
+  }
+}
+@media (min-height: 1160px) {
+  div.scroll {
+    height: 50vh;
+  }
+}
+@media (min-height: 1270px) {
+  div.scroll {
+    height: 55vh;
+  }
+}
+@media (min-height: 1420px) {
+  div.scroll {
+    height: 60vh;
+  }
 }/*# sourceMappingURL=header.css.map */

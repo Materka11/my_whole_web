@@ -40,10 +40,12 @@
     background-color: transparent;
   }
   .header .background {
-    height: 45vh;
-    width: 60vw;
+    display: block;
+    position: absolute;
+    height: 45%;
+    width: 50%;
     top: 330px;
-    left: 60%;
+    left: 40%;
   }
   .header .name {
     margin: -200px 120px;
@@ -72,7 +74,6 @@
   .header div.scroll {
     top: 650px;
     left: 327px;
-    height: 50%;
   }
   .header .menuDesktop {
     display: block;
@@ -163,5 +164,10 @@
   }
   .header .menuDesktop .menuDesktopFixed .subMenu:hover .line {
     height: 2px;
+  }
+}
+@media (min-width: 1980px) {
+  .header .bust {
+    transform: scale(1.5);
   }
 }/*# sourceMappingURL=header.css.map */

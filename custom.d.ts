@@ -1,9 +1,14 @@
-declare module '*.jpg' {
+declare module "*.jpg" {
   const path: string;
   export default path;
 }
 
-declare module '*.png' {
+declare module "*.png" {
   const path: string;
   export default path;
+}
+
+declare module "*.module.scss" {
+  const classes: { [key: string]: string };
+  export default classes;
 }

@@ -29,7 +29,9 @@ export const Header = ({ setClassNoScroll }: NoScroll) => {
         scrollToComponent={scrollToComponent}
       />
       <Bust />
-      <img className="background" src={background} alt="background" />
+      <div className="background">
+        <img src={background} alt="background" />
+      </div>
       <span className="name">
         <strong className="hi">Hi, my</strong> name is <strong>Arek</strong>
         <span className="description">

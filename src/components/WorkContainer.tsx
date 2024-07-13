@@ -4,6 +4,7 @@ import { BsArrowRight } from "react-icons/bs";
 import { useHasScrolled } from "../hooks/useHasScrolled";
 import { useScrollTrigger } from "../hooks/useScrollTrigger";
 import { useEffect, useState } from "react";
+import { sendEvent } from "../helpers/sendEvent";
 
 interface WorkContainerProps {
   title: string;
@@ -77,7 +78,11 @@ export const WorkContainer = ({
           <strong>Created in {date}</strong>
         </p>
       </div>
-      <a href={link} style={styleButton}>
+      <a
+        href={link}
+        style={styleButton}
+        onClick={() => sendEvent("Works", "Click", title)}
+      >
         <span>SEE MY {isCodeOrWork}</span>
         <BsArrowRight className="icon" />
         <div className="btnDynamic">

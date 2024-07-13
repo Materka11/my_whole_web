@@ -1,16 +1,19 @@
+html {
+  font-size: 16px;
+}
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Bitter', 'Segoe UI', 'Roboto',
-    'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Bitter", "Segoe UI", "Roboto",
+    "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  font-size: 16px;
   min-height: 100vh;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
 
@@ -46,7 +49,7 @@ a {
   text-shadow: -5px 5px #00ffff80, 5px 5px #00ffff80, -5px -5px #00ffff80,
     5px -5px #00ffff80;
   font-size: 64px;
-  font-family: 'ROBOT'; /* do zmiany*/
+  font-family: "ROBOT"; /* do zmiany*/
   cursor: pointer;
   color: #000;
 
@@ -62,4 +65,10 @@ a {
 
 .none {
   opacity: 0 !important;
+}
+
+@media (min-width: 1980px) {
+  html {
+    font-size: 19px;
+  }
 }

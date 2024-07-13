@@ -20,27 +20,40 @@
       padding: 0 25px;
 
       h2 {
-        font-size: 2.1875rem;
+        font-size: 1.75rem;
         color: v.$primary-purple;
         font-weight: bold;
       }
 
       h3 {
         font-weight: 400;
+        color: v.$primary-purple;
+        font-size: 1rem;
+        margin: 0;
+
+        strong {
+          font-size: 1rem;
+          color: v.$primary-purple;
+          float: left;
+          margin-right: 2px;
+        }
       }
 
       span {
         font-weight: bold;
         text-transform: uppercase;
+        width: 100%;
+        float: left;
+        margin-top: 5px;
       }
 
       p,
       ul,
-      h3,
       strong,
       span {
-        font-size: 0.6875rem;
+        font-size: 0.75rem;
         color: v.$primary-purple;
+        text-align: start;
       }
     }
 
@@ -53,6 +66,17 @@
       height: 100%;
       padding-right: 15px;
       padding-bottom: 15px;
+      scrollbar-width: none;
+
+      &::-webkit-scrollbar {
+        display: none;
+      }
+
+      div {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+      }
     }
 
     hr {

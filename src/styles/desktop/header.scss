@@ -48,10 +48,12 @@
       }
     }
     .background {
-      height: 45vh;
-      width: 60vw;
+      display: block;
+      position: absolute;
+      height: 45%;
+      width: 50%;
       top: 330px;
-      left: 60%;
+      left: 40%;
     }
 
     .name {
@@ -86,7 +88,6 @@
     div.scroll {
       top: 650px;
       left: 327px;
-      height: 50%;
     }
 
     .menuDesktop {
@@ -191,6 +192,14 @@
           height: 2px;
         }
       }
+    }
+  }
+}
+
+@media (min-width: 1980px) {
+  .header {
+    .bust {
+      transform: scale(1.5);
     }
   }
 }

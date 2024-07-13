@@ -1,15 +1,42 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './styles/_global.scss';
-import App2D from './App2D';
-import App3D from './App3D';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import reportWebVitals from './reportWebVitals';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import "./styles/_global.scss";
+import App2D from "./App2D";
+import App3D from "./App3D";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import reportWebVitals from "./reportWebVitals";
+import PageNotFound from "./PageNotFound";
+import ReactGa from "react-ga4";
+
+ReactGa.initialize(process.env.REACT_APP_GOOGLE_ANALYTICS_ID as string);
+ReactGa.send({
+  hitType: "pageview",
+  page: window.location.pathname,
+});
 
 const root = ReactDOM.createRoot(
-  document.getElementById('root') as HTMLElement
+  document.getElementById("root") as HTMLElement
 );
-console.log(`⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡆⠀
+
+root.render(
+  <React.StrictMode>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<App3D />} />
+        <Route path="/main" element={<App2D />} />
+        <Route path="*" element={<PageNotFound />} />
+      </Routes>
+    </BrowserRouter>
+  </React.StrictMode>
+);
+
+// If you want to start measuring performance in your app, pass a function
+// to log results (for example: reportWebVitals(console.log))
+// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
+reportWebVitals();
+
+console.log(`
+	⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡆⠀
 	⢰⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠀
 	⢸⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠀
 	⣼⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠿⣟⣿⠯⠗⠒⠉⠉⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡇⢹⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠟⢿⡄
@@ -42,20 +69,5 @@ console.log(`⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿�
 	⠀⠀⠀⠀⠀⠀⠋⣿⠈⣿⣿⡏⣿⣿⣼⣾⡇⣾⣿⣿⣿⣿⣿⣿⣷⢄⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⣿⣿⣿⣿⠻⡆⠘⣿⣿⣿⣿⣿⣿⣿⣿
 	⠀⠀⠀⠀⠀⠀⠀⣿⡇⣿⣿⣷⢹⣿⣳⡻⢠⢿⣿⣿⣿⣿⣿⣿⣿⠀⠉⢲⢤⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣠⣾⣿⣿⣿⣿⡵⣿⡀⠸⣿⣿⣿⣿⣿⣿⣿
 	⠀⠀⠀⠀⠀⠀⠀⣿⡇⣿⣿⣿⠸⢿⡟⡇⡼⣼⣿⣿⣿⣿⣿⣿⣿⡇⠀⠈⡇⠻⡷⣦⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣠⣖⠭⣾⣿⣿⣿⠋⣾⠗⣧⠀⢿⣿⣿⣿⣿⣿⣿
-	⠀⠀⠀⠀⠀⠀⠀⡇⡇⢻⢹⣿⠀⢸⣿⠀⠇⣿⣿⣿⣿⣿⣿⣿⣿⣷⡀⠀⠸⣆⡿⣚⡩⣙⠶⣤⣄⡀⠀⠀⠀⠀⢀⣠⡤⢞⣫⣵⣫⠽⣿⣿⡿⢚⡥⣺⠜⡆⠈⣿⣿⣿⣿⣿⣿`);
-
-root.render(
-  <React.StrictMode>
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<App3D />} />
-        <Route path="/main" element={<App2D />} />
-      </Routes>
-    </BrowserRouter>
-  </React.StrictMode>
-);
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+	⠀⠀⠀⠀⠀⠀⠀⡇⡇⢻⢹⣿⠀⢸⣿⠀⠇⣿⣿⣿⣿⣿⣿⣿⣿⣷⡀⠀⠸⣆⡿⣚⡩⣙⠶⣤⣄⡀⠀⠀⠀⠀⢀⣠⡤⢞⣫⣵⣫⠽⣿⣿⡿⢚⡥⣺⠜⡆⠈⣿⣿⣿⣿⣿⣿
+	`);
