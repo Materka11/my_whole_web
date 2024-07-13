@@ -73,6 +73,7 @@ export const Work = () => {
       <button
         style={{ opacity: styleButton.left }}
         onClick={handleClickInActiveContainer}
+        aria-label="Back"
       >
         <IoArrowRedoSharp className="icon" />
       </button>
@@ -95,6 +96,7 @@ export const Work = () => {
       <button
         style={{ opacity: styleButton.right }}
         onClick={handleClickActiveContainer}
+        aria-label="Forward"
       >
         <IoArrowUndoSharp className="icon" />
       </button>

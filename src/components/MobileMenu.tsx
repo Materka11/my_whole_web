@@ -51,12 +51,12 @@ export const MobileMenu = ({
         <hr />
         <SocialLinks />
       </div>
-      <ul className="link">
+      <div className="link">
         <button onClick={handleClickHome}>HOME</button>
         <button onClick={handleClickAboutMe}>ABOUT ME</button>
         <button onClick={handleClickWork}>WORK</button>
         <button onClick={handleClickContact}>CONTACT</button>
-      </ul>
+      </div>
     </div>
   );
 };

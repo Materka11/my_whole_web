@@ -8,6 +8,7 @@ export const SocialLinks = () => (
       href="https://github.com/materka11"
       className="icon"
       onClick={() => sendEvent("Social Links", "Click", "Github")}
+      aria-label="My github"
     >
       <BsGithub />
     </a>
@@ -15,6 +16,7 @@ export const SocialLinks = () => (
       href="https://www.facebook.com/arkadiusz.materka"
       className="icon"
       onClick={() => sendEvent("Social Links", "Click", "Facebook")}
+      aria-label="My facebook"
     >
       <BsFacebook />
     </a>
@@ -22,6 +24,7 @@ export const SocialLinks = () => (
       href="https://www.instagram.com/materka_144/"
       className="icon"
       onClick={() => sendEvent("Social Links", "Click", "Instagram")}
+      aria-label="My instagram"
     >
       <BsInstagram />
     </a>
@@ -29,6 +32,7 @@ export const SocialLinks = () => (
       href="https://www.linkedin.com/in/arkadiusz-materka-738372242/"
       className="icon"
       onClick={() => sendEvent("Social Links", "Click", "Linkedin")}
+      aria-label="My linkedin"
     >
       <BsLinkedin />
     </a>
