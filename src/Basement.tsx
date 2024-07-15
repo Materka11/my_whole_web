@@ -8,6 +8,7 @@ import { useLoader } from "@react-three/fiber";
 import { Howl } from "howler";
 import { useNavigate } from "react-router-dom";
 import { sendEvent } from "./helpers/sendEvent";
+import { DRACOLoader } from "three/examples/jsm/loaders/DRACOLoader";
 
 type GLTFResult = GLTF & {
   nodes: {
@@ -96,8 +97,15 @@ interface GLTFAction extends THREE.AnimationClip {
 
 export function Basement(props: JSX.IntrinsicElements["group"]) {
   const group = useRef<THREE.Group>(null);
+  const dracoLoader = new DRACOLoader();
+  dracoLoader.setDecoderPath("/path/to/draco/");
   const { nodes, materials, animations, scene } = useGLTF(
-    "/myProjectWebHologramDecimate-processed.glb"
+    "/myProjectWebHologramDecimate-processed.glb",
+    false,
+    false,
+    (loader) => {
+      loader.setDRACOLoader(dracoLoader);
+    }
   ) as GLTFResult;
   const { actions } = useAnimations(animations, group);
   const pageImg = useLoader(THREE.TextureLoader, page);
@@ -692,5 +700,7 @@ export function Basement(props: JSX.IntrinsicElements["group"]) {
     </group>
   );
 }
+
+useGLTF.preload("/myProjectWebHologramDecimate-processed.glb");
 
 export default Basement;
