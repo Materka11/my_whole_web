@@ -28,7 +28,7 @@ export const COMMERCIAL_EXPERIENCE = [
     nameComapany: "ART-Tech Solutions",
     positionJob: "Frontend Developer",
     startJob: "JUNE 2023",
-    endJob: "PRESENT",
+    endJob: "AUGUST 2024",
     description:
       "Creating several portals for the Alivi Foundation in Next.js and React",
     responsibilities: [
