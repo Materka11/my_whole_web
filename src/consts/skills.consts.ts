@@ -4,6 +4,8 @@ export const skills = [
   "Next.js +13",
   "TypeScript",
   "JavaScript",
+  "C#",
+  ".NET",
   "Node.js",
   "Express.js",
   "MongoDB",
@@ -24,4 +26,5 @@ export const skills = [
   "Vite",
   "Webpack",
   "Netlify",
+  "Firebase",
 ];
