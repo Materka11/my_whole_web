@@ -27,4 +27,5 @@ export const skills = [
   "Webpack",
   "Netlify",
   "Firebase",
+  "REST",
 ];
