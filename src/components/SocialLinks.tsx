@@ -21,7 +21,7 @@ export const SocialLinks = () => (
       <BsFacebook />
     </a>
     <a
-      href="https://www.instagram.com/materka_144/"
+      href="https://www.instagram.com/soldier_wikary/"
       className="icon"
       onClick={() => sendEvent("Social Links", "Click", "Instagram")}
       aria-label="My instagram"
