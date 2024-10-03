@@ -28,4 +28,5 @@ export const skills = [
   "Netlify",
   "Firebase",
   "REST",
+  "GraphQL",
 ];
