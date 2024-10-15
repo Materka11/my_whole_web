@@ -1,6 +1,7 @@
 import { BsGithub, BsInstagram, BsFacebook, BsLinkedin } from "react-icons/bs";
 import "../styles/mobile/menu.css";
 import { sendEvent } from "../helpers/sendEvent";
+import { IoLogoGitlab } from "react-icons/io5";
 
 export const SocialLinks = () => (
   <div className="icons">
@@ -11,6 +12,14 @@ export const SocialLinks = () => (
       aria-label="My github"
     >
       <BsGithub />
+    </a>
+    <a
+      href="https://gitlab.com/materka111"
+      className="icon"
+      onClick={() => sendEvent("Social Links", "Click", "GitLab")}
+      aria-label="My gitlab"
+    >
+      <IoLogoGitlab />
     </a>
     <a
       href="https://www.facebook.com/arkadiusz.materka"
