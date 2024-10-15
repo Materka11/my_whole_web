@@ -75,4 +75,20 @@ export const works: WorkType[] = [
     isCodeOrWork: "work",
     link: "https://moja.alivia.org.pl/",
   },
+  {
+    id: 9,
+    title: "Drinks UPC API",
+    description: "RESTful API that manages drink-related information",
+    date: "October 2024",
+    isCodeOrWork: "code",
+    link: "https://github.com/Materka11/drinks_UPC_api",
+  },
+  {
+    id: 10,
+    title: "Memory Game",
+    description: "Memory game writing in React and Zustand",
+    date: "October 2024",
+    isCodeOrWork: "code",
+    link: "https://gitlab.com/materka111/memory-game",
+  },
 ];
