@@ -32,5 +32,3 @@ npm install
 npm start
 ```
 5. Visit http://localhost:3000 in your browser to explore the site locally.
-## License
-This project is open-source and available under the MIT License.
