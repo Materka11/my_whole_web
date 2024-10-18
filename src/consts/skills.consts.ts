@@ -36,4 +36,6 @@ export const skills = [
   "REST",
   "GraphQL",
   "Swagger",
+  "SCRUM",
+  "Agile",
 ];
