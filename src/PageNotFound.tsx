@@ -1,5 +1,5 @@
 import styles from "./styles/mobile/pageNotFound.module.scss";
-import { BsArrowRight } from "react-icons/bs";
+// import { BsArrowRight } from "react-icons/bs";
 import { Link } from "react-router-dom";
 
 const PageNotFound = () => {
@@ -11,10 +11,10 @@ const PageNotFound = () => {
       </div>
       <Link to="/main">
         <span>Go to Home</span>
-        <BsArrowRight className={styles.icon} />
+        {/* <BsArrowRight className={styles.icon} /> */}
         <div className={styles.btnDynamic}>
           <span>Go to Home</span>
-          <BsArrowRight className={styles.icon} />
+          {/* <BsArrowRight className={styles.icon} /> */}
         </div>
       </Link>
     </div>

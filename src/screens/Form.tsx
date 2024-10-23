@@ -1,9 +1,9 @@
-import '../styles/mobile/form.css';
-import '../styles/desktop/form.css';
-import { BsArrowRight } from 'react-icons/bs';
+import "../styles/mobile/form.css";
+import "../styles/desktop/form.css";
+// import { BsArrowRight } from 'react-icons/bs';
 // import { useForm } from '../hooks/useForm';
-import { useHasScrolled } from '../hooks/useHasScrolled';
-import { useScrollTrigger } from '../hooks/useScrollTrigger';
+import { useHasScrolled } from "../hooks/useHasScrolled";
+import { useScrollTrigger } from "../hooks/useScrollTrigger";
 
 export const Form = () => {
   const scrollContact = useHasScrolled(844);
@@ -86,10 +86,10 @@ export const Form = () => {
 
         <button type="submit">
           <span>SEND MESSAGE</span>
-          <BsArrowRight className="icon" />
+          {/* <BsArrowRight className="icon" /> */}
           <div className="btnDynamic">
             <span>SEND MESSAGE</span>
-            <BsArrowRight className="icon" />
+            {/* <BsArrowRight className="icon" /> */}
           </div>
         </button>
       </form>

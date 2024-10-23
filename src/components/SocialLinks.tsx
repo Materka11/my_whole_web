@@ -1,7 +1,7 @@
-import { BsGithub, BsInstagram, BsFacebook, BsLinkedin } from "react-icons/bs";
+// import { BsGithub, BsInstagram, BsFacebook, BsLinkedin } from "react-icons/bs";
 import "../styles/mobile/menu.css";
 import { sendEvent } from "../helpers/sendEvent";
-import { IoLogoGitlab } from "react-icons/io5";
+// import { IoLogoGitlab } from "react-icons/io5";
 
 export const SocialLinks = () => (
   <div className="icons">
@@ -11,7 +11,7 @@ export const SocialLinks = () => (
       onClick={() => sendEvent("Social Links", "Click", "Github")}
       aria-label="My github"
     >
-      <BsGithub />
+      {/* <BsGithub /> */}
     </a>
     <a
       href="https://gitlab.com/materka111"
@@ -19,7 +19,7 @@ export const SocialLinks = () => (
       onClick={() => sendEvent("Social Links", "Click", "GitLab")}
       aria-label="My gitlab"
     >
-      <IoLogoGitlab />
+      {/* <IoLogoGitlab /> */}
     </a>
     <a
       href="https://www.facebook.com/arkadiusz.materka"
@@ -27,7 +27,7 @@ export const SocialLinks = () => (
       onClick={() => sendEvent("Social Links", "Click", "Facebook")}
       aria-label="My facebook"
     >
-      <BsFacebook />
+      {/* <BsFacebook /> */}
     </a>
     <a
       href="https://www.instagram.com/soldier_wikary/"
@@ -35,7 +35,7 @@ export const SocialLinks = () => (
       onClick={() => sendEvent("Social Links", "Click", "Instagram")}
       aria-label="My instagram"
     >
-      <BsInstagram />
+      {/* <BsInstagram /> */}
     </a>
     <a
       href="https://www.linkedin.com/in/arkadiusz-materka-738372242/"
@@ -43,7 +43,7 @@ export const SocialLinks = () => (
       onClick={() => sendEvent("Social Links", "Click", "Linkedin")}
       aria-label="My linkedin"
     >
-      <BsLinkedin />
+      {/* <BsLinkedin /> */}
     </a>
   </div>
 );

@@ -1,7 +1,7 @@
 import "../styles/mobile/work.css";
 import "../styles/desktop/work.css";
 import { WorkContainer } from "../components/WorkContainer";
-import { IoArrowUndoSharp, IoArrowRedoSharp } from "react-icons/io5";
+// import { IoArrowUndoSharp, IoArrowRedoSharp } from "react-icons/io5";
 import { works } from "../consts/works.consts";
 import { useEffect, useState } from "react";
 
@@ -75,7 +75,7 @@ export const Work = () => {
         onClick={handleClickInActiveContainer}
         aria-label="Back"
       >
-        <IoArrowRedoSharp className="icon" />
+        {/* <IoArrowRedoSharp className="icon" /> */}
       </button>
       <div className="containerOuter">
         {worksData.map(
@@ -98,7 +98,7 @@ export const Work = () => {
         onClick={handleClickActiveContainer}
         aria-label="Forward"
       >
-        <IoArrowUndoSharp className="icon" />
+        {/* <IoArrowUndoSharp className="icon" /> */}
       </button>
     </div>
   );

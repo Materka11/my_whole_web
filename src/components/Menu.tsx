@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { MobileMenu } from "./MobileMenu";
 import logoMenu from "../assets/img/logoMenu.png";
 import logo from "../assets/img/logo.png";
-import { FiMessageCircle } from "react-icons/fi";
+// import { FiMessageCircle } from "react-icons/fi";
 import { useHasScrolled } from "../hooks/useHasScrolled";
 import { sendEvent } from "../helpers/sendEvent";
 
@@ -75,7 +75,7 @@ export const Menu = ({ setClassNoScroll, scrollToComponent }: MenuType) => {
           <span className="spanLink">CLOSE</span>
           <span className="spanLink menuSpan">MENU</span>
         </span>
-        <FiMessageCircle className="icon" />
+        {/* <FiMessageCircle className="icon" /> */}
         <a
           href="mailto:arekmaterka11@gmail.com?subject=Hi Arek, I'd like to say hello"
           onClick={() => sendEvent("Email", "Click", "SAY HELLO")}

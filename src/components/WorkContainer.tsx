@@ -1,6 +1,6 @@
 import "../styles/mobile/workContainer.css";
 import "../styles/desktop/workContainer.css";
-import { BsArrowRight } from "react-icons/bs";
+// import { BsArrowRight } from "react-icons/bs";
 import { useHasScrolled } from "../hooks/useHasScrolled";
 import { useScrollTrigger } from "../hooks/useScrollTrigger";
 import { useEffect, useState } from "react";
@@ -84,10 +84,10 @@ export const WorkContainer = ({
         onClick={() => sendEvent("Works", "Click", title)}
       >
         <span>SEE MY {isCodeOrWork}</span>
-        <BsArrowRight className="icon" />
+        {/* <BsArrowRight className="icon" /> */}
         <div className="btnDynamic">
           <span>SEE MY {isCodeOrWork}</span>
-          <BsArrowRight className="icon" />
+          {/* <BsArrowRight className="icon" /> */}
         </div>
       </a>
     </div>
