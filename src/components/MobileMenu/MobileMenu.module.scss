@@ -1,0 +1,59 @@
+@use "../../styles/variables" as v;
+
+.menu {
+  width: 100vw;
+  height: calc(100vh - 100px);
+  overflow: hidden;
+  background-color: v.$white;
+  position: fixed;
+  top: -1100px;
+  bottom: 0;
+  transition: transform 0.5s ease-in-out;
+  z-index: 3;
+}
+
+.inactive {
+  opacity: 0;
+  transform: translate(0, -1100px);
+
+  .socialLink {
+    transform: translate(400px) !important;
+  }
+
+  .link {
+    transform: translate(-300px);
+  }
+}
+
+.active {
+  opacity: 1;
+  transform: translate(0, 1200px);
+
+  .socialLink {
+    transform: translate(-400px) !important;
+  }
+
+  .link {
+    transform: translate(300px);
+  }
+}
+
+.socialLink {
+  width: 100vw;
+  height: 50px;
+  position: relative;
+  left: 400px;
+  transition: transform 0.75s 0.1s ease-in-out;
+
+  hr {
+    width: 20vw;
+    border-width: 2px;
+    background-color: v.$primary-purple;
+    border-color: v.$primary-purple;
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    margin: 0;
+    left: 25px;
+  }
+}

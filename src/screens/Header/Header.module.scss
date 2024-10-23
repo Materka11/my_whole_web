@@ -1,0 +1,7 @@
+@use "../../styles/variables" as v;
+
+.header {
+  height: 100vh;
+  background-color: v.$primary-purple;
+  position: relative;
+}
