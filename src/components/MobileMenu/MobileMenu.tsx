@@ -2,6 +2,7 @@ import { SocialLinks } from "../SocialLinks/SocialLinks";
 import { iOS } from "../../helpers/ios";
 import { sendEvent } from "../../helpers/sendEvent";
 import styles from "./MobileMenu.module.scss";
+import { Category, CATEGORY } from "../../consts/category.consts";
 
 interface MobileMenuType {
   isActiveMobileMenu: boolean;
@@ -25,24 +26,21 @@ export const MobileMenu = ({
     handleClickMenu();
   };
 
-  const handleClickHome = () => {
-    handleClickMenu();
-    sendEvent("Forwarding", "Click", "Home");
-  };
-
-  const handleClickAboutMe = () => {
-    handleClickLink(1, aboutMeShift);
-    sendEvent("Forwarding", "Click", "About me");
-  };
-
-  const handleClickWork = () => {
-    handleClickLink(2, workShift);
-    sendEvent("Forwarding", "Click", "Work");
-  };
-
-  const handleClickContact = () => {
-    handleClickLink(3, contactShift);
-    sendEvent("Forwarding", "Click", "Contact");
+  const handleClickCategory = (category: Category) => {
+    switch (category) {
+      case Category.About:
+        handleClickLink(1, aboutMeShift);
+        sendEvent("Forwarding", "Click", "About me");
+        break;
+      case Category.Portfolio:
+        handleClickLink(2, workShift);
+        sendEvent("Forwarding", "Click", "Work");
+        break;
+      case Category.Contact:
+        handleClickLink(3, contactShift);
+        sendEvent("Forwarding", "Click", "Contact");
+        break;
+    }
   };
 
   return (
@@ -55,12 +53,14 @@ export const MobileMenu = ({
         <hr />
         <SocialLinks />
       </div>
-      {/*  <div className="link">
-        <button onClick={handleClickHome}>HOME</button>
-        <button onClick={handleClickAboutMe}>ABOUT ME</button>
-        <button onClick={handleClickWork}>WORK</button>
-        <button onClick={handleClickContact}>CONTACT</button>
-      </div> */}
+
+      <div className={styles.link}>
+        {CATEGORY.map((name) => (
+          <button onClick={() => handleClickCategory(Category[name])}>
+            {name}
+          </button>
+        ))}
+      </div>
     </div>
   );
 };
