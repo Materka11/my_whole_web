@@ -1,0 +1,124 @@
+@use "../../styles/variables.scss" as v;
+@import "../../styles/mixins";
+
+.nav {
+  height: 100px;
+  position: fixed;
+  width: 100%;
+  z-index: 9999;
+  background: linear-gradient(
+    180deg,
+    v.$primary-purple 85%,
+    hsla(0, 0%, 100%, 0)
+  );
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+
+  span,
+  a {
+    color: v.$primary-green;
+    font-weight: bold;
+    font-size: 0.75rem;
+
+    @include xxl {
+      color: v.$primary-purple;
+    }
+  }
+}
+
+.containerMenu {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  height: 40px;
+  width: 80px;
+}
+
+.space {
+  transform: rotate(90deg);
+  background-color: v.$primary-green;
+  width: 35px;
+  height: 1px;
+  border-color: v.$primary-green;
+}
+
+.spanMenu {
+  width: 65px;
+  height: 15px;
+  overflow: hidden;
+
+  &:hover * {
+    letter-spacing: 6px;
+  }
+
+  span {
+    display: inline-block;
+    transform: translateY(-35px);
+    height: 15px;
+    transition: all 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.3);
+    cursor: pointer;
+  }
+
+  .menuSpan {
+    padding: 1.25rem 0;
+  }
+}
+
+.hello {
+  display: flex;
+  justify-items: center;
+  gap: 1rem;
+
+  @include xxl {
+    transition: letter-spacing 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.3);
+
+    &:hover {
+      letter-spacing: 1px;
+    }
+  }
+}
+
+.label {
+  display: none;
+
+  @include xxl {
+    display: block;
+  }
+}
+
+.icon {
+  @include xxl {
+    display: none;
+  }
+}
+
+.navMenu {
+  background: none;
+  background-color: v.$white;
+  transition: all 0.25s ease-in-out;
+
+  hr {
+    background-color: v.$primary-purple;
+    border-color: v.$primary-purple;
+  }
+
+  span,
+  a {
+    color: v.$primary-purple;
+  }
+  .spanMenu {
+    span {
+      transform: none;
+    }
+  }
+}
+
+.white {
+  @include xxl {
+    height: 0;
+    color: v.$primary-purple;
+  }
+}

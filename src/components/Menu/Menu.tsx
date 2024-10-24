@@ -2,20 +2,28 @@ import { useState, useEffect, Dispatch, SetStateAction } from "react";
 import { MobileMenu } from "../MobileMenu/MobileMenu";
 import logoMenu from "../../assets/img/logoMenu.png";
 import logo from "../../assets/img/logo.png";
-import { FiMessageCircle } from "react-icons/fi";
 import { useHasScrolled } from "../../hooks/useHasScrolled";
 import { sendEvent } from "../../helpers/sendEvent";
+import styles from "./Menu.module.scss";
+import { MessageIcon } from "../../assets/icons/icons";
 
-interface MenuType {
+enum ClassNav {
+  white = "white",
+  navMenu = "navMenu",
+}
+
+type ClassNavType = keyof typeof styles;
+
+interface Props {
   setClassNoScroll: Dispatch<SetStateAction<string>>;
   scrollToComponent: (vh: number, px?: number) => void;
 }
 
-export const Menu = ({ setClassNoScroll, scrollToComponent }: MenuType) => {
-  const [isActiveMobileMenu, setIsActiveMobileMenu] = useState(true);
+export const Menu = ({ setClassNoScroll, scrollToComponent }: Props) => {
+  const [isActiveMobileMenu, setIsActiveMobileMenu] = useState(false);
   const [isToggledMenu, setIsToggledMenu] = useState(false);
   const [switchLogo, setSwitchLogo] = useState(logo);
-  const [classNav, setClassNav] = useState("");
+  const [classNav, setClassNav] = useState<ClassNavType | "">("");
 
   const POINT_OF_HEADER = 294;
   const POINT_OF_ABOUT_ME = 784;
@@ -31,7 +39,7 @@ export const Menu = ({ setClassNoScroll, scrollToComponent }: MenuType) => {
     if (innerWidth >= 1440) {
       if (scrollHeaderNav) {
         setSwitchLogo(logoMenu);
-        setClassNav("white");
+        setClassNav(ClassNav.white);
       } else if (!scrollHeaderNav) {
         setSwitchLogo(logo);
         setClassNav("");
@@ -44,7 +52,7 @@ export const Menu = ({ setClassNoScroll, scrollToComponent }: MenuType) => {
 
       if (scrollWorkNav) {
         setSwitchLogo(logoMenu);
-        setClassNav("white");
+        setClassNav(ClassNav.white);
       }
     }
     //eslint-disable-next-line
@@ -56,7 +64,7 @@ export const Menu = ({ setClassNoScroll, scrollToComponent }: MenuType) => {
       setIsToggledMenu(true);
       setClassNoScroll("noScroll");
       setSwitchLogo(logoMenu);
-      setClassNav("navMenu");
+      setClassNav(ClassNav.navMenu);
     } else {
       setIsActiveMobileMenu(false);
       setIsToggledMenu(false);
@@ -68,22 +76,32 @@ export const Menu = ({ setClassNoScroll, scrollToComponent }: MenuType) => {
 
   return (
     <>
-      {/* <nav className={classNav}>
-        <img src={switchLogo} alt="logo" />
-        <hr />
-        <span className="spanMenu" onClick={handleClickMenu}>
-          <span className="spanLink">CLOSE</span>
-          <span className="spanLink menuSpan">MENU</span>
-        </span>
-        <FiMessageCircle className="icon" />
+      <nav className={`${styles[classNav]} ${styles.nav}`}>
+        <div className={styles.containerMenu}>
+          <img className={styles.logo} src={switchLogo} alt="logo" />
+          <span>
+            <hr className={styles.space} />
+          </span>
+          <span className={styles.spanMenu} onClick={handleClickMenu}>
+            <span>CLOSE</span>
+            <span className={styles.menuSpan}>MENU</span>
+          </span>
+        </div>
         <a
           href="mailto:arekmaterka11@gmail.com?subject=Hi Arek, I'd like to say hello"
           onClick={() => sendEvent("Email", "Click", "SAY HELLO")}
+          className={styles.hello}
+          aria-label="Message"
         >
-          SAY HELLO
+          <MessageIcon
+            width={25}
+            styles={styles.icon}
+            stroke={ClassNav.navMenu === classNav ? "#000" : "#fff"}
+          />
+          <span className={styles.label}>SAY HELLO</span>
         </a>
       </nav>
-      */}
+
       <MobileMenu
         isActiveMobileMenu={isActiveMobileMenu}
         handleClickMenu={handleClickMenu}
