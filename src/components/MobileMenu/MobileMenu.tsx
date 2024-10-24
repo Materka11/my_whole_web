@@ -56,7 +56,10 @@ export const MobileMenu = ({
 
       <div className={styles.link}>
         {CATEGORY.map((name) => (
-          <button onClick={() => handleClickCategory(Category[name])}>
+          <button
+            key={name}
+            onClick={() => handleClickCategory(Category[name])}
+          >
             {name}
           </button>
         ))}
