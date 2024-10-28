@@ -20,10 +20,6 @@
     color: v.$primary-green;
     font-weight: bold;
     font-size: 0.75rem;
-
-    @include xxl {
-      color: v.$primary-purple;
-    }
   }
 }
 
@@ -71,6 +67,7 @@
   display: flex;
   justify-items: center;
   gap: 1rem;
+  width: 5rem;
 
   @include xxl {
     transition: letter-spacing 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.3);

@@ -76,7 +76,9 @@ export const Menu = ({ setClassNoScroll, scrollToComponent }: Props) => {
 
   return (
     <>
-      <nav className={`${styles[classNav]} ${styles.nav}`}>
+      <nav
+        className={`${styles[classNav] ? styles[classNav] : ""} ${styles.nav}`}
+      >
         <div className={styles.containerMenu}>
           <img className={styles.logo} src={switchLogo} alt="logo" />
           <span>
