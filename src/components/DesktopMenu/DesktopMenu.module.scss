@@ -1,0 +1,20 @@
+@use "../../styles/variables.scss" as v;
+
+.desktopMenu {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  gap: 1.5rem;
+
+  button {
+    background-color: transparent;
+    border: none;
+    color: v.$primary-green;
+    font-size: 1rem;
+    text-align: right;
+    width: 100%;
+    cursor: pointer;
+    transition: all 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.3);
+    font-weight: bold;
+  }
+}
