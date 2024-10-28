@@ -1,13 +1,13 @@
 import { ReactNode } from "react";
 import { sendEvent } from "../../helpers/sendEvent";
 
-interface Props {
+interface IProps {
   children: ReactNode;
   href: string;
   label: string;
 }
 
-export const SocialLink = ({ children, href, label }: Props) => {
+export const SocialLink = ({ children, href, label }: IProps) => {
   return (
     <a
       href={href}

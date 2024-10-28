@@ -4,7 +4,7 @@ import { sendEvent } from "../../helpers/sendEvent";
 import styles from "./MobileMenu.module.scss";
 import { Category, CATEGORY } from "../../consts/category.consts";
 
-interface MobileMenuType {
+interface IProps {
   isActiveMobileMenu: boolean;
   handleClickMenu: () => void;
   scrollToComponent: (vh: number, px?: number) => void;
@@ -14,7 +14,7 @@ export const MobileMenu = ({
   isActiveMobileMenu,
   handleClickMenu,
   scrollToComponent,
-}: MobileMenuType) => {
+}: IProps) => {
   const isIOS = iOS();
 
   const aboutMeShift = isIOS ? -10 : -100;
