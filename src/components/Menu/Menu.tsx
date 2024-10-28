@@ -1,27 +1,25 @@
 import { useState, useEffect, Dispatch, SetStateAction } from "react";
-import { MobileMenu } from "../MobileMenu/MobileMenu";
 import logoMenu from "../../assets/img/logoMenu.png";
 import logo from "../../assets/img/logo.png";
 import { useHasScrolled } from "../../hooks/useHasScrolled";
-import { sendEvent } from "../../helpers/sendEvent";
 import styles from "./Menu.module.scss";
-import { MessageIcon } from "../../assets/icons/icons";
+import { ContainerLogoMenu } from "../ContainerLogoMenu/ContainerLogoMenu";
+import { HelloMessage } from "../HelloMessage/HelloMessage";
+import { DesktopMenu } from "../DesktopMenu/DesktopMenu";
 
-enum ClassNav {
+export enum ClassNav {
   white = "white",
   navMenu = "navMenu",
 }
 
 type ClassNavType = keyof typeof styles;
 
-interface Props {
+interface IProps {
   setClassNoScroll: Dispatch<SetStateAction<string>>;
   scrollToComponent: (vh: number, px?: number) => void;
 }
 
-export const Menu = ({ setClassNoScroll, scrollToComponent }: Props) => {
-  const [isActiveMobileMenu, setIsActiveMobileMenu] = useState(false);
-  const [isToggledMenu, setIsToggledMenu] = useState(false);
+export const Menu = ({ setClassNoScroll, scrollToComponent }: IProps) => {
   const [switchLogo, setSwitchLogo] = useState(logo);
   const [classNav, setClassNav] = useState<ClassNavType | "">("");
 
@@ -58,57 +56,21 @@ export const Menu = ({ setClassNoScroll, scrollToComponent }: Props) => {
     //eslint-disable-next-line
   }, [document.documentElement.scrollTop]);
 
-  const handleClickMenu = () => {
-    if (!isToggledMenu) {
-      setIsActiveMobileMenu(true);
-      setIsToggledMenu(true);
-      setClassNoScroll("noScroll");
-      setSwitchLogo(logoMenu);
-      setClassNav(ClassNav.navMenu);
-    } else {
-      setIsActiveMobileMenu(false);
-      setIsToggledMenu(false);
-      setClassNoScroll("");
-      setSwitchLogo(logo);
-      setClassNav("");
-    }
-  };
-
   return (
     <>
       <nav
         className={`${styles[classNav] ? styles[classNav] : ""} ${styles.nav}`}
       >
-        <div className={styles.containerMenu}>
-          <img className={styles.logo} src={switchLogo} alt="logo" />
-          <span>
-            <hr className={styles.space} />
-          </span>
-          <span className={styles.spanMenu} onClick={handleClickMenu}>
-            <span>CLOSE</span>
-            <span className={styles.menuSpan}>MENU</span>
-          </span>
-        </div>
-        <a
-          href="mailto:arekmaterka11@gmail.com?subject=Hi Arek, I'd like to say hello"
-          onClick={() => sendEvent("Email", "Click", "SAY HELLO")}
-          className={styles.hello}
-          aria-label="Message"
-        >
-          <MessageIcon
-            width={25}
-            styles={styles.icon}
-            stroke={ClassNav.navMenu === classNav ? "#000" : "#fff"}
-          />
-          <span className={styles.label}>SAY HELLO</span>
-        </a>
+        <ContainerLogoMenu
+          switchLogo={switchLogo}
+          scrollToComponent={scrollToComponent}
+          setClassNav={setClassNav}
+          setClassNoScroll={setClassNoScroll}
+          setSwitchLogo={setSwitchLogo}
+        />
+        <DesktopMenu scrollToComponent={scrollToComponent} />
+        <HelloMessage classNav={classNav} />
       </nav>
-
-      <MobileMenu
-        isActiveMobileMenu={isActiveMobileMenu}
-        handleClickMenu={handleClickMenu}
-        scrollToComponent={scrollToComponent}
-      />
     </>
   );
 };
