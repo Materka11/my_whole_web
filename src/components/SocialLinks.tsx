@@ -1,4 +1,10 @@
-import { BsGithub, BsInstagram, BsFacebook, BsLinkedin } from "react-icons/bs";
+import {
+  BsGithub,
+  BsInstagram,
+  BsFacebook,
+  BsLinkedin,
+  BsYoutube,
+} from "react-icons/bs";
 import "../styles/mobile/menu.css";
 import { sendEvent } from "../helpers/sendEvent";
 import { IoLogoGitlab } from "react-icons/io5";
@@ -44,6 +50,14 @@ export const SocialLinks = () => (
       aria-label="My linkedin"
     >
       <BsLinkedin />
+    </a>
+    <a
+      href="https://www.youtube.com/@arek_dev"
+      className="icon"
+      onClick={() => sendEvent("Social Links", "Click", "YouTube")}
+      aria-label="My YouTube"
+    >
+      <BsYoutube />
     </a>
   </div>
 );
