@@ -10,6 +10,7 @@ export const skills = [
   "Entity Framework Core",
   "Node.js",
   "Express.js",
+  "Sitecore",
   "MongoDB",
   "Postgresql",
   "Microsoft SQL Server",

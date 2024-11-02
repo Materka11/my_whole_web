@@ -33,7 +33,8 @@ const ContainersInfo = () => (
         Next.js and React technology for the Moja Alivia portal. My primary goal
         was to enhance the SEO of the projects. After few months I completed the
         Moja Alivia portal and I'm starting a project as a fullstack developer
-        where I will be creating a website for company reviews.
+        where I will be creating a website for company reviews and I'm part of a
+        team that creates websites for airports using Sitecore.
       </p>
     </ContainerInfo>
     <ContainerInfo title="Tech Stack" classContainer="skill">
