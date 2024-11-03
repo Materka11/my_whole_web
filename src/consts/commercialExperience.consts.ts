@@ -78,4 +78,16 @@ export const COMMERCIAL_EXPERIENCE = [
       "Figma",
     ],
   },
+  {
+    id: 4,
+    nameComapany: "Kartel Media",
+    positionJob: "Frontend Developer",
+    startJob: "OCTOBER 2024",
+    endJob: "PRESENT",
+    description: "Creating websites for airports with sitecore",
+    responsibilities: [
+      "Creating components in Next.js and integrate with sitecore",
+    ],
+    technologies: ["Next.js", "TypeScript", "Sitecore", "Tailwind", "Jira"],
+  },
 ];
