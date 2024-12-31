@@ -91,4 +91,12 @@ export const works: WorkType[] = [
     isCodeOrWork: "code",
     link: "https://gitlab.com/materka111/memory-game",
   },
+  {
+    id: 11,
+    title: "King Abdulaziz International Airport",
+    description: "Website for airport done with Next.js and Sitecore",
+    date: "January 2025",
+    isCodeOrWork: "work",
+    link: "https://www.kaia.sa/",
+  },
 ];
