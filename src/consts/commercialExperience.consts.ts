@@ -57,7 +57,7 @@ export const COMMERCIAL_EXPERIENCE = [
     nameComapany: "Freelancer",
     positionJob: "Fullstack Developer",
     startJob: "FEBRUARY 2024",
-    endJob: "PRESENT",
+    endJob: "JANUARY 2025",
     description:
       "Creating website about rating companies in Next.js and Node.js",
     responsibilities: [
@@ -86,8 +86,19 @@ export const COMMERCIAL_EXPERIENCE = [
     endJob: "PRESENT",
     description: "Creating websites for airports with sitecore",
     responsibilities: [
-      "Creating components in Next.js and integrate with sitecore",
+      "Creating components in Next.js",
+      "Integrate with Sitecore",
+      "Style Components with Tailwind",
+      "Manage Tasks with Jira",
+      "Meetings daily and with clients",
     ],
-    technologies: ["Next.js", "TypeScript", "Sitecore", "Tailwind", "Jira"],
+    technologies: [
+      "Next.js",
+      "TypeScript",
+      "Sitecore",
+      "Tailwind",
+      "Jira",
+      "Teams",
+    ],
   },
 ];
