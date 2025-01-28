@@ -12,7 +12,7 @@ export enum ClassNav {
   navMenu = "navMenu",
 }
 
-type ClassNavType = keyof typeof styles;
+export type ClassNavType = keyof typeof styles;
 
 interface IProps {
   setClassNoScroll: Dispatch<SetStateAction<string>>;
@@ -68,7 +68,10 @@ export const Menu = ({ setClassNoScroll, scrollToComponent }: IProps) => {
           setClassNoScroll={setClassNoScroll}
           setSwitchLogo={setSwitchLogo}
         />
-        <DesktopMenu scrollToComponent={scrollToComponent} />
+        <DesktopMenu
+          scrollToComponent={scrollToComponent}
+          classNav={classNav}
+        />
         <HelloMessage classNav={classNav} />
       </nav>
     </>

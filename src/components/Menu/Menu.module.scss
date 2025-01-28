@@ -46,7 +46,12 @@
 
 .white {
   @include xxl {
-    height: 0;
     color: v.$primary-purple;
+    background: linear-gradient(180deg, v.$white 85%, hsla(0, 0%, 100%, 0));
+
+    span,
+    a {
+      color: v.$primary-purple;
+    }
   }
 }
