@@ -6,6 +6,7 @@ import styles from "./Menu.module.scss";
 import { ContainerLogoMenu } from "../ContainerLogoMenu/ContainerLogoMenu";
 import { HelloMessage } from "../HelloMessage/HelloMessage";
 import { DesktopMenu } from "../DesktopMenu/DesktopMenu";
+import { Category } from "../../consts/category.consts";
 
 export enum ClassNav {
   white = "white",
@@ -22,6 +23,7 @@ interface IProps {
 export const Menu = ({ setClassNoScroll, scrollToComponent }: IProps) => {
   const [switchLogo, setSwitchLogo] = useState(logo);
   const [classNav, setClassNav] = useState<ClassNavType | "">("");
+  const [activeButton, setActiveButton] = useState(Category.About);
 
   const POINT_OF_HEADER = 294;
   const POINT_OF_ABOUT_ME = 784;
@@ -41,16 +43,19 @@ export const Menu = ({ setClassNoScroll, scrollToComponent }: IProps) => {
       } else if (!scrollHeaderNav) {
         setSwitchLogo(logo);
         setClassNav("");
+        setActiveButton(Category.About);
       }
 
       if (scrollAboutMeNav) {
         setSwitchLogo(logo);
         setClassNav("");
+        setActiveButton(Category.Portfolio);
       }
 
       if (scrollWorkNav) {
         setSwitchLogo(logoMenu);
         setClassNav(ClassNav.white);
+        setActiveButton(Category.Contact);
       }
     }
     //eslint-disable-next-line
@@ -71,6 +76,7 @@ export const Menu = ({ setClassNoScroll, scrollToComponent }: IProps) => {
         <DesktopMenu
           scrollToComponent={scrollToComponent}
           classNav={classNav}
+          activeButton={activeButton}
         />
         <HelloMessage classNav={classNav} />
       </nav>
