@@ -2,7 +2,7 @@ import { Dispatch, SetStateAction } from "react";
 import styles from "./Header.module.scss";
 import background from "../../assets/img/Component 12 – 1@2x2.png";
 import { Menu } from "../../components/Menu/Menu";
-import { Bust } from "../../components/Bust";
+import { Bust } from "../../components/Bust/Bust";
 import { DesktopMenu } from "../../components/DesktopMenu";
 
 interface Props {
@@ -27,7 +27,8 @@ export const Header = ({ setClassNoScroll }: Props) => {
         setClassNoScroll={setClassNoScroll}
         scrollToComponent={scrollToComponent}
       />
-      {/*<Bust />
+      <Bust />
+      {/*
       <div className="background">
         <img src={background} alt="background" />
       </div>
