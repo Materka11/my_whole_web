@@ -1,6 +1,10 @@
 @use "../../styles/variables.scss" as v;
 @import "../../styles/mixins";
 
+$width-bust: 301px;
+$height-bust: 436px;
+$scale-bust: 1.5;
+
 .container {
   position: relative;
   width: 100vw;
@@ -10,25 +14,38 @@
 .bust {
   position: absolute;
   z-index: 2;
-  width: 301px;
-  height: 436px;
+  width: $width-bust;
+  height: $height-bust;
   top: 80px;
   left: 50%;
 
   @include lg {
     top: auto;
     left: auto;
-    right: 15%;
-    bottom: 0;
+    right: 20%;
+    bottom: calc(0px + ($height-bust * ($scale-bust - 1)) / 2);
+    transform: scale($scale-bust);
+    -webkit-transform: scale($scale-bust);
+    -moz-transform: scale($scale-bust);
+    -ms-transform: scale($scale-bust);
+    -o-transform: scale($scale-bust);
   }
 
   .head {
-    width: 301px;
-    height: 436px;
+    width: $width-bust;
+    height: $height-bust;
     position: absolute;
     left: 50%;
     transform: translate(-50%, 0);
     z-index: 2;
+
+    @include lg {
+      transform: scale($scale-bust);
+      -webkit-transform: scale($scale-bust);
+      -moz-transform: scale($scale-bust);
+      -ms-transform: scale($scale-bust);
+      -o-transform: scale($scale-bust);
+    }
 
     div {
       position: absolute;
