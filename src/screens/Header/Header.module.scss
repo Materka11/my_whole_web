@@ -5,3 +5,9 @@
   background-color: v.$primary-purple;
   position: relative;
 }
+
+.content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
