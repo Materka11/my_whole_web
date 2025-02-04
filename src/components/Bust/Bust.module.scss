@@ -3,7 +3,8 @@
 
 $width-bust: 301px;
 $height-bust: 436px;
-$scale-bust: 1.5;
+$scale-bust-lg: 1.4;
+$scale-bust-xxxl: 2;
 
 .container {
   position: relative;
@@ -22,13 +23,22 @@ $scale-bust: 1.5;
   @include lg {
     top: auto;
     left: auto;
-    right: 20%;
-    bottom: calc(0px + ($height-bust * ($scale-bust - 1)) / 2);
-    transform: scale($scale-bust);
-    -webkit-transform: scale($scale-bust);
-    -moz-transform: scale($scale-bust);
-    -ms-transform: scale($scale-bust);
-    -o-transform: scale($scale-bust);
+    right: 40%;
+    bottom: calc(0px + ($height-bust * ($scale-bust-lg - 1)) / 2);
+    transform: scale($scale-bust-lg);
+    -webkit-transform: scale($scale-bust-lg);
+    -moz-transform: scale($scale-bust-lg);
+    -ms-transform: scale($scale-bust-lg);
+    -o-transform: scale($scale-bust-lg);
+  }
+
+  @include xxxl {
+    bottom: calc(0px + ($height-bust * ($scale-bust-xxxl - 1)) / 2);
+    transform: scale($scale-bust-xxxl);
+    -webkit-transform: scale($scale-bust-xxxl);
+    -moz-transform: scale($scale-bust-xxxl);
+    -ms-transform: scale($scale-bust-xxxl);
+    -o-transform: scale($scale-bust-xxxl);
   }
 
   .head {
@@ -40,11 +50,19 @@ $scale-bust: 1.5;
     z-index: 2;
 
     @include lg {
-      transform: scale($scale-bust);
-      -webkit-transform: scale($scale-bust);
-      -moz-transform: scale($scale-bust);
-      -ms-transform: scale($scale-bust);
-      -o-transform: scale($scale-bust);
+      transform: scale($scale-bust-lg);
+      -webkit-transform: scale($scale-bust-lg);
+      -moz-transform: scale($scale-bust-lg);
+      -ms-transform: scale($scale-bust-lg);
+      -o-transform: scale($scale-bust-lg);
+    }
+
+    @include xxxl {
+      transform: scale($scale-bust-xxxl);
+      -webkit-transform: scale($scale-bust-xxxl);
+      -moz-transform: scale($scale-bust-xxxl);
+      -ms-transform: scale($scale-bust-xxxl);
+      -o-transform: scale($scale-bust-xxxl);
     }
 
     div {
