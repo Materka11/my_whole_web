@@ -2,8 +2,8 @@ import { Dispatch, SetStateAction } from "react";
 import styles from "./Header.module.scss";
 import { Menu } from "../../components/Menu/Menu";
 import { Bust } from "../../components/Bust/Bust";
-import { DesktopMenu } from "../../components/DesktopMenu";
 import { Name } from "../../components/Name/Name";
+import { Scroll } from "../../components/Scroll/Scroll";
 
 interface Props {
   setClassNoScroll: Dispatch<SetStateAction<string>>;
@@ -29,12 +29,9 @@ export const Header = ({ setClassNoScroll }: Props) => {
       />
       <section className={styles.content}>
         <Name />
+        <Scroll />
         <Bust />
       </section>
-      {/*
-      <span className="scroll" />
-      <div className="scroll" />
-      <DesktopMenu scrollToComponent={scrollToComponent} /> */}
     </div>
   );
 };

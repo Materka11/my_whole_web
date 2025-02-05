@@ -318,52 +318,6 @@
     }
   }
 
-  span.scroll {
-    color: v.$primary-green;
-    font-size: 0.75rem;
-    letter-spacing: 2.4px;
-    display: block;
-    margin: 10px auto;
-    text-align: center;
-    width: 100px;
-    text-align: center;
-
-    &::before {
-      content: "SCROLL";
-      animation: scroll infinite 15s;
-    }
-  }
-
-  @keyframes scroll {
-    0% {
-      content: "SCROLL";
-    }
-
-    20% {
-      filter: blur(1px);
-      opacity: 0;
-    }
-
-    50% {
-      content: "DOWN";
-      filter: blur(0px);
-      opacity: 1;
-    }
-
-    70% {
-      filter: blur(1px);
-      opacity: 0;
-    }
-  }
-
-  div.scroll {
-    width: 1px;
-    background-color: #a398e9;
-    position: absolute;
-    top: 655px;
-    left: 50%;
-  }
-
   .menuDesktop {
     display: none;
   }
