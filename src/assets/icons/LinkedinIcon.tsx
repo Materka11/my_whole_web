@@ -1,10 +1,11 @@
-interface Props {
+interface IProps {
   width: number;
+  color?: string;
 }
 
-export const LinkedinIcon = ({ width }: Props) => (
+export const LinkedinIcon = ({ width, color = "#000000" }: IProps) => (
   <svg
-    fill="#000000"
+    fill={color}
     width={width}
     version="1.1"
     id="Layer_1"

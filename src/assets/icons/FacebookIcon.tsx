@@ -1,10 +1,11 @@
-interface Props {
+interface IProps {
   width: number;
+  color?: string;
 }
 
-export const FacebookIcon = ({ width }: Props) => (
+export const FacebookIcon = ({ width, color = "#000000" }: IProps) => (
   <svg
-    fill="#000000"
+    fill={color}
     width={width}
     viewBox="0 0 24 24"
     xmlns="http://www.w3.org/2000/svg"
