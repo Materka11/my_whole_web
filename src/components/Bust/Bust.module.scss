@@ -23,7 +23,7 @@ $scale-bust-xxxl: 2;
   @include lg {
     top: auto;
     left: auto;
-    right: 40%;
+    right: 37.5%;
     bottom: calc(0px + ($height-bust * ($scale-bust-lg - 1)) / 2);
     transform: scale($scale-bust-lg);
     -webkit-transform: scale($scale-bust-lg);

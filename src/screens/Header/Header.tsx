@@ -4,6 +4,7 @@ import { Menu } from "../../components/Menu/Menu";
 import { Bust } from "../../components/Bust/Bust";
 import { Name } from "../../components/Name/Name";
 import { Scroll } from "../../components/Scroll/Scroll";
+import { SocialLinks } from "../../components/SocialLinks/SocialLinks";
 
 interface Props {
   setClassNoScroll: Dispatch<SetStateAction<string>>;
@@ -31,6 +32,11 @@ export const Header = ({ setClassNoScroll }: Props) => {
         <Name />
         <Scroll />
         <Bust />
+        <SocialLinks
+          iconsStyles={styles.icons}
+          iconWidth={30}
+          iconColor="#FFFFFF"
+        />
       </section>
     </div>
   );
