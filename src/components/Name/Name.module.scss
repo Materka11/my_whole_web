@@ -14,10 +14,12 @@
 
   @include lg {
     font-size: 4rem;
+    max-width: 520px;
   }
 
   @include xl {
     padding-left: 9rem;
+    max-width: max-content;
   }
 
   @include xxxl {
