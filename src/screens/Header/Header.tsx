@@ -32,11 +32,13 @@ export const Header = ({ setClassNoScroll }: Props) => {
         <Name />
         <Scroll />
         <Bust />
-        <SocialLinks
-          iconsStyles={styles.icons}
-          iconWidth={30}
-          iconColor="#FFFFFF"
-        />
+        <div className={styles.desktopSocial}>
+          <SocialLinks
+            iconsStyles={styles.icons}
+            iconWidth={30}
+            iconColor="#FFFFFF"
+          />
+        </div>
       </section>
     </div>
   );

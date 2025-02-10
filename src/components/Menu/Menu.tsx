@@ -62,24 +62,22 @@ export const Menu = ({ setClassNoScroll, scrollToComponent }: IProps) => {
   }, [document.documentElement.scrollTop]);
 
   return (
-    <>
-      <nav
-        className={`${styles[classNav] ? styles[classNav] : ""} ${styles.nav}`}
-      >
-        <ContainerLogoMenu
-          switchLogo={switchLogo}
-          scrollToComponent={scrollToComponent}
-          setClassNav={setClassNav}
-          setClassNoScroll={setClassNoScroll}
-          setSwitchLogo={setSwitchLogo}
-        />
-        <DesktopMenu
-          scrollToComponent={scrollToComponent}
-          classNav={classNav}
-          activeButton={activeButton}
-        />
-        <HelloMessage classNav={classNav} />
-      </nav>
-    </>
+    <nav
+      className={`${styles[classNav] ? styles[classNav] : ""} ${styles.nav}`}
+    >
+      <ContainerLogoMenu
+        switchLogo={switchLogo}
+        scrollToComponent={scrollToComponent}
+        setClassNav={setClassNav}
+        setClassNoScroll={setClassNoScroll}
+        setSwitchLogo={setSwitchLogo}
+      />
+      <DesktopMenu
+        scrollToComponent={scrollToComponent}
+        classNav={classNav}
+        activeButton={activeButton}
+      />
+      <HelloMessage classNav={classNav} />
+    </nav>
   );
 };

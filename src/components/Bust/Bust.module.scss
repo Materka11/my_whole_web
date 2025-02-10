@@ -3,24 +3,35 @@
 
 $width-bust: 301px;
 $height-bust: 436px;
+$scale-bust: 0.7;
 $scale-bust-lg: 1.4;
 $scale-bust-xxxl: 2;
 
 .container {
   position: relative;
   width: 100%;
-  height: 100vh;
+  height: 65vh;
+
+  @include lg {
+    height: 100vh;
+  }
 }
 
 .bust {
   position: absolute;
   z-index: 2;
-  width: $width-bust;
+  width: fit-content;
   height: $height-bust;
-  top: 80px;
   left: 50%;
+  bottom: calc(0px + ($height-bust * ($scale-bust - 1)) / 2);
+  transform: scale($scale-bust) translateX(-50%);
+  -webkit-transform: scale($scale-bust) translateX(-50%);
+  -moz-transform: scale($scale-bust) translateX(-50%);
+  -ms-transform: scale($scale-bust) translateX(-50%);
+  -o-transform: scale($scale-bust) translateX(-50%);
 
   @include lg {
+    width: $width-bust;
     top: auto;
     left: auto;
     right: 37.5%;

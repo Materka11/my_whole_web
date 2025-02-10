@@ -5,7 +5,7 @@
   display: flex;
   justify-items: center;
   gap: 1rem;
-  width: 5rem;
+  width: fit-content;
 
   @include lg {
     transition: letter-spacing 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.3);

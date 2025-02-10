@@ -8,12 +8,14 @@
   flex-direction: column;
   width: 100%;
   font-weight: bold;
-  padding-left: 5rem;
   gap: 1rem;
   box-sizing: border-box;
+  text-align: center;
 
   @include lg {
+    text-align: left;
     font-size: 4rem;
+    padding-left: 5rem;
     max-width: 520px;
   }
 
