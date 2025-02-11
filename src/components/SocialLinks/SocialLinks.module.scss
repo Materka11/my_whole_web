@@ -1,11 +1,16 @@
 @use "../../styles/variables.scss" as v;
+@import "../../styles/mixins";
 
 .icons {
   display: flex;
-  width: 400px;
+  width: 75%;
   justify-content: space-between;
   align-items: center;
   gap: 0.25rem;
+
+  @include lg {
+    width: 400px;
+  }
 
   hr {
     width: 2px;

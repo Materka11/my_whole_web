@@ -14,7 +14,7 @@ export const SocialLinks = ({
   iconColor,
 }: IProps) => {
   return (
-    <div className={`${styles.icons} ${iconsStyles}`}>
+    <div className={`${styles.icons} ${iconsStyles || ""}`}>
       <hr />
       {SOCIAL_MEDIA.map(({ id, name, href, Icon }) => (
         <SocialLink key={id} label={name} href={href}>
