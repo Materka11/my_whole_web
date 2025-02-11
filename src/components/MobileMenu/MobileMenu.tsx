@@ -50,7 +50,6 @@ export const MobileMenu = ({
       }`}
     >
       <div className={styles.socialLink}>
-        <hr />
         <SocialLinks />
       </div>
 

@@ -1,9 +1,10 @@
 import { Dispatch, SetStateAction } from "react";
 import styles from "./Header.module.scss";
-import background from "../../assets/img/Component 12 – 1@2x2.png";
 import { Menu } from "../../components/Menu/Menu";
-import { Bust } from "../../components/Bust";
-import { DesktopMenu } from "../../components/DesktopMenu";
+import { Bust } from "../../components/Bust/Bust";
+import { Name } from "../../components/Name/Name";
+import { Scroll } from "../../components/Scroll/Scroll";
+import { SocialLinks } from "../../components/SocialLinks/SocialLinks";
 
 interface Props {
   setClassNoScroll: Dispatch<SetStateAction<string>>;
@@ -27,20 +28,18 @@ export const Header = ({ setClassNoScroll }: Props) => {
         setClassNoScroll={setClassNoScroll}
         scrollToComponent={scrollToComponent}
       />
-      {/*<Bust />
-      <div className="background">
-        <img src={background} alt="background" />
-      </div>
-      <span className="name">
-        <strong className="hi">Hi, my</strong> name is <strong>Arek</strong>
-        <span className="description">
-          I'm a <strong>self-taught frontend developer</strong> from Pomorskie,
-          Poland.
-        </span>
-      </span>
-      <span className="scroll" />
-      <div className="scroll" />
-      <DesktopMenu scrollToComponent={scrollToComponent} /> */}
+      <section className={styles.content}>
+        <Name />
+        <Scroll />
+        <Bust />
+        <div className={styles.desktopSocial}>
+          <SocialLinks
+            iconsStyles={styles.icons}
+            iconWidth={30}
+            iconColor="#FFFFFF"
+          />
+        </div>
+      </section>
     </div>
   );
 };

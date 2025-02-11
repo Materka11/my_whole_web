@@ -13,7 +13,9 @@
   );
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
+  padding: 0 1rem;
+  box-sizing: border-box;
 
   span,
   a {
@@ -46,7 +48,12 @@
 
 .white {
   @include xxl {
-    height: 0;
     color: v.$primary-purple;
+    background: linear-gradient(180deg, v.$white 85%, hsla(0, 0%, 100%, 0));
+
+    span,
+    a {
+      color: v.$primary-purple;
+    }
   }
 }

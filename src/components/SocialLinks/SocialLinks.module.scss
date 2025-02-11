@@ -1,9 +1,20 @@
 @use "../../styles/variables.scss" as v;
+@import "../../styles/mixins";
 
 .icons {
-  position: absolute;
-  left: 130px;
-  top: 50%;
-  transform: translate(0, -50%);
-  width: 125px;
+  display: flex;
+  width: 75%;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.25rem;
+
+  @include lg {
+    width: 400px;
+  }
+
+  hr {
+    width: 2px;
+    height: 100%;
+    background-color: v.$primary-green;
+  }
 }

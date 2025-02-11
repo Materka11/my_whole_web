@@ -1,0 +1,71 @@
+@use "../../styles/variables.scss" as v;
+@import "../../styles/mixins";
+
+$heigh-of-second-div: 35vh;
+$height-of-name-div: calc(100px + 2rem);
+
+.container {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  display: flex;
+  width: fit-content;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+
+  @include lg {
+    left: 25%;
+  }
+}
+
+span.scroll {
+  color: v.$primary-green;
+  font-size: 0.75rem;
+  letter-spacing: 2.4px;
+  display: block;
+  text-align: center;
+
+  &::before {
+    content: "SCROLL";
+    animation: scroll infinite 15s;
+  }
+}
+
+div.scroll {
+  width: 1px;
+  background-color: #a398e9;
+  height: calc($heigh-of-second-div - $height-of-name-div - 2rem);
+
+  @include lg {
+    height: 20vh;
+  }
+}
+
+@keyframes scroll {
+  0% {
+    content: "SCROLL";
+  }
+
+  20% {
+    filter: blur(1px);
+    opacity: 0;
+  }
+
+  50% {
+    content: "DOWN";
+    filter: blur(0px);
+    opacity: 1;
+  }
+
+  70% {
+    filter: blur(1px);
+    opacity: 0;
+  }
+}

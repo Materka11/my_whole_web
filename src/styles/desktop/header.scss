@@ -56,40 +56,6 @@
       left: 40%;
     }
 
-    .name {
-      margin: -200px 120px;
-      text-align: left;
-      font-size: 5rem;
-
-      .hi {
-        font-weight: 400;
-        display: block;
-      }
-
-      strong {
-        display: inline-block;
-      }
-
-      .description {
-        display: block;
-        font-size: 1.5rem;
-        margin: 20px 0;
-        width: 500px;
-      }
-    }
-
-    span.scroll {
-      position: absolute;
-      top: 600px;
-      left: 300px;
-      transform: translate(-20%, 0);
-    }
-
-    div.scroll {
-      top: 650px;
-      left: 327px;
-    }
-
     .menuDesktop {
       display: block;
       position: absolute;

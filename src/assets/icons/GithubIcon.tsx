@@ -1,8 +1,9 @@
-interface Props {
+interface IProps {
   width: number;
+  color?: string;
 }
 
-export const GithubIcon = ({ width }: Props) => (
+export const GithubIcon = ({ width, color = "#000000" }: IProps) => (
   <svg
     width={width}
     viewBox="0 0 20 20"
@@ -17,7 +18,7 @@ export const GithubIcon = ({ width }: Props) => (
       <g
         id="Dribbble-Light-Preview"
         transform="translate(-140.000000, -7559.000000)"
-        fill="#000000"
+        fill={color}
       >
         <g id="icons" transform="translate(56.000000, 160.000000)">
           <path
