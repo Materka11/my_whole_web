@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { AboutMe } from "./screens/AboutMe";
+import { AboutMe } from "./screens/AboutMe/AboutMe";
 import { Form } from "./screens/Form";
 import { Header } from "./screens/Header/Header";
 import { Work } from "./screens/Work";
