@@ -2,7 +2,7 @@ import styles from "./AboutMe.module.scss";
 import { useRef } from "react";
 import { motion, useTransform, useScroll } from "framer-motion";
 import { useMobile } from "../../hooks/useMobile";
-import ContainersInfo from "../../components/ContainersInfo";
+import { ContainersInfo } from "../../components/ContainersInfo/ContainersInfo";
 
 export const AboutMe = () => {
   const targetRef = useRef(null);
@@ -17,7 +17,9 @@ export const AboutMe = () => {
   if (isMobile) {
     return (
       <div className={styles.aboutMe}>
-        <div className={styles.containerOuter}>{/* <ContainersInfo /> */}</div>
+        <div className={styles.containerOuter}>
+          <ContainersInfo />
+        </div>
       </div>
     );
   }
@@ -33,7 +35,7 @@ export const AboutMe = () => {
             position: "relative",
           }}
         >
-          {/* <ContainersInfo /> */}
+          <ContainersInfo />
         </motion.div>
       </div>
     </div>
