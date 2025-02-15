@@ -9,13 +9,13 @@ const App2D = () => {
   const [classNoScroll, setClassNoScroll] = useState("");
 
   return (
-    <div className={`App ${classNoScroll}`}>
+    <main className={`app ${classNoScroll}`}>
       <Header setClassNoScroll={setClassNoScroll} />
       <AboutMe />
       <Work />
       <Form />
       <Footer />
-    </div>
+    </main>
   );
 };
 

@@ -7,7 +7,7 @@
   justify-content: center;
   text-align: justify;
   box-sizing: border-box;
-  padding: 0 25px;
+  padding: 0 1.5rem;
 
   @include lg {
     height: 100vh;
@@ -29,10 +29,11 @@
     font-weight: bold;
 
     @include lg {
-      font-size: 3.75rem;
+      font-size: 4rem;
       position: absolute;
       margin: 0;
       top: 150px;
+      padding: 0 0 0 6.5rem;
     }
   }
 
@@ -103,7 +104,7 @@
     align-items: flex-start;
     justify-content: flex-start;
     margin-top: 200px;
-    padding: 75px 0;
+    padding: 2rem 0;
     overflow-y: hidden;
   }
 
@@ -128,9 +129,18 @@
 
 .history {
   .scrollContainer {
+    hr {
+      @include lg {
+        height: 2px;
+        background-color: v.$primary-purple;
+        width: 20%;
+        margin: 2rem 1rem 0 6.5rem;
+      }
+    }
     p {
       @include lg {
-        text-align: center;
+        text-align: left;
+        padding: 0 3.5rem 0 0;
       }
     }
   }

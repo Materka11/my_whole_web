@@ -7,30 +7,19 @@ import { ContainerInfo } from "../ContainerInfo/ContainerInfo";
 export const ContainersInfo = () => {
   return (
     <>
-      <ContainerInfo title="History" classContainer="history">
+      <ContainerInfo title="About" classContainer="history">
+        <hr />
         <p>
-          I've been learning frontend development since October 2017 and have
-          applied my knowledge by working on various projects. My goal was to
-          add more dynamic elements to my pages, so I decided to learn my first
-          language, which was JavaScript and used it to create a basic game.
-          Afterwards, I explored the powerful library React, and after six
-          months of studying it, I created my first React project, which was an
-          online store, also learning Git and Adobe XD in the process. Then, I
-          moved on to Typescript and used it to build this website. To enhance
-          the site further, I added a 3D component using React Three Fiber,
-          requiring me to learn Blender as well. In October 2022, I started
-          studying at the Koszalin University of Technology to further expand my
-          knowledge and skills in the field of computer science and engineering.
-          Additionally, in September 2022, as team member DeveloArt, I worked on
-          developing mobile applications for restaurants using React Native.
-          After ten months of being a team member at DeveloArt, I decided to
-          conclude my collaboration with them. In June 2023, I embarked on a new
-          chapter by joining ART-Tech Solutions, Here, I contributed to a
-          project utilizing Next.js and React technology for the Moja Alivia
-          portal. My primary goal was to enhance the SEO of the projects. After
-          few months I completed the Moja Alivia portal and I'm starting a
-          project as a fullstack developer where I will be creating a website
-          for company reviews.
+          Innovative and detail-oriented Frontend and Web Developer with over
+          two years of experience creating high-performance web applications and
+          optimizing user interfaces and experiences. Proficient in React,
+          Next.js, and a variety of modern tools and frameworks.Achieved
+          measurable improvements in performance and SEO across multiple
+          projects, including increasing site traffic by 25% and reducing load
+          times by 30%. Dedicated to continuous learning and delivering
+          scalable, user-centric solutions. Seeking to leverage skills to
+          contribute to cutting-edge projects in dynamic teams within the
+          technology, e-commerce, or SaaS industries.
         </p>
       </ContainerInfo>
       {/*
