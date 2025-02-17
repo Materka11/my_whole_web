@@ -33,7 +33,7 @@
       position: absolute;
       margin: 0;
       top: 150px;
-      padding: 0 0 0 6.5rem;
+      padding: 0 0 0 2rem;
     }
   }
 
@@ -134,13 +134,12 @@
         height: 2px;
         background-color: v.$primary-purple;
         width: 20%;
-        margin: 2rem 1rem 0 6.5rem;
+        margin: 2rem 1rem 0 2rem;
       }
     }
     p {
       @include lg {
         text-align: left;
-        padding: 0 3.5rem 0 0;
       }
     }
   }

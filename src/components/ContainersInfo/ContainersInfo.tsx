@@ -3,6 +3,7 @@ import { COMMERCIAL_EXPERIENCE } from "../../consts/commercialExperience.consts"
 import { education } from "../../consts/education.consts";
 import { certificates } from "../../consts/certificates.consts";
 import { ContainerInfo } from "../ContainerInfo/ContainerInfo";
+import React from "react";
 
 export const ContainersInfo = () => {
   return (
@@ -22,7 +23,7 @@ export const ContainersInfo = () => {
           technology, e-commerce, or SaaS industries.
         </p>
       </ContainerInfo>
-      {/*
+
       <ContainerInfo title="Tech Stack" classContainer="skill">
         <ul>
           {skills.map((skill) => (
@@ -30,10 +31,11 @@ export const ContainersInfo = () => {
           ))}
         </ul>
       </ContainerInfo>
+
       <ContainerInfo title="Experience" classContainer="experience">
         {COMMERCIAL_EXPERIENCE.map((experience, index) => (
           <React.Fragment key={experience.id}>
-            <CommercialExperience
+            {/* <CommercialExperience
               description={experience.description}
               endJob={experience.endJob}
               nameComapany={experience.nameComapany}
@@ -42,7 +44,7 @@ export const ContainersInfo = () => {
               startJob={experience.startJob}
               technologies={experience.technologies}
               isLastIndex={index === COMMERCIAL_EXPERIENCE.length - 1}
-            />
+            /> */}
           </React.Fragment>
         ))}
       </ContainerInfo>
@@ -53,12 +55,12 @@ export const ContainersInfo = () => {
         <div>
           {education.map((school) => (
             <React.Fragment key={school.id}>
-              <NameWithDate
+              {/* <NameWithDate
                 name={school.schoolName}
                 additionalName={school.department}
                 startDate={school.startSchool}
                 endDate={school.endSchool}
-              />
+              /> */}
             </React.Fragment>
           ))}
         </div>
@@ -66,14 +68,14 @@ export const ContainersInfo = () => {
         <div>
           {certificates.map((certificate) => (
             <React.Fragment key={certificate.id}>
-              <NameWithDate
+              {/* <NameWithDate
                 name={certificate.name}
                 startDate={certificate.date}
-              />
+              /> */}
             </React.Fragment>
           ))}
         </div>
-      </ContainerInfo> */}
+      </ContainerInfo>
     </>
   );
 };
