@@ -1,4 +1,4 @@
-import { skills } from "../../consts/skills.consts";
+import { SKILLS } from "../../consts/skills.consts";
 import { COMMERCIAL_EXPERIENCE } from "../../consts/commercialExperience.consts";
 import { education } from "../../consts/education.consts";
 import { certificates } from "../../consts/certificates.consts";
@@ -24,11 +24,11 @@ export const ContainersInfo = () => {
         </p>
       </ContainerInfo>
 
-      <ContainerInfo title="Tech Stack" classContainer="skill">
+      <ContainerInfo title="My Skills" classContainer="skill">
         <ul>
-          {skills.map((skill) => (
+          {/* {SKILLS.map((skill) => (
             <li key={skill}>{skill}</li>
-          ))}
+          ))} */}
         </ul>
       </ContainerInfo>
 
