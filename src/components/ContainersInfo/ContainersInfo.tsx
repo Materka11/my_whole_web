@@ -4,6 +4,7 @@ import { education } from "../../consts/education.consts";
 import { certificates } from "../../consts/certificates.consts";
 import { ContainerInfo } from "../ContainerInfo/ContainerInfo";
 import React from "react";
+import styles from "./ContainersInfo.module.scss";
 
 export const ContainersInfo = () => {
   return (
@@ -25,11 +26,39 @@ export const ContainersInfo = () => {
       </ContainerInfo>
 
       <ContainerInfo title="My Skills" classContainer="skill">
-        <ul>
-          {/* {SKILLS.map((skill) => (
-            <li key={skill}>{skill}</li>
-          ))} */}
-        </ul>
+        <div className={styles.containerSkills}>
+          <h3>Frontend</h3>
+          <div>
+            {SKILLS?.frontend?.map(({ Icon, label }) => (
+              <div>
+                <Icon width="2rem" height="2rem" />
+                <h4>{label}</h4>
+              </div>
+            ))}
+          </div>
+        </div>
+        <div className={styles.containerSkills}>
+          <h3>Backend</h3>
+          <div>
+            {SKILLS?.backend?.map(({ Icon, label }) => (
+              <div>
+                <Icon width="2rem" height="2rem" />
+                <h4>{label}</h4>
+              </div>
+            ))}
+          </div>
+        </div>
+        <div className={styles.containerSkills}>
+          <h3>Tool</h3>
+          <div>
+            {SKILLS?.tools?.map(({ Icon, label }) => (
+              <div>
+                <Icon width="2rem" height="2rem" />
+                <h4>{label}</h4>
+              </div>
+            ))}
+          </div>
+        </div>
       </ContainerInfo>
 
       <ContainerInfo title="Experience" classContainer="experience">

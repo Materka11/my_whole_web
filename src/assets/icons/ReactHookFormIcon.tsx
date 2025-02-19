@@ -1,4 +1,4 @@
-import React, { SVGProps } from "react";
+import { SVGProps } from "react";
 
 export const ReactHookFormIcon = (props: SVGProps<SVGSVGElement>) => {
   return (
@@ -7,6 +7,7 @@ export const ReactHookFormIcon = (props: SVGProps<SVGSVGElement>) => {
       width="203"
       height="202"
       fillRule="evenodd"
+      viewBox="0 0 203 202"
       {...props}
     >
       <path

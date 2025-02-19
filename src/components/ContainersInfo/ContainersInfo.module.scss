@@ -1,0 +1,53 @@
+@use "../../styles/variables" as v;
+@import "../../styles/mixins";
+
+.containerSkills {
+  margin: 0 0 0 2rem;
+  gap: 1rem;
+  width: 100vw !important;
+
+  h3 {
+    font-size: 1.5rem;
+  }
+
+  div {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1rem;
+
+    div {
+      background-color: v.$soft-grey;
+      border-radius: 1rem;
+      -webkit-border-radius: 1rem;
+      -moz-border-radius: 1rem;
+      -ms-border-radius: 1rem;
+      -o-border-radius: 1rem;
+      width: 10rem;
+      height: 10rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: v.$black;
+      flex-direction: column;
+      box-sizing: border-box;
+      gap: 0.5rem;
+      transition: all 0.5s;
+      -webkit-transition: all;
+      -moz-transition: all;
+      -ms-transition: all;
+      -o-transition: all;
+
+      &:hover {
+        background-color: v.$primary-purple;
+        color: v.$white;
+      }
+
+      h4 {
+        margin: 0;
+        text-wrap: wrap;
+        width: 75%;
+        text-align: center;
+      }
+    }
+  }
+}
