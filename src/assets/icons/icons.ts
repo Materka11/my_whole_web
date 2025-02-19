@@ -22,6 +22,24 @@ import { Vuejs } from "./VueIcon";
 import { Firebase } from "./FirebaseIcon";
 import { Storybook } from "./StorybookIcon";
 import { SitecoreIcon } from "./SitecoreIcon";
+import { RestApiIcon } from "./RestApiIcon";
+import { GraphqlDark } from "./GraphqlDarkIcon";
+import { NodejsWordmark } from "./NodejsIcon";
+import { Express } from "./ExpressIcon";
+import { MongodbWordmark } from "./MongoDBIcon";
+import { PostgresqlWordmark } from "./PostresSQLIcon";
+import { MicrosoftsqlserverWordmark } from "./SQLServerIcon";
+import { Docker } from "./DockerIcon";
+import { Dotnet } from "./dotnetIcon";
+import { Git } from "./GitIcon";
+import { Swagger } from "./SwaggerIcon";
+import { Jira } from "./JiraIcon";
+import { Webpack } from "./WebpackIcon";
+import { FigmaDark } from "./FigmaIcon";
+import { Trello } from "./TrelloIcon";
+import { NetlifyDark } from "./NetlifyIcon";
+import { ViteDark } from "./ViteIcon";
+import { AdobeXd } from "./AdobeXdIcond";
 
 export {
   GithubIcon,
@@ -48,4 +66,22 @@ export {
   Firebase,
   Storybook,
   SitecoreIcon,
+  RestApiIcon,
+  GraphqlDark,
+  NodejsWordmark,
+  Express,
+  MongodbWordmark,
+  PostgresqlWordmark,
+  MicrosoftsqlserverWordmark,
+  Docker,
+  Dotnet,
+  Git,
+  Swagger,
+  Jira,
+  Webpack,
+  FigmaDark,
+  Trello,
+  NetlifyDark,
+  ViteDark,
+  AdobeXd,
 };
