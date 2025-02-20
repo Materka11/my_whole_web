@@ -1,5 +1,5 @@
 import { SKILLS } from "../../consts/skills.consts";
-import { COMMERCIAL_EXPERIENCE } from "../../consts/commercialExperience.consts";
+import { EXPERIENCE } from "../../consts/commercialExperience.consts";
 import { education } from "../../consts/education.consts";
 import { certificates } from "../../consts/certificates.consts";
 import { ContainerInfo } from "../ContainerInfo/ContainerInfo";
@@ -98,48 +98,7 @@ export const ContainersInfo = () => {
       </ContainerInfo>
 
       <ContainerInfo title="Experience" classContainer="experience">
-        {COMMERCIAL_EXPERIENCE.map((experience, index) => (
-          <React.Fragment key={experience.id}>
-            {/* <CommercialExperience
-              description={experience.description}
-              endJob={experience.endJob}
-              nameComapany={experience.nameComapany}
-              positionJob={experience.positionJob}
-              responsibilities={experience.responsibilities}
-              startJob={experience.startJob}
-              technologies={experience.technologies}
-              isLastIndex={index === COMMERCIAL_EXPERIENCE.length - 1}
-            /> */}
-          </React.Fragment>
-        ))}
-      </ContainerInfo>
-      <ContainerInfo
-        title="Education & Certificates"
-        classContainer="education"
-      >
-        <div>
-          {education.map((school) => (
-            <React.Fragment key={school.id}>
-              {/* <NameWithDate
-                name={school.schoolName}
-                additionalName={school.department}
-                startDate={school.startSchool}
-                endDate={school.endSchool}
-              /> */}
-            </React.Fragment>
-          ))}
-        </div>
-        <hr />
-        <div>
-          {certificates.map((certificate) => (
-            <React.Fragment key={certificate.id}>
-              {/* <NameWithDate
-                name={certificate.name}
-                startDate={certificate.date}
-              /> */}
-            </React.Fragment>
-          ))}
-        </div>
+        <></>
       </ContainerInfo>
     </>
   );
