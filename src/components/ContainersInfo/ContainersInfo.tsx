@@ -3,10 +3,19 @@ import { COMMERCIAL_EXPERIENCE } from "../../consts/commercialExperience.consts"
 import { education } from "../../consts/education.consts";
 import { certificates } from "../../consts/certificates.consts";
 import { ContainerInfo } from "../ContainerInfo/ContainerInfo";
-import React from "react";
+import React, { useState } from "react";
 import styles from "./ContainersInfo.module.scss";
 
 export const ContainersInfo = () => {
+  const [hoverPosition, setHoverPosition] = useState({ x: 0, y: 0 });
+
+  const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
+    const rect = e.currentTarget.getBoundingClientRect();
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
+    setHoverPosition({ x, y });
+  };
+
   return (
     <>
       <ContainerInfo title="About" classContainer="history">
@@ -30,7 +39,16 @@ export const ContainersInfo = () => {
           <h3>Frontend</h3>
           <div>
             {SKILLS?.frontend?.map(({ Icon, label }) => (
-              <div>
+              <div
+                key={label}
+                onMouseMove={handleMouseMove}
+                style={
+                  {
+                    "--x": `${hoverPosition.x}px`,
+                    "--y": `${hoverPosition.y}px`,
+                  } as React.CSSProperties
+                }
+              >
                 <Icon width="2rem" height="2rem" />
                 <h4>{label}</h4>
               </div>
@@ -41,7 +59,16 @@ export const ContainersInfo = () => {
           <h3>Backend</h3>
           <div>
             {SKILLS?.backend?.map(({ Icon, label }) => (
-              <div>
+              <div
+                key={label}
+                onMouseMove={handleMouseMove}
+                style={
+                  {
+                    "--x": `${hoverPosition.x}px`,
+                    "--y": `${hoverPosition.y}px`,
+                  } as React.CSSProperties
+                }
+              >
                 <Icon width="2rem" height="2rem" />
                 <h4>{label}</h4>
               </div>
@@ -52,7 +79,16 @@ export const ContainersInfo = () => {
           <h3>Tool</h3>
           <div>
             {SKILLS?.tools?.map(({ Icon, label }) => (
-              <div>
+              <div
+                key={label}
+                onMouseMove={handleMouseMove}
+                style={
+                  {
+                    "--x": `${hoverPosition.x}px`,
+                    "--y": `${hoverPosition.y}px`,
+                  } as React.CSSProperties
+                }
+              >
                 <Icon width="2rem" height="2rem" />
                 <h4>{label}</h4>
               </div>
