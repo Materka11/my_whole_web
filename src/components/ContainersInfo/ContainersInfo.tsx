@@ -5,6 +5,7 @@ import { certificates } from "../../consts/certificates.consts";
 import { ContainerInfo } from "../ContainerInfo/ContainerInfo";
 import React, { useState } from "react";
 import styles from "./ContainersInfo.module.scss";
+import { Timeline } from "../Timelline/Timeline";
 
 export const ContainersInfo = () => {
   const [hoverPosition, setHoverPosition] = useState({ x: 0, y: 0 });
@@ -98,7 +99,7 @@ export const ContainersInfo = () => {
       </ContainerInfo>
 
       <ContainerInfo title="Experience" classContainer="experience">
-        <></>
+        <Timeline data={EXPERIENCE} />
       </ContainerInfo>
     </>
   );

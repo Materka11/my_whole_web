@@ -1,4 +1,4 @@
-interface IExperience {
+export interface IExperience {
   id: number;
   date: string;
   title: string;
@@ -6,6 +6,12 @@ interface IExperience {
 }
 
 export const EXPERIENCE: IExperience[] = [
+  {
+    id: 18,
+    date: "2018",
+    content: "",
+    title: "",
+  },
   {
     id: 1,
     date: "2018-09",
@@ -15,6 +21,18 @@ export const EXPERIENCE: IExperience[] = [
       "I started my education in the field of IT, where I learned the basics of programming and computer science.",
   },
   {
+    id: 19,
+    date: "2019",
+    content: "",
+    title: "",
+  },
+  {
+    id: 20,
+    date: "2020",
+    content: "",
+    title: "",
+  },
+  {
     id: 2,
     date: "2020-12",
     title: "Autodesk AutoCAD Certified",
@@ -22,11 +40,23 @@ export const EXPERIENCE: IExperience[] = [
       "I passed the Autodesk AutoCAD Certified exam, which confirmed my knowledge of the program.",
   },
   {
+    id: 21,
+    date: "2021",
+    content: "",
+    title: "",
+  },
+  {
     id: 3,
     date: "2021-09",
     title: "EE.08 - Installation and Operation of Computer Systems",
     content:
       "I passed the EE.08 exam, which confirmed my knowledge of the installation and operation of computer systems.",
+  },
+  {
+    id: 22,
+    date: "2022",
+    content: "",
+    title: "",
   },
   {
     id: 4,
@@ -56,6 +86,12 @@ export const EXPERIENCE: IExperience[] = [
       "I started my studies at Koszalin University of Technology in the field of IT.",
   },
   {
+    id: 23,
+    date: "2023",
+    content: "",
+    title: "",
+  },
+  {
     id: 8,
     date: "2023-06",
     title: "DeveloArt	- Frontend Developer",
@@ -66,6 +102,12 @@ export const EXPERIENCE: IExperience[] = [
     date: "2023-06",
     title: "ART-Tech Solutions - Frontend Developer",
     content: "I started working as a Frontend Developer at ART-Tech Solutions.",
+  },
+  {
+    id: 24,
+    date: "2024",
+    content: "",
+    title: "",
   },
   {
     id: 10,
@@ -99,6 +141,12 @@ export const EXPERIENCE: IExperience[] = [
     date: "2024-10",
     title: "Kartel Media Ltd - Frontend Developer",
     content: "I started working as a Frontend Developer at Kartel Media Ltd.",
+  },
+  {
+    id: 25,
+    date: "2025",
+    content: "",
+    title: "",
   },
   {
     id: 15,

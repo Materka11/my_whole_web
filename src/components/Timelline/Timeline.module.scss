@@ -1,0 +1,21 @@
+@use "../../styles/variables" as v;
+@import "../../styles/mixins";
+
+.timeline {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+  div {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+  }
+
+  .timelineLine {
+    height: 10px;
+    width: 100%;
+    background-color: v.$primary-purple;
+    margin: 5rem 0;
+  }
+}
