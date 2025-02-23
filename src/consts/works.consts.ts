@@ -99,4 +99,12 @@ export const works: WorkType[] = [
     isCodeOrWork: "work",
     link: "https://www.kaia.sa/",
   },
+  {
+    id: 12,
+    title: "Jadoo Landing Page",
+    description: "Landing page for Jadoo",
+    date: "January 2025",
+    isCodeOrWork: "work",
+    link: "https://materka11.github.io/jadoo_landing_page/",
+  },
 ];
