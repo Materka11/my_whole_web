@@ -93,8 +93,8 @@
 .scrollContainer {
   overflow-y: auto;
   height: 100%;
-  padding-right: 15px;
-  padding-bottom: 15px;
+  padding-right: 1rem;
+  padding-bottom: 1rem;
   scrollbar-width: none;
 
   @include lg {
@@ -158,7 +158,7 @@
 
 .experience {
   @include lg {
-    width: 900vw;
+    width: v.$scroll-x;
   }
 
   .scrollContainer {

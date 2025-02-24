@@ -12,7 +12,7 @@
 
   @include lg {
     display: flex;
-    height: calc(300vh + 100px);
+    height: calc(v.$scroll-x + 100px);
     position: relative;
     overflow: visible;
   }
