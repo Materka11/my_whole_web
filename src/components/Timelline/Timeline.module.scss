@@ -16,6 +16,34 @@
     gap: 10rem;
   }
 
+  .timelineItemWrapper {
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+    gap: 1rem;
+    align-items: center;
+    position: relative;
+
+    .timelineSide {
+      position: absolute;
+      height: 1.5rem;
+      bottom: -6rem;
+      border-radius: 50%;
+      width: 1.5rem;
+      background-color: #f5f5f5;
+      z-index: 2;
+      -webkit-border-radius: 50%;
+      -moz-border-radius: 50%;
+      -ms-border-radius: 50%;
+      -o-border-radius: 50%;
+      transition: all 0.3s ease-out;
+    }
+
+    .active {
+      background-color: v.$primary-purple;
+    }
+  }
+
   .timelineLine {
     position: relative;
     height: 10px;

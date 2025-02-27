@@ -33,15 +33,21 @@ export const Timeline = ({ data }: IProps) => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  const isActive = (idx: number) =>
+    progress >= (idx / sortedData.length) * 100 + 1.5;
+
   return (
     <div className={styles.timeline} ref={timelineRef}>
       <div>
         {sortedData?.map((experience, index) => (
-          <TimelineItem
-            title={experience?.date}
-            key={experience?.id}
-            isActive={progress >= (index / sortedData.length) * 100}
-          />
+          <div className={styles.timelineItemWrapper} key={experience?.id}>
+            <TimelineItem title={experience?.date} isActive={isActive(index)} />
+            <div
+              className={`${styles.timelineSide} ${
+                isActive(index) ? styles.active : ""
+              }`}
+            />
+          </div>
         ))}
       </div>
 
@@ -57,7 +63,7 @@ export const Timeline = ({ data }: IProps) => {
           <TimelineItem
             {...experience}
             key={experience?.id}
-            isActive={progress >= (index / sortedData.length) * 100}
+            isActive={isActive(index)}
           />
         ))}
       </div>
