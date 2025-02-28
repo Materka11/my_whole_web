@@ -25,9 +25,9 @@ export const Menu = ({ setClassNoScroll, scrollToComponent }: IProps) => {
   const [classNav, setClassNav] = useState<ClassNavType | "">("");
   const [activeButton, setActiveButton] = useState(Category.About);
 
-  const POINT_OF_HEADER = 294;
-  const POINT_OF_ABOUT_ME = 784;
-  const POINT_OF_WORK = 940;
+  const POINT_OF_HEADER = 90;
+  const POINT_OF_ABOUT_ME = 940;
+  const POINT_OF_WORK = 990;
 
   const scrollHeaderNav = useHasScrolled(POINT_OF_HEADER);
   const scrollAboutMeNav = useHasScrolled(POINT_OF_ABOUT_ME);

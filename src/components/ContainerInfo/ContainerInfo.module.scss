@@ -128,6 +128,8 @@
 }
 
 .history {
+  padding: 0;
+
   .scrollContainer {
     hr {
       @include lg {

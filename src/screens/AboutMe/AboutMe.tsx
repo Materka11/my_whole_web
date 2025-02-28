@@ -11,7 +11,7 @@ export const AboutMe = () => {
     offset: ["start start", "end end"],
   });
 
-  const x = useTransform(scrollYProgress, [0, 1], ["1%", "-80%"]);
+  const x = useTransform(scrollYProgress, [0, 1], ["0.45%", "-100%"]);
 
   const isMobile = useMobile();
 
