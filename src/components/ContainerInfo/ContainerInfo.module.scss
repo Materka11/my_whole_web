@@ -152,15 +152,13 @@
 
   .scrollContainer {
     @include lg {
-      width: 300vw;
-      justify-content: space-between;
     }
   }
 }
 
 .experience {
   @include lg {
-    width: v.$scroll-x;
+    width: 100%;
   }
 
   .scrollContainer {

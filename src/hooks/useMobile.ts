@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-const RESOLUTION = 1440;
+const RESOLUTION = 1024;
 
 export const useMobile = () => {
   const [isMobile, setIsMobile] = useState(window.innerWidth < RESOLUTION);
