@@ -16,28 +16,28 @@ export const AboutMe = () => {
 
       switch (true) {
         case width >= 2560:
-          setEndValue("-77.5%");
+          setEndValue("-89%");
           break;
         case width >= 1920:
-          setEndValue("-82.5%");
+          setEndValue("-91%");
           break;
         case width >= 1536:
-          setEndValue("-85%");
+          setEndValue("-91.75%");
           break;
         case width >= 1440:
-          setEndValue("-86%");
+          setEndValue("-92%");
           break;
         case width >= 1366:
-          setEndValue("-87%");
+          setEndValue("-92.5%");
           break;
         case width >= 1280:
-          setEndValue("-87.5%");
+          setEndValue("-93%");
           break;
         case width >= 1024:
-          setEndValue("-90%");
+          setEndValue("-95%");
           break;
         default:
-          setEndValue("-90%");
+          setEndValue("-95%");
           break;
       }
     };

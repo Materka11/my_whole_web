@@ -11,7 +11,7 @@
 
   @include lg {
     height: 100vh;
-    flex-shrink: 1;
+    flex-shrink: 0;
     width: 100vw;
     overflow: hidden;
     //transform: translate(0, 200px) scale(0.1);
@@ -128,8 +128,6 @@
 }
 
 .history {
-  padding: 0;
-
   .scrollContainer {
     hr {
       @include lg {
