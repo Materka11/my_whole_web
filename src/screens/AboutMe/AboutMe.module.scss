@@ -2,9 +2,7 @@
 @import "../../styles/mixins";
 
 .aboutMe {
-  height: calc(100vh - 100px);
-  overflow: scroll;
-  overflow: -moz-scrollbars-none;
+  height: 100%;
 
   &::-webkit-scrollbar {
     display: none;
@@ -18,11 +16,9 @@
   }
 
   .containerOuter {
-    display: flex;
+    display: block;
     flex-wrap: nowrap;
     flex-direction: row;
-    width: min-content;
-    height: 100%;
 
     @include md {
       display: block;
@@ -35,6 +31,7 @@
       top: 0px;
       align-items: center;
       height: 100vh;
+      width: min-content;
     }
 
     img {
@@ -43,6 +40,7 @@
 
     hr {
       border-color: v.$primary-purple;
+      margin: 0;
     }
   }
 }

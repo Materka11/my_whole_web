@@ -2,9 +2,12 @@
 @import "../../styles/mixins";
 
 .containerSkills {
-  margin: 0 0 0 2rem;
   gap: 1rem;
-  width: 100vw !important;
+
+  @include lg {
+    margin: 0 0 0 2rem;
+    width: 100vw !important;
+  }
 
   h3 {
     font-size: 1.5rem;
@@ -22,8 +25,8 @@
       -moz-border-radius: 1rem;
       -ms-border-radius: 1rem;
       -o-border-radius: 1rem;
-      width: 10rem;
-      height: 10rem;
+      width: 7.5rem;
+      height: 7.5rem;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -38,6 +41,11 @@
       -o-transition: all 0.1s ease-in-out;
       position: relative;
       overflow: hidden;
+
+      @include lg {
+        width: 10rem;
+        height: 10rem;
+      }
 
       &::before {
         content: "";
