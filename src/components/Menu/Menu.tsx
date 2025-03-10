@@ -40,6 +40,7 @@ export const Menu = ({ setClassNoScroll, scrollToComponent }: IProps) => {
       if (scrollHeaderNav) {
         setSwitchLogo(logoMenu);
         setClassNav(ClassNav.white);
+        setActiveButton(Category.About);
       } else if (!scrollHeaderNav) {
         setSwitchLogo(logo);
         setClassNav("");

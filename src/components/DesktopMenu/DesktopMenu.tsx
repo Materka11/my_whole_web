@@ -21,11 +21,11 @@ export const DesktopMenu = ({
         sendEvent("Forwarding", "Click", "About Me");
         break;
       case Category.Portfolio:
-        scrollToComponent(19.6);
+        scrollToComponent(22);
         sendEvent("Forwarding", "Click", "Work");
         break;
       case Category.Contact:
-        scrollToComponent(20.67);
+        scrollToComponent(23.01);
         sendEvent("Forwarding", "Click", "Contact");
         break;
     }
