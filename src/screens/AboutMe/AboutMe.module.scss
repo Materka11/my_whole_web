@@ -1,0 +1,46 @@
+@use "../../styles/variables" as v;
+@import "../../styles/mixins";
+
+.aboutMe {
+  height: 100%;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  @include lg {
+    display: flex;
+    height: calc(v.$scroll-x + 100px);
+    position: relative;
+    overflow: visible;
+  }
+
+  .containerOuter {
+    display: block;
+    flex-wrap: nowrap;
+    flex-direction: row;
+
+    @include md {
+      display: block;
+    }
+
+    @include lg {
+      display: flex;
+      overflow: hidden;
+      position: sticky;
+      top: 0px;
+      align-items: center;
+      height: 100vh;
+      width: min-content;
+    }
+
+    img {
+      display: none;
+    }
+
+    hr {
+      border-color: v.$primary-purple;
+      margin: 0;
+    }
+  }
+}
