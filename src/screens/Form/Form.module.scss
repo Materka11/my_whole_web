@@ -1,0 +1,147 @@
+@use "../../styles/variables" as v;
+@import "../../styles/mixins";
+
+.form {
+  height: 100vh;
+  position: relative;
+  background-color: #f9f9f9;
+
+  .text {
+    position: absolute;
+    top: 15%;
+    margin: 0 30px;
+    color: v.$primary-purple;
+
+    @include lg {
+      margin: 0;
+      width: 100%;
+      text-align: center;
+      transform: translate(0, 200px) scale(0.1);
+      opacity: 0;
+      transition: all 0.75s cubic-bezier(0.175, 0.885, 0.32, 1.3);
+    }
+
+    span {
+      font-weight: bold;
+      font-size: 1.75rem;
+
+      @include lg {
+        font-size: 2.5rem;
+      }
+    }
+
+    p {
+      font-size: 1rem;
+      margin: 13px 0;
+
+      @include lg {
+        font-size: 1.375rem;
+        margin: 30px 0;
+      }
+    }
+
+    &.transition {
+      @include lg {
+        transform: none;
+        opacity: 1;
+      }
+    }
+  }
+
+  form {
+    position: absolute;
+    top: 30%;
+    margin: 0 30px;
+    width: calc(100% - 90px);
+
+    @include lg {
+      width: 50%;
+      margin: 50px 0;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    .formRow {
+      margin: 10px 0;
+      span {
+        font-size: 0.875rem;
+      }
+
+      .input {
+        border: none;
+        background-color: #f9f9f9;
+        border-bottom: 1px solid rgba(61, 21, 95, 0.5);
+        border-radius: 0;
+        width: 100%;
+        padding: 10px 10px;
+        font-size: 1rem;
+        font-family: Lato, sans-serif;
+        &:focus {
+          outline: none;
+        }
+      }
+
+      textarea {
+        resize: none;
+        min-height: 50px;
+      }
+    }
+  }
+  button {
+    position: absolute;
+    width: 300px;
+    height: 60px;
+    border: 2px solid v.$primary-purple;
+    background-color: v.$primary-purple;
+    color: v.$white;
+    font-size: 1rem;
+    bottom: -80px;
+    font-weight: bold;
+    overflow: hidden;
+    left: 50%;
+    transform: translateX(-50%);
+    cursor: pointer;
+
+    span {
+      position: absolute;
+      left: 40%;
+      transform: translate(-50%, -50%);
+      top: 50%;
+      text-transform: uppercase;
+    }
+
+    .icon {
+      color: v.$white;
+      font-size: 3rem;
+      position: absolute;
+      left: 80%;
+      transform: translate(-50%, -50%);
+      top: 50%;
+    }
+
+    .btnDynamic {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 2;
+      transition: all ease 0.5s;
+      background-color: v.$white;
+      color: v.$primary-purple;
+      font-family: Lato, sans-serif;
+      font-weight: 900;
+
+      .icon {
+        color: v.$primary-purple;
+      }
+    }
+
+    &:hover .btnDynamic {
+      transform: translateX(100%);
+    }
+  }
+}
