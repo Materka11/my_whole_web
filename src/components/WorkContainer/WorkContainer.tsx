@@ -1,4 +1,4 @@
-// import { BsArrowRight } from "react-icons/bs";
+import { TwotoneArrowRightAlt } from "../../assets/icons/ArrowRightAlt";
 import { useHasScrolled } from "../../hooks/useHasScrolled";
 import { useScrollTrigger } from "../../hooks/useScrollTrigger";
 import { useEffect, useState } from "react";
@@ -90,10 +90,10 @@ export const WorkContainer = ({
         onClick={() => sendEvent("Works", "Click", title)}
       >
         <span>SEE MY {isCodeOrWork}</span>
-        {/* <BsArrowRight className="icon" /> */}
+        <TwotoneArrowRightAlt className={styles.icon} />
         <div className={styles.btnDynamic}>
           <span>SEE MY {isCodeOrWork}</span>
-          {/* <BsArrowRight className="icon" /> */}
+          <TwotoneArrowRightAlt className={styles.icon} />
         </div>
       </a>
     </div>

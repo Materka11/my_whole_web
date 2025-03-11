@@ -1,5 +1,5 @@
 import { WorkContainer } from "../../components/WorkContainer/WorkContainer";
-// import { IoArrowUndoSharp, IoArrowRedoSharp } from "react-icons/io5";
+import { ArrowRedo } from "../../assets/icons/ArrowRightRedo";
 import { works } from "../../consts/works.consts";
 import { useEffect, useState } from "react";
 import styles from "./Work.module.scss";
@@ -74,7 +74,7 @@ export const Work = () => {
         onClick={handleClickInActiveContainer}
         aria-label="Back"
       >
-        {/* <IoArrowRedoSharp className="icon" /> */}
+        <ArrowRedo className={styles.icon} />
       </button>
       <div className={styles.containerOuter}>
         {worksData.map(
@@ -97,7 +97,7 @@ export const Work = () => {
         onClick={handleClickActiveContainer}
         aria-label="Forward"
       >
-        {/* <IoArrowUndoSharp className="icon" /> */}
+        <ArrowRedo className={`${styles.icon} ${styles.left}`} />
       </button>
     </div>
   );
