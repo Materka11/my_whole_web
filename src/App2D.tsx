@@ -3,7 +3,7 @@ import { AboutMe } from "./screens/AboutMe/AboutMe";
 import { Form } from "./screens/Form/Form";
 import { Header } from "./screens/Header/Header";
 import { Work } from "./screens/Work/Work";
-import { Footer } from "./screens/Footer";
+import { Footer } from "./screens/Footer/Footer";
 
 const App2D = () => {
   const [classNoScroll, setClassNoScroll] = useState("");
