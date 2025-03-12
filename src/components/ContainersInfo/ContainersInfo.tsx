@@ -1,7 +1,5 @@
 import { SKILLS } from "../../consts/skills.consts";
 import { EXPERIENCE } from "../../consts/commercialExperience.consts";
-import { education } from "../../consts/education.consts";
-import { certificates } from "../../consts/certificates.consts";
 import { ContainerInfo } from "../ContainerInfo/ContainerInfo";
 import React, { useState } from "react";
 import styles from "./ContainersInfo.module.scss";
