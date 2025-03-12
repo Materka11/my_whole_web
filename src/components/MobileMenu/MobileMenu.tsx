@@ -29,15 +29,15 @@ export const MobileMenu = ({
   const handleClickCategory = (category: Category) => {
     switch (category) {
       case Category.About:
-        handleClickLink(1, aboutMeShift);
+        handleClickLink(0, aboutMeShift);
         sendEvent("Forwarding", "Click", "About me");
         break;
       case Category.Portfolio:
-        handleClickLink(2, workShift);
+        handleClickLink(17.6, workShift);
         sendEvent("Forwarding", "Click", "Work");
         break;
       case Category.Contact:
-        handleClickLink(3, contactShift);
+        handleClickLink(18.6, contactShift);
         sendEvent("Forwarding", "Click", "Contact");
         break;
     }
