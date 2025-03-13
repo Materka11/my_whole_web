@@ -38,13 +38,14 @@ export const DesktopMenu = ({
       }`}
     >
       {CATEGORY.map((name) => (
-        <button
-          onClick={() => handleClickCategory(Category[name])}
-          key={name}
-          className={activeButton === name ? styles.active : ""}
-        >
-          {name}
-        </button>
+        <li key={name}>
+          <button
+            onClick={() => handleClickCategory(Category[name])}
+            className={activeButton === name ? styles.active : ""}
+          >
+            {name}
+          </button>
+        </li>
       ))}
     </ul>
   );

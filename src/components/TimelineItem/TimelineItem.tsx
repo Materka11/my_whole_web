@@ -13,7 +13,7 @@ export const TimelineItem = ({ title, content, isActive }: IProps) => {
         !title && !content ? styles.empty : ""
       } ${isActive && title ? styles.active : ""}`}
     >
-      <h4>{title}</h4>
+      <h3>{title}</h3>
       {content && <p>{content}</p>}
     </article>
   );

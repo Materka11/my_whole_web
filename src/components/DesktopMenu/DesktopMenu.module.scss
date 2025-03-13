@@ -10,6 +10,10 @@
     padding: 0;
     gap: 1.5rem;
 
+    li {
+      list-style-type: none;
+    }
+
     button {
       background-color: transparent;
       border: none;
