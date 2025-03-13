@@ -5,14 +5,21 @@ import App2D from "./App2D";
 import App3D from "./App3D";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import reportWebVitals from "./reportWebVitals";
-import PageNotFound from "./PageNotFound";
+import PageNotFound from "./screens/PageNotFound/PageNotFound";
 import ReactGa from "react-ga4";
 
-ReactGa.initialize(process.env.REACT_APP_GOOGLE_ANALYTICS_ID as string);
-ReactGa.send({
-  hitType: "pageview",
-  page: window.location.pathname,
-});
+const GA_MEASUREMENT_ID = process.env.REACT_APP_GOOGLE_ANALYTICS_ID || "";
+
+if (!GA_MEASUREMENT_ID) {
+  throw new Error("GA_MEASUREMENT_ID is required but missing.");
+}
+if (GA_MEASUREMENT_ID) {
+  ReactGa.initialize(GA_MEASUREMENT_ID as string);
+  ReactGa.send({
+    hitType: "pageview",
+    page: window.location.pathname,
+  });
+}
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement

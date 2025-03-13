@@ -1,0 +1,50 @@
+@use "../../styles/variables" as v;
+@import "../../styles/mixins";
+
+.name {
+  font-size: 2.625rem;
+  color: v.$primary-green;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  font-weight: bold;
+  gap: 1rem;
+  box-sizing: border-box;
+  text-align: center;
+
+  @include lg {
+    text-align: left;
+    font-size: 4rem;
+    padding-left: 5rem;
+    max-width: 520px;
+  }
+
+  @include xl {
+    padding-left: 9rem;
+    max-width: max-content;
+  }
+
+  @include xxxl {
+    padding-left: 13rem;
+  }
+
+  h1 {
+    @include lg {
+      font-weight: 400;
+      display: block;
+    }
+  }
+
+  strong {
+    display: inline-block;
+  }
+
+  .description {
+    display: none;
+
+    @include lg {
+      display: block;
+      font-size: 1.5rem;
+    }
+  }
+}
