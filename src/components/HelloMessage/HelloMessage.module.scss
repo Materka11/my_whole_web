@@ -1,0 +1,31 @@
+@use "../../styles/variables.scss" as v;
+@import "../../styles/mixins";
+
+.hello {
+  display: flex;
+  justify-items: center;
+  gap: 1rem;
+  width: fit-content;
+
+  @include lg {
+    transition: letter-spacing 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.3);
+
+    &:hover {
+      letter-spacing: 1px;
+    }
+  }
+}
+
+.label {
+  display: none;
+
+  @include lg {
+    display: block;
+  }
+}
+
+.icon {
+  @include lg {
+    display: none;
+  }
+}

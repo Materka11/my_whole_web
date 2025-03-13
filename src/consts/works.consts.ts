@@ -28,7 +28,7 @@ export const works: WorkType[] = [
   },
   {
     id: 3,
-    title: "This website",
+    title: "This Website",
     description: "View the code of this website",
     date: "October 2022",
     isCodeOrWork: "code",

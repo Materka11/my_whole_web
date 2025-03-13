@@ -1,16 +1,7 @@
-import * as THREE from 'three';
-import React, { Suspense, useRef, useEffect } from 'react';
-import {
-  OrbitControls,
-  useHelper,
-  Bounds,
-  PerspectiveCamera,
-} from '@react-three/drei';
-import { angleToRadians } from './utils/angle';
-import { useControls } from 'leva';
-import Basement from './Basement';
-import { SpotLight, SpotLightHelper } from 'three';
-import { Howl } from 'howler';
+import React, { Suspense } from "react";
+import { OrbitControls, Bounds } from "@react-three/drei";
+import { angleToRadians } from "./utils/angle";
+import Basement from "./Basement";
 
 export const Scene = () => {
   // when click everywhere start autoplay on page
@@ -38,7 +29,7 @@ export const Scene = () => {
   return (
     <React.Fragment>
       <spotLight
-        color={'#3588FF'}
+        color={"#3588FF"}
         position={[0, 2000, 0]}
         distance={3500}
         intensity={10}
@@ -54,7 +45,7 @@ export const Scene = () => {
             receiveShadow
           >
             <planeGeometry args={[10000, 10000]} />
-            <meshStandardMaterial color={'#000000'} />
+            <meshStandardMaterial color={"#000000"} />
           </mesh>
         </Bounds>
       </Suspense>
@@ -65,7 +56,7 @@ export const Scene = () => {
         enableDamping={true}
         zoomSpeed={2}
       />
-      <color attach="background" args={['#000000']} />
+      <color attach="background" args={["#000000"]} />
     </React.Fragment>
   );
 };

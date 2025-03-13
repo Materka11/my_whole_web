@@ -1,0 +1,41 @@
+@use "../../styles/variables" as v;
+@import "../../styles/mixins";
+
+.header {
+  height: 100vh;
+  background-color: v.$primary-purple;
+  position: relative;
+
+  .content {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+
+    @include lg {
+      flex-direction: row;
+      gap: 0;
+    }
+  }
+
+  .desktopSocial {
+    display: none;
+
+    @include lg {
+      display: block;
+    }
+  }
+
+  .icons {
+    @include lg {
+      position: absolute;
+      flex-direction: column;
+      height: 400px;
+      bottom: 25px;
+      right: 5%;
+      width: fit-content !important;
+      gap: 0.5rem !important;
+    }
+  }
+}

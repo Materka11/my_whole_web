@@ -5,7 +5,7 @@ import { LoadingScreen } from "./LoadingScreen";
 import "./styles/_global.scss";
 import { BrowserRouter } from "react-router-dom";
 import { Html, useProgress } from "@react-three/drei";
-import Loader from "./Loader";
+import Loader from "./components/Loader/Loader";
 
 const App3D = () => {
   const progress = useProgress();

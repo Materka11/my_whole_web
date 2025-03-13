@@ -1,0 +1,59 @@
+@use "../../styles/variables.scss" as v;
+@import "../../styles/mixins";
+
+.nav {
+  height: 100px;
+  position: fixed;
+  width: 100%;
+  z-index: 9999;
+  background: linear-gradient(
+    180deg,
+    v.$primary-purple 85%,
+    hsla(0, 0%, 100%, 0)
+  );
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1rem;
+  box-sizing: border-box;
+
+  span,
+  a {
+    color: v.$primary-green;
+    font-weight: bold;
+    font-size: 0.75rem;
+  }
+}
+
+.navMenu {
+  background: none;
+  background-color: v.$white;
+  transition: all 0.25s ease-in-out;
+
+  hr {
+    background-color: v.$primary-purple;
+    border-color: v.$primary-purple;
+  }
+
+  span,
+  a {
+    color: v.$primary-purple;
+  }
+  .spanMenu {
+    span {
+      transform: none;
+    }
+  }
+}
+
+.white {
+  @include xxl {
+    color: v.$primary-purple;
+    background: linear-gradient(180deg, v.$white 85%, hsla(0, 0%, 100%, 0));
+
+    span,
+    a {
+      color: v.$primary-purple;
+    }
+  }
+}

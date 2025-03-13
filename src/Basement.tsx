@@ -1,5 +1,5 @@
 import * as THREE from "three";
-import { useRef, useMemo, useLayoutEffect, useState, useEffect } from "react";
+import { useRef, useLayoutEffect, useState, useEffect } from "react";
 import { useGLTF, useAnimations, useBounds } from "@react-three/drei";
 import { GLTF } from "three-stdlib";
 import page from "./assets/img/screenMyWeb.png";
@@ -99,7 +99,7 @@ export function Basement(props: JSX.IntrinsicElements["group"]) {
   const group = useRef<THREE.Group>(null);
   const dracoLoader = new DRACOLoader();
   dracoLoader.setDecoderPath("/path/to/draco/");
-  const { nodes, materials, animations, scene } = useGLTF(
+  const { nodes, materials, animations } = useGLTF(
     "/myProjectWebHologramDecimate-processed.glb",
     false,
     false,
@@ -143,6 +143,7 @@ export function Basement(props: JSX.IntrinsicElements["group"]) {
       clearTimeout(startAnimation);
       clearTimeout(endAnimation);
     };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [actions]);
 
   //hover on monitor
