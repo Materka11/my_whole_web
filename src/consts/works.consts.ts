@@ -28,7 +28,7 @@ export const works: WorkType[] = [
   },
   {
     id: 3,
-    title: "This website",
+    title: "This Website",
     description: "View the code of this website",
     date: "October 2022",
     isCodeOrWork: "code",
@@ -90,5 +90,21 @@ export const works: WorkType[] = [
     date: "October 2024",
     isCodeOrWork: "code",
     link: "https://gitlab.com/materka111/memory-game",
+  },
+  {
+    id: 11,
+    title: "King Abdulaziz International Airport",
+    description: "Website for airport done with Next.js and Sitecore",
+    date: "January 2025",
+    isCodeOrWork: "work",
+    link: "https://www.kaia.sa/",
+  },
+  {
+    id: 12,
+    title: "Jadoo Landing Page",
+    description: "Landing page for Jadoo",
+    date: "January 2025",
+    isCodeOrWork: "work",
+    link: "https://materka11.github.io/jadoo_landing_page/",
   },
 ];
