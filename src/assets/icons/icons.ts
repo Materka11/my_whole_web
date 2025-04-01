@@ -40,6 +40,7 @@ import { Trello } from "./TrelloIcon";
 import { NetlifyDark } from "./NetlifyIcon";
 import { ViteDark } from "./ViteIcon";
 import { AdobeXd } from "./AdobeXdIcond";
+import { Medusa } from "./MedusaIcon";
 
 export {
   GithubIcon,
@@ -84,4 +85,5 @@ export {
   NetlifyDark,
   ViteDark,
   AdobeXd,
+  Medusa,
 };
