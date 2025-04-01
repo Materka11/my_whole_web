@@ -155,6 +155,18 @@ export const EXPERIENCE: IExperience[] = [
     content: "I finished my work as a Fullstack Developer.",
   },
   {
+    id: 26,
+    date: "2025-03",
+    title: "Bluewom Ltd - Frontend Developer",
+    content: "I started working as a Frontend Developer at Bluewom Ltd.",
+  },
+  {
+    id: 26,
+    date: "2025-04",
+    title: "Bluewom Ltd - Frontend Developer",
+    content: "I finished my project and work at Bluewom Ltd.",
+  },
+  {
     id: 16,
     date: "Present",
     title: "Koszalin University of Technology - IT",

@@ -107,4 +107,12 @@ export const works: WorkType[] = [
     isCodeOrWork: "work",
     link: "https://materka11.github.io/jadoo_landing_page/",
   },
+  {
+    id: 13,
+    title: "Wakacyjne Pomysły",
+    description: "E-commerce platform",
+    date: "April 2025",
+    isCodeOrWork: "work",
+    link: "https://wakacyjnepomysly.pl/",
+  },
 ];

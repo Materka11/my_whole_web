@@ -37,6 +37,7 @@ import {
   NetlifyDark,
   ViteDark,
   AdobeXd,
+  Medusa,
 } from "../assets/icons/icons";
 
 interface ISkills {
@@ -82,6 +83,7 @@ export const SKILLS: ISkills = {
     { label: "SQL Server", Icon: MicrosoftsqlserverWordmark },
     { label: "Docker", Icon: Docker },
     { label: ".NET", Icon: Dotnet },
+    { label: "Medusa.js", Icon: Medusa },
   ],
   tools: [
     { label: "Git", Icon: Git },
