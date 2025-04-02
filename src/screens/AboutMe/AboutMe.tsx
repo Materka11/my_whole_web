@@ -16,7 +16,7 @@ export const AboutMe = () => {
 
       switch (true) {
         case width >= 2560:
-          setEndValue("-89%");
+          setEndValue("-90%");
           break;
         case width >= 1920:
           setEndValue("-91%");
