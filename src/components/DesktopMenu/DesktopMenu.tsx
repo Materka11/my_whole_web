@@ -1,31 +1,29 @@
 import { Category, CATEGORY } from "../../consts/category.consts";
 import { sendEvent } from "../../helpers/sendEvent";
+import { useScrollTo } from "../../hooks/useScrollTo";
 import { ClassNavType } from "../Menu/Menu";
 import styles from "./DesktopMenu.module.scss";
 
 interface IProps {
-  scrollToComponent: (vh: number, px?: number) => void;
   classNav: ClassNavType;
   activeButton: string;
 }
 
-export const DesktopMenu = ({
-  scrollToComponent,
-  classNav,
-  activeButton,
-}: IProps) => {
+export const DesktopMenu = ({ classNav, activeButton }: IProps) => {
+  const scrollTo = useScrollTo();
+
   const handleClickCategory = (category: Category) => {
     switch (category) {
       case Category.About:
-        scrollToComponent(0);
+        scrollTo({ elementId: "aboutMe" });
         sendEvent("Forwarding", "Click", "About Me");
         break;
       case Category.Portfolio:
-        scrollToComponent(22);
+        scrollTo({ elementId: "work" });
         sendEvent("Forwarding", "Click", "Work");
         break;
       case Category.Contact:
-        scrollToComponent(23.01);
+        scrollTo({ elementId: "form" });
         sendEvent("Forwarding", "Click", "Contact");
         break;
     }

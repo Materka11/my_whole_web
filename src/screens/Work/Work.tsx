@@ -68,7 +68,7 @@ export const Work = () => {
   };
 
   return (
-    <div className={styles.work}>
+    <div className={styles.work} id="work">
       <button
         style={{ opacity: styleButton.left }}
         onClick={handleClickInActiveContainer}

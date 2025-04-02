@@ -10,7 +10,6 @@ interface IProps {
   setClassNoScroll: Dispatch<SetStateAction<string>>;
   setSwitchLogo: Dispatch<SetStateAction<string>>;
   setClassNav: Dispatch<SetStateAction<string | number>>;
-  scrollToComponent: (vh: number, px?: number) => void;
 }
 
 export const ContainerLogoMenu = ({
@@ -18,7 +17,6 @@ export const ContainerLogoMenu = ({
   setClassNoScroll,
   setSwitchLogo,
   setClassNav,
-  scrollToComponent,
 }: IProps) => {
   const [isActiveMobileMenu, setIsActiveMobileMenu] = useState(false);
   const [isToggledMenu, setIsToggledMenu] = useState(false);
@@ -27,7 +25,6 @@ export const ContainerLogoMenu = ({
     if (!isToggledMenu) {
       setIsActiveMobileMenu(true);
       setIsToggledMenu(true);
-      setClassNoScroll("noScroll");
       setSwitchLogo(logoMenu);
       setClassNav(ClassNav.navMenu);
     } else {
@@ -54,7 +51,6 @@ export const ContainerLogoMenu = ({
       <MobileMenu
         isActiveMobileMenu={isActiveMobileMenu}
         handleClickMenu={handleClickMenu}
-        scrollToComponent={scrollToComponent}
       />
     </>
   );
