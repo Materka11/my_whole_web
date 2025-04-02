@@ -16,7 +16,7 @@ export const AboutMe = () => {
 
       switch (true) {
         case width >= 2560:
-          setEndValue("-89%");
+          setEndValue("-90%");
           break;
         case width >= 1920:
           setEndValue("-91%");
@@ -54,7 +54,7 @@ export const AboutMe = () => {
 
   if (isMobile) {
     return (
-      <div className={styles.aboutMe}>
+      <div className={styles.aboutMe} id="aboutMe">
         <div className={styles.containerOuter}>
           <ContainersInfo />
         </div>
@@ -63,7 +63,7 @@ export const AboutMe = () => {
   }
 
   return (
-    <div className={styles.aboutMe} ref={targetRef}>
+    <div className={styles.aboutMe} ref={targetRef} id="aboutMe">
       <div className={styles.containerOuter}>
         <motion.div
           style={{

@@ -1,5 +1,5 @@
 import { TwotoneArrowRightAlt } from "../../assets/icons/ArrowRightAlt";
-import { useHasScrolled } from "../../hooks/useHasScrolled";
+import { useHasScrolledToElementById } from "../../hooks/useHasScrolledToElementById";
 import { useScrollTrigger } from "../../hooks/useScrollTrigger";
 import { useEffect, useState } from "react";
 import { sendEvent } from "../../helpers/sendEvent";
@@ -31,7 +31,7 @@ export const WorkContainer = ({
   id,
   isActive,
 }: WorkContainerProps) => {
-  const scrollWork = useHasScrolled(635);
+  const scrollWork = useHasScrolledToElementById(500, "work");
   const classContainerTransition = useScrollTrigger(scrollWork);
 
   const [styleContainer, setStyleContainer] = useState<

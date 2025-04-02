@@ -1,7 +1,7 @@
 import { useState, useEffect, Dispatch, SetStateAction } from "react";
 import logoMenu from "../../assets/img/logoMenu.png";
 import logo from "../../assets/img/logo.png";
-import { useHasScrolled } from "../../hooks/useHasScrolled";
+import { useHasScrolledToElementById } from "../../hooks/useHasScrolledToElementById";
 import styles from "./Menu.module.scss";
 import { ContainerLogoMenu } from "../ContainerLogoMenu/ContainerLogoMenu";
 import { HelloMessage } from "../HelloMessage/HelloMessage";
@@ -17,43 +17,38 @@ export type ClassNavType = keyof typeof styles;
 
 interface IProps {
   setClassNoScroll: Dispatch<SetStateAction<string>>;
-  scrollToComponent: (vh: number, px?: number) => void;
 }
 
-export const Menu = ({ setClassNoScroll, scrollToComponent }: IProps) => {
+export const Menu = ({ setClassNoScroll }: IProps) => {
   const [switchLogo, setSwitchLogo] = useState(logo);
   const [classNav, setClassNav] = useState<ClassNavType | "">("");
   const [activeButton, setActiveButton] = useState(Category.About);
 
-  const POINT_OF_HEADER = 90;
-  const POINT_OF_ABOUT_ME = 940;
-  const POINT_OF_WORK = 990;
-
-  const scrollHeaderNav = useHasScrolled(POINT_OF_HEADER);
-  const scrollAboutMeNav = useHasScrolled(POINT_OF_ABOUT_ME);
-  const scrollWorkNav = useHasScrolled(POINT_OF_WORK);
+  const scrollAboutMeNav = useHasScrolledToElementById(0, "aboutMe");
+  const scrollWorkNav = useHasScrolledToElementById(0, "work");
+  const scrollFormkNav = useHasScrolledToElementById(0, "form");
 
   useEffect(() => {
     const { innerWidth } = window;
 
     if (innerWidth >= 1440) {
-      if (scrollHeaderNav) {
+      if (scrollAboutMeNav) {
         setSwitchLogo(logoMenu);
         setClassNav(ClassNav.white);
         setActiveButton(Category.About);
-      } else if (!scrollHeaderNav) {
+      } else if (!scrollAboutMeNav) {
         setSwitchLogo(logo);
         setClassNav("");
         setActiveButton(Category.About);
       }
 
-      if (scrollAboutMeNav) {
+      if (scrollWorkNav) {
         setSwitchLogo(logo);
         setClassNav("");
         setActiveButton(Category.Portfolio);
       }
 
-      if (scrollWorkNav) {
+      if (scrollFormkNav) {
         setSwitchLogo(logoMenu);
         setClassNav(ClassNav.white);
         setActiveButton(Category.Contact);
@@ -68,16 +63,11 @@ export const Menu = ({ setClassNoScroll, scrollToComponent }: IProps) => {
     >
       <ContainerLogoMenu
         switchLogo={switchLogo}
-        scrollToComponent={scrollToComponent}
         setClassNav={setClassNav}
         setClassNoScroll={setClassNoScroll}
         setSwitchLogo={setSwitchLogo}
       />
-      <DesktopMenu
-        scrollToComponent={scrollToComponent}
-        classNav={classNav}
-        activeButton={activeButton}
-      />
+      <DesktopMenu classNav={classNav} activeButton={activeButton} />
       <HelloMessage classNav={classNav} />
     </nav>
   );

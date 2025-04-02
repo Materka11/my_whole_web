@@ -18,6 +18,7 @@
     flex-wrap: nowrap;
     flex-direction: row;
     height: 100%;
+    z-index: 10;
 
     @include lg {
       height: 70vh;

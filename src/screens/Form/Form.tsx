@@ -1,12 +1,12 @@
 // import { BsArrowRight } from 'react-icons/bs';
 // import { useForm } from '../hooks/useForm';
 import { TwotoneArrowRightAlt } from "../../assets/icons/ArrowRightAlt";
-import { useHasScrolled } from "../../hooks/useHasScrolled";
+import { useHasScrolledToElementById } from "../../hooks/useHasScrolledToElementById";
 import { useScrollTrigger } from "../../hooks/useScrollTrigger";
 import styles from "./Form.module.scss";
 
 export const Form = () => {
-  const scrollContact = useHasScrolled(844);
+  const scrollContact = useHasScrolledToElementById(500, "form");
   const classText = useScrollTrigger(scrollContact);
 
   // const initialState = {
@@ -22,7 +22,7 @@ export const Form = () => {
   // }
 
   return (
-    <div className={styles.form}>
+    <div className={styles.form} id="form">
       <div className={`${styles.text} ${styles[classText]}`}>
         <span>Send me a message!</span>
         <p>Got a question or proposal, or just want to say hello? Go ahead.</p>

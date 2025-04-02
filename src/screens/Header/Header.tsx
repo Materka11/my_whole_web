@@ -11,23 +11,9 @@ interface Props {
 }
 
 export const Header = ({ setClassNoScroll }: Props) => {
-  const scrollToComponent = (vh: number, px: number = 0) => {
-    const { innerHeight, scrollTo } = window;
-
-    setTimeout(() => {
-      scrollTo({
-        top: innerHeight * vh + px,
-        behavior: "smooth",
-      });
-    }, 0);
-  };
-
   return (
     <div className={styles.header}>
-      <Menu
-        setClassNoScroll={setClassNoScroll}
-        scrollToComponent={scrollToComponent}
-      />
+      <Menu setClassNoScroll={setClassNoScroll} />
       <section className={styles.content}>
         <Name />
         <Scroll />
