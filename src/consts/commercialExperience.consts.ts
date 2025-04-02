@@ -161,7 +161,7 @@ export const EXPERIENCE: IExperience[] = [
     content: "I started working as a Frontend Developer at Bluewom Ltd.",
   },
   {
-    id: 26,
+    id: 27,
     date: "2025-04",
     title: "Bluewom Ltd - Frontend Developer",
     content: "I finished my project and work at Bluewom Ltd.",
