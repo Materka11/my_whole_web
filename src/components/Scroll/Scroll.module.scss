@@ -34,7 +34,8 @@ span.scroll {
 
   &::before {
     content: "SCROLL";
-    animation: scroll infinite 15s;
+    animation: scroll infinite 5s;
+    -webkit-animation: scroll infinite 5s;
   }
 }
 
