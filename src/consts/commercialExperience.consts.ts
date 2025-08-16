@@ -167,6 +167,18 @@ export const EXPERIENCE: IExperience[] = [
     content: "I finished my project and work at Bluewom Ltd.",
   },
   {
+    id: 28,
+    date: "2025-07",
+    title: "DeveloArt - Student Intern Frontend Developer",
+    content: "I started working as a Frontend Developer at DeveloArt.",
+  },
+  {
+    id: 29,
+    date: "2025-08",
+    title: "DeveloArt - Student Intern Frontend Developer",
+    content: "I finished my intern as a Frontend Developer at DeveloArt.",
+  },
+  {
     id: 16,
     date: "Present",
     title: "Koszalin University of Technology - IT",
