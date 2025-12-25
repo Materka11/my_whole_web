@@ -187,9 +187,15 @@ export const EXPERIENCE: IExperience[] = [
   },
   {
     id: 17,
-    date: "Present",
+    date: "2025-09",
     title: "Kartel Media Ltd - Frontend Developer",
+    content: "I finished working as a Frontend Developer at Kartel Media Ltd.",
+  },
+  {
+    id: 18,
+    date: "2025-09",
+    title: "Transfer Multisort Elektronik - Frontend Developer",
     content:
-      "I am currently working as a Frontend Developer at Kartel Media Ltd.",
+      "I am currently working as a Frontend Developer at Transfer Multisort Elektronik.",
   },
 ];

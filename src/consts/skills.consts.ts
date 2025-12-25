@@ -38,6 +38,9 @@ import {
   ViteDark,
   AdobeXd,
   Medusa,
+  JestIcon,
+  FileTypeLightExpoIcon,
+  BitbucketIcon,
 } from "../assets/icons/icons";
 
 interface ISkills {
@@ -63,10 +66,12 @@ export const SKILLS: ISkills = {
     { label: "CSS3", Icon: Css3 },
     { label: "HTML5", Icon: Html5 },
     { label: "React Native", Icon: ReactDark },
+    { label: "Expo", Icon: FileTypeLightExpoIcon },
     { label: "Zustand", Icon: ZustandIcon },
     { label: "Bootstrap", Icon: Bootstrap },
     { label: "React Query", Icon: ReactQueryIcon },
     { label: "React Hook Form", Icon: ReactHookFormIcon },
+    { label: "Jest", Icon: JestIcon },
     { label: "Styled Components", Icon: Styledcomponents },
     { label: "Vue.js", Icon: Vuejs },
     { label: "Firebase", Icon: Firebase },
@@ -89,6 +94,7 @@ export const SKILLS: ISkills = {
     { label: "Git", Icon: Git },
     { label: "Github", Icon: GithubIcon },
     { label: "Gitlab", Icon: GitlabIcon },
+    { label: "Bitbucket", Icon: BitbucketIcon },
     { label: "Swagger", Icon: Swagger },
     { label: "Jira", Icon: Jira },
     { label: "Webpack", Icon: Webpack },
