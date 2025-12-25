@@ -21,15 +21,15 @@ export const ContainersInfo = () => {
         <hr />
         <p>
           Innovative and detail-oriented Frontend and Web Developer with over
-          two years of experience creating high-performance web applications and
-          optimizing user interfaces and experiences. Proficient in React,
-          Next.js, and a variety of modern tools and frameworks.Achieved
-          measurable improvements in performance and SEO across multiple
-          projects, including increasing site traffic by 25% and reducing load
-          times by 30%. Dedicated to continuous learning and delivering
-          scalable, user-centric solutions. Seeking to leverage skills to
-          contribute to cutting-edge projects in dynamic teams within the
-          technology, e-commerce, or SaaS industries.
+          two years of experience building high-performance web and mobile
+          applications. Expert in React, Next.js, and Expo, with a proven track
+          record of optimizing user interfaces and cross-platform experiences.
+          Achieved measurable improvements in performance and SEO, including a
+          25% increase in site traffic and a 30% reduction in load times.
+          Proficient in leveraging Expo to deliver scalable, native-quality
+          mobile solutions efficiently. Dedicated to continuous learning and
+          seeking to contribute to cutting-edge projects within technology,
+          e-commerce, or SaaS industries.
         </p>
       </ContainerInfo>
 

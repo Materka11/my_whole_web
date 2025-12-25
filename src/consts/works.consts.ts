@@ -115,4 +115,12 @@ export const works: WorkType[] = [
     isCodeOrWork: "work",
     link: "https://wakacyjnepomysly.pl/",
   },
+  {
+    id: 14,
+    title: "Music TY",
+    description: "Mobile App for music lovers",
+    date: "August 2025",
+    isCodeOrWork: "work",
+    link: "https://play.google.com/store/apps/details?id=com.anonymous.music_ty",
+  },
 ];

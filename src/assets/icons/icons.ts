@@ -41,6 +41,9 @@ import { NetlifyDark } from "./NetlifyIcon";
 import { ViteDark } from "./ViteIcon";
 import { AdobeXd } from "./AdobeXdIcond";
 import { Medusa } from "./MedusaIcon";
+import { JestIcon } from "./JestIcon";
+import { FileTypeLightExpoIcon } from "./ExpoIcon";
+import { BitbucketIcon } from "./BitbucketIcon";
 
 export {
   GithubIcon,
@@ -86,4 +89,7 @@ export {
   ViteDark,
   AdobeXd,
   Medusa,
+  JestIcon,
+  FileTypeLightExpoIcon,
+  BitbucketIcon,
 };
